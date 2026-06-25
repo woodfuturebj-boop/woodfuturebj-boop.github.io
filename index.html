@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Surplus Value Router</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.5;
+      }
+      body {
+        margin: 0;
+        padding: 40px 20px;
+        background: #f7f8fb;
+        color: #151922;
+      }
+      main {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 34px;
+      }
+      h2 {
+        margin-top: 32px;
+        font-size: 20px;
+      }
+      code,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+      pre {
+        overflow-x: auto;
+        padding: 14px 16px;
+        border: 1px solid #d9dee8;
+        background: #ffffff;
+      }
+      a {
+        color: #1457c8;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #111318;
+          color: #e9edf5;
+        }
+        pre {
+          border-color: #2b3240;
+          background: #171b23;
+        }
+        a {
+          color: #8ab4ff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Surplus Value Router</h1>
+      <p>AntSeed verified provider and buyer connection entry.</p>
+
+      <h2>Connect</h2>
+      <p>AntSeed buyer auto-selection is disabled, so buyers must pin a peer explicitly.</p>
+      <pre><code>antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b</code></pre>
+
+      <p>Per-request routing:</p>
+      <pre><code>curl -H "x-antseed-pin-peer: c50de6922b00677c93007c01924586de887ced7b" http://127.0.0.1:8377/v1/models</code></pre>
+
+      <p>Model-prefix routing:</p>
+      <pre><code>c50de6922b00677c93007c01924586de887ced7b@gpt-5.4</code></pre>
+
+      <h2>Provider</h2>
+      <ul>
+        <li>Peer: <code>c50de6922b00677c93007c01924586de887ced7b</code></li>
+        <li>Agent ID: <code>56687</code></li>
+        <li>Seller wallet: <code>0xc50DE6922b00677c93007c01924586dE887ced7b</code></li>
+        <li>Settlement: Base mainnet USDC</li>
+        <li>Public endpoint: <code>192.220.28.51:6882</code></li>
+        <li>GitHub proof: <a href="https://github.com/woodfuturebj-boop/antseed-proof">woodfuturebj-boop/antseed-proof</a></li>
+        <li>Domain proof: <a href="/.well-known/antseed.json">/.well-known/antseed.json</a></li>
+      </ul>
+
+      <h2>Primary Services</h2>
+      <ul>
+        <li><code>gpt-5.4</code></li>
+        <li><code>gpt-5.4-mini</code></li>
+        <li><code>gpt-5.2-codex</code></li>
+        <li><code>gpt-5.3-codex</code></li>
+        <li><code>opus-4.7</code></li>
+        <li><code>opus-4.8</code></li>
+        <li><code>glm-5</code></li>
+        <li><code>glm-5.1</code></li>
+        <li><code>grok-4.3</code></li>
+      </ul>
+
+      <p>Inspect live services and current prices:</p>
+      <pre><code>antseed network peer c50de6922b00677c93007c01924586de887ced7b</code></pre>
+
+      <p>No private keys, API keys, or credentials are stored in this site.</p>
+    </main>
+  </body>
+</html>
