@@ -38,3 +38,5 @@ antseed network peer c50de6922b00677c93007c01924586de887ced7b
 - Response authentication: `verification.response-auth.v1`
 
 No private keys, API keys, or provider credentials are stored in this repository.
+
+External buyer beta: https://github.com/woodfuturebj-boop/antseed-proof/issues/1
