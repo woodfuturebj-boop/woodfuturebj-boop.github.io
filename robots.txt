@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://woodfuturebj-boop.github.io/sitemap.xml

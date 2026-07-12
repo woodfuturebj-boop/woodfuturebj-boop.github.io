@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-12T10:14:14Z",
+  "pricingUnit": "USD per 1M tokens",
+  "services": [
+    {
+      "id": "opus-4.7",
+      "input": 1.1755523511,
+      "output": 5.8777617555,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Premium coding and reasoning"
+    },
+    {
+      "id": "opus-4.8",
+      "input": 1.61881823763,
+      "output": 8.09409118815,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Frontier coding and complex tasks"
+    },
+    {
+      "id": "claude-sonnet-5",
+      "input": 0.5500011,
+      "output": 2.7500055,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Balanced coding and agent workloads"
+    },
+    {
+      "id": "gpt-5.4",
+      "input": 0.12500025,
+      "output": 0.7500015,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "High-volume general reasoning"
+    },
+    {
+      "id": "glm-5.2",
+      "input": 0.30352560705,
+      "output": 0.958501917,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Efficient multilingual reasoning"
+    }
+  ]
+}
