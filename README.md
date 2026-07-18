@@ -30,6 +30,15 @@ The provider still advertises its broader catalog. Inspect signed live metadata 
 antseed network peer c50de6922b00677c93007c01924586de887ced7b
 ```
 
+## AntFeed MCP
+
+This seller is indexed by AntFeed under wallet
+`0xc50DE6922b00677c93007c01924586dE887ced7b`. MCP-compatible agents can install
+`@antfeed/mcp`, look up `Surplus Value Router`, inspect pricing, and connect a
+local AntSeed buyer after explicit user confirmation.
+
+See the [24-hour external buyer guide](https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md).
+
 ## Verification
 
 - Domain proof: `/.well-known/antseed.json`

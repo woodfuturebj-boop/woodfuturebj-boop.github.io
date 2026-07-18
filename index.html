@@ -152,6 +152,8 @@
         font-size: 18px;
       }
 
+      .hero-actions { margin-bottom: 24px; }
+
       .peer-line {
         display: flex;
         align-items: center;
@@ -310,6 +312,7 @@
       .tab-panel[hidden] { display: none; }
       .tab-panel h3 { margin-bottom: 8px; }
       .tab-panel p { max-width: 760px; color: var(--muted); }
+      .tab-panel p code { overflow-wrap: anywhere; }
 
       .table-wrap {
         overflow-x: auto;
@@ -454,6 +457,11 @@
           <p class="eyebrow">Verified AntSeed provider</p>
           <h1>Surplus Value Router</h1>
           <p class="lede">OpenAI-compatible services with explicit peer routing, response authentication, and direct USDC settlement on Base.</p>
+          <div class="actions hero-actions">
+            <a class="action" href="#connect">Connect now</a>
+            <a class="action secondary" href="#integrations" data-select-tab="tab-antfeed">Use AntFeed MCP</a>
+            <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=beta.yml">Get Beta help</a>
+          </div>
           <div class="peer-line">
             <strong>Peer</strong>
             <code id="peer-id">c50de6922b00677c93007c01924586de887ced7b</code>
@@ -529,6 +537,7 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
             <button class="tab-button" type="button" role="tab" id="tab-pi" aria-controls="panel-pi" aria-selected="false">Pi</button>
             <button class="tab-button" type="button" role="tab" id="tab-langchain" aria-controls="panel-langchain" aria-selected="false">LangChain</button>
             <button class="tab-button" type="button" role="tab" id="tab-hermes" aria-controls="panel-hermes" aria-selected="false">Hermes</button>
+            <button class="tab-button" type="button" role="tab" id="tab-antfeed" aria-controls="panel-antfeed" aria-selected="false">AntFeed MCP</button>
           </div>
 
           <div class="tab-panel" role="tabpanel" id="panel-cli" aria-labelledby="tab-cli">
@@ -600,6 +609,34 @@ custom_providers:
               <button class="copy-button" type="button" data-copy-target="code-hermes">Copy</button>
             </div>
           </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-antfeed" aria-labelledby="tab-antfeed" hidden>
+            <h3>AntFeed MCP discovery</h3>
+            <p>This seller is indexed in AntFeed under wallet <code>0xc50DE6922b00677c93007c01924586dE887ced7b</code>. Add the MCP server, then use read-only lookup and pricing tools before opening a session.</p>
+            <div class="command">
+              <pre id="code-antfeed"><code>{
+  "mcpServers": {
+    "antfeed": {
+      "command": "npx",
+      "args": ["-y", "@antfeed/mcp"],
+      "env": {
+        "ANTFEED_EXPLORER_URL": "https://www.antfeed.org",
+        "ANTSEED_BUYER_URL": "http://localhost:8377",
+        "ANTSEED_MAX_DEPOSIT_USDC": "10"
+      }
+    }
+  }
+}</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-antfeed">Copy</button>
+            </div>
+            <div class="command">
+              <pre id="prompt-antfeed"><code>Use AntFeed MCP to look up "Surplus Value Router".
+Verify seller 0xc50DE6922b00677c93007c01924586dE887ced7b,
+inspect opus-4.7 pricing, and ask me before create_session.</code></pre>
+              <button class="copy-button" type="button" data-copy-target="prompt-antfeed">Copy</button>
+            </div>
+            <p class="notice"><code>create_session</code> can move buyer funds. Keep host confirmation enabled and review the provider, service, and deposit before approving it.</p>
+          </div>
         </div>
       </section>
 
@@ -651,9 +688,10 @@ custom_providers:
       <section id="support">
         <div class="shell">
           <h2>Beta and support</h2>
-          <p class="section-copy">Report connection problems or request beta onboarding through GitHub. Real external usage only; self-trading and artificial volume are not accepted.</p>
+          <p class="section-copy">Need help getting a real workload connected today? Open the short onboarding form before or after installing a buyer. A buyer hash is optional until your buyer exists. Real external usage only; self-trading and artificial volume are not accepted.</p>
           <div class="actions">
-            <a class="action" href="https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=beta.yml">Join the beta</a>
+            <a class="action" href="https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=beta.yml">Get onboarding help</a>
+            <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md">24-hour Beta guide</a>
             <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/issues/1">Beta overview</a>
             <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml">Report an issue</a>
             <a class="action secondary" href="https://antseed.com/docs/">AntSeed docs</a>
@@ -692,13 +730,22 @@ custom_providers:
       });
 
       const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+      function selectTab(tab) {
+        tabs.forEach((item) => {
+          const selected = item === tab;
+          item.setAttribute("aria-selected", String(selected));
+          document.getElementById(item.getAttribute("aria-controls")).hidden = !selected;
+        });
+      }
+
       tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          tabs.forEach((item) => {
-            const selected = item === tab;
-            item.setAttribute("aria-selected", String(selected));
-            document.getElementById(item.getAttribute("aria-controls")).hidden = !selected;
-          });
+        tab.addEventListener("click", () => selectTab(tab));
+      });
+
+      document.querySelectorAll("[data-select-tab]").forEach((link) => {
+        link.addEventListener("click", () => {
+          const tab = document.getElementById(link.dataset.selectTab);
+          if (tab) selectTab(tab);
         });
       });
 
