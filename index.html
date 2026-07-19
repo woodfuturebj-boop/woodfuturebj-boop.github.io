@@ -654,13 +654,13 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
               <div class="model-selector" role="group" aria-label="Starter model">
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.4">gpt-5.4</button>
                 <button class="model-option" type="button" aria-pressed="true" data-starter-model="gpt-5.5">gpt-5.5</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.6-sol-pro">gpt-5.6-sol-pro</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="glm-5.2">glm-5.2</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="kimi-k3">kimi-k3</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.8">claude-opus-4.8</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.6">claude-opus-4.6</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-sonnet-5">claude-sonnet-5</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gemini-3.1-pro-preview">gemini-3.1-pro-preview</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-fable-5">claude-fable-5</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="minimax-m2.7">minimax-m2.7</button>
               </div>
               <button class="route-link-button" type="button" id="copy-route-link" aria-live="polite">Copy route link</button>
             </div>
@@ -890,10 +890,20 @@ https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload</code></pre>
           output: "$0.063",
           summary: "has strong recent demand and a controlled 21% raw-cost adoption price that currently ranks first among exact offers",
         },
+        "gpt-5.6-sol-pro": {
+          input: "$0.25",
+          output: "$1.5",
+          summary: "has strong recent reasoning demand and a 50% raw-cost adoption price that currently ranks first among indexed exact offers",
+        },
         "glm-5.2": {
           input: "$0.015",
           output: "$0.015",
           summary: "has strong recent multilingual demand and a deliberately subsidized published price",
+        },
+        "kimi-k3": {
+          input: "$0.6965",
+          output: "$3.4825",
+          summary: "has meaningful recent agent demand and a controlled adoption price that currently ranks first among indexed exact offers",
         },
         "claude-opus-4.8": {
           input: "$0.3",
@@ -910,20 +920,10 @@ https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload</code></pre>
           output: "$0.9227445",
           summary: "has strong recent coding demand and a controlled adoption price that currently ranks first among exact offers",
         },
-        "gemini-3.1-pro-preview": {
-          input: "$0.1",
-          output: "$0.6",
-          summary: "has substantial recent demand and a low published first-workload price",
-        },
         "claude-fable-5": {
           input: "$0.896607",
           output: "$4.483032",
           summary: "has meaningful recent demand and a low published first-workload price",
-        },
-        "minimax-m2.7": {
-          input: "$0.000900002",
-          output: "$0.003600007",
-          summary: "is the lowest-cost featured route in the current published catalog",
         },
       };
 
