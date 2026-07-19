@@ -7,7 +7,7 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Seller wallet: 0xc50DE6922b00677c93007c01924586dE887ced7b
 - Settlement: Base mainnet USDC
 - AntStation download: https://github.com/AntSeed/antseed/releases/latest
-- AntStation Discover search: opus-4.7 first; alternatives gpt-5.6-sol-pro, kimi-k3, or Surplus Value Router | GPT/GLM/Claude
+- AntStation Discover search: opus-4.7, claude-opus-4.7, or claude-opus-4-7 first; all three exact service names use the same high-demand upstream route
 - AntStation path: open Discover, select this provider and a service, then start a real chat; the selection pins both provider and service
 - Live catalog: antseed network peer c50de6922b00677c93007c01924586de887ced7b
 - Public monitor snapshot: https://woodfuturebj-boop.github.io/provider-status.json
@@ -15,6 +15,11 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Primary adoption route: c50de6922b00677c93007c01924586de887ced7b@opus-4.7
 - Public opus-4.7 route: https://woodfuturebj-boop.github.io/routes/opus-4.7/
 - Published opus-4.7 snapshot: $0.3061375 input / $1.5306875 output per 1M tokens
+- Rank-one canonical alias: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.7
+- Public canonical alias route: https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/
+- Published claude-opus-4.7 snapshot: $0.1940598 input / $0.970299 output per 1M tokens
+- Rank-one compatibility alias: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-7
+- Public compatibility alias route: https://woodfuturebj-boop.github.io/routes/claude-opus-4-7/
 - Demand evidence: https://x.com/AntSeedAI/status/2078868465276874967
 - High-demand general route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.4
 - Public gpt-5.4 route: https://woodfuturebj-boop.github.io/?model=gpt-5.4#first-workload
