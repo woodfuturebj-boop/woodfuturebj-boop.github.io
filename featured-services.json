@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T10:58:09Z",
+  "updatedAt": "2026-07-19T12:00:22Z",
   "pricingUnit": "USD per 1M tokens",
   "services": [
     {
@@ -44,6 +44,20 @@
       "output": 0.015,
       "protocol": "OpenAI Chat Completions",
       "focus": "Efficient multilingual reasoning"
+    },
+    {
+      "id": "gemini-3.1-pro-preview",
+      "input": 0.1,
+      "output": 0.6,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Rank-one Gemini reasoning experiment"
+    },
+    {
+      "id": "claude-fable-5",
+      "input": 0.896607,
+      "output": 4.483032,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Rank-one long-form and coding route"
     }
   ]
 }

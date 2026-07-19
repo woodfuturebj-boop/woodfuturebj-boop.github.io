@@ -612,6 +612,8 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
                 <button class="model-option" type="button" aria-pressed="true" data-starter-model="gpt-5.4">gpt-5.4</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="glm-5.2">glm-5.2</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.8">claude-opus-4.8</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gemini-3.1-pro-preview">gemini-3.1-pro-preview</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-fable-5">claude-fable-5</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="minimax-m2.7">minimax-m2.7</button>
               </div>
               <button class="route-link-button" type="button" id="copy-route-link" aria-live="polite">Copy route link</button>
@@ -732,7 +734,7 @@ custom_providers:
             <div class="command">
               <pre id="prompt-antfeed"><code>Use AntFeed MCP to look up "Surplus Value Router".
 Verify seller 0xc50DE6922b00677c93007c01924586dE887ced7b,
-inspect gpt-5.4, glm-5.2, claude-opus-4.8, and minimax-m2.7 pricing,
+inspect gpt-5.4, glm-5.2, gemini-3.1-pro-preview, and claude-fable-5 pricing,
 then ask me before create_session.</code></pre>
               <button class="copy-button" type="button" data-copy-target="prompt-antfeed">Copy</button>
             </div>
@@ -744,7 +746,7 @@ then ask me before create_session.</code></pre>
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Six services are highlighted for beta onboarding. Choose <code>gpt-5.4</code>, <code>glm-5.2</code>, or <code>claude-opus-4.8</code> for an active high-demand pricing experiment, or <code>minimax-m2.7</code> for the lowest published first-workload price.</p>
+          <p class="section-copy">Eight services are highlighted for beta onboarding. Choose <code>gpt-5.4</code>, <code>glm-5.2</code>, <code>gemini-3.1-pro-preview</code>, <code>claude-fable-5</code>, or <code>claude-opus-4.8</code> for an active rank-one pricing experiment, or <code>minimax-m2.7</code> for the lowest published first-workload price.</p>
           <div class="table-wrap">
             <table>
               <thead>
@@ -822,6 +824,16 @@ then ask me before create_session.</code></pre>
           input: "$0.3",
           output: "$1.5",
           summary: "has more than 16,000 recent requests and is published at 50% of the current raw-cost snapshot, where the computed exact-price rank is 1",
+        },
+        "gemini-3.1-pro-preview": {
+          input: "$0.1",
+          output: "$0.6",
+          summary: "has more than 4,700 recent requests and moved from exact-price rank 2 to rank 1 at 50% of the current raw-cost snapshot",
+        },
+        "claude-fable-5": {
+          input: "$0.896607",
+          output: "$4.483032",
+          summary: "has more than 2,900 recent requests and moved from exact-price rank 2 to rank 1 at 50% of the current raw-cost snapshot",
         },
         "minimax-m2.7": {
           input: "$0.000900002",
