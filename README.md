@@ -23,19 +23,19 @@ antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'
 ```
 
-Run one real workload through the high-demand `gpt-5.4` route without changing
+Run one real workload through the 24-hour `gpt-5.5` adoption route without changing
 your saved connection:
 
 ```bash
 curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.4","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.5","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
 ```
 
 The live page also provides copy-ready selectors for `glm-5.2`,
 `gpt-5.5`, `claude-opus-4.8`, `claude-opus-4.6`, `claude-sonnet-5`, `gemini-3.1-pro-preview`, `claude-fable-5`, and the
-lowest-cost featured route, `minimax-m2.7`. All six
-use the one-request `peer@model` prefix and do not replace the buyer's saved
+lowest-cost featured route, `minimax-m2.7`. All routes use the one-request
+`peer@model` prefix and do not replace the buyer's saved
 connection.
 
 Model-specific public links preselect the matching route and keep the workload
@@ -75,7 +75,9 @@ antseed network peer c50de6922b00677c93007c01924586de887ced7b
 This seller is indexed by AntFeed under wallet
 `0xc50DE6922b00677c93007c01924586dE887ced7b`. MCP-compatible agents can install
 `@antfeed/mcp`, look up `Surplus Value Router`, inspect pricing, and connect a
-local AntSeed buyer after explicit user confirmation.
+local AntSeed buyer after explicit user confirmation. AntFeed refreshes its
+provider directory hourly, so compare newly published launch prices with the
+signed live catalog before approving a session.
 
 See the [24-hour external buyer guide](https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md).
 

@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Find Surplus Value Router in AntStation Discover or explicitly pin it from the AntSeed CLI, then run a low-cost OpenAI-compatible workload with Base USDC settlement.">
+    <meta name="description" content="Pin Surplus Value Router on AntSeed and run a real gpt-5.5 workload at a published launch snapshot of $0.0105 input and $0.063 output per 1M tokens.">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Surplus Value Router | AntSeed Provider">
-    <meta property="og:description" content="Find this verified provider in AntStation Discover or pin it from the CLI, then choose a low-cost first workload.">
+    <meta property="og:description" content="24-hour adoption pricing for explicitly pinned gpt-5.5 and other high-demand AntSeed routes.">
     <meta property="og:url" content="https://woodfuturebj-boop.github.io/">
     <meta property="og:image" content="https://woodfuturebj-boop.github.io/assets/antseed-provider-card.png">
     <meta property="og:image:width" content="1200">
@@ -15,7 +15,7 @@
     <meta property="og:image:type" content="image/png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Surplus Value Router | AntSeed Provider">
-    <meta name="twitter:description" content="AntStation Discover and explicit peer routing for verified OpenAI-compatible AntSeed services.">
+    <meta name="twitter:description" content="Pin this verified AntSeed peer and run gpt-5.5 at a published $0.0105 / $0.063 per 1M-token launch snapshot.">
     <meta name="twitter:image" content="https://woodfuturebj-boop.github.io/assets/antseed-provider-card.png">
     <link rel="canonical" href="https://woodfuturebj-boop.github.io/">
     <link rel="icon" href="assets/antseed-mark.svg" type="image/svg+xml">
@@ -154,6 +154,27 @@
         margin-bottom: 24px;
         color: var(--muted);
         font-size: 18px;
+      }
+
+      .launch-offer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        max-width: 820px;
+        margin: 0 0 24px;
+        padding: 13px 0;
+        border-top: 1px solid #a8d8bb;
+        border-bottom: 1px solid #a8d8bb;
+        color: #075d36;
+      }
+
+      .launch-offer strong { font-size: 16px; }
+
+      .launch-offer span {
+        color: var(--muted);
+        font-size: 13px;
+        text-align: right;
       }
 
       .hero-actions { margin-bottom: 24px; }
@@ -498,6 +519,8 @@
         .status-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
         .steps, .trust-grid { grid-template-columns: 1fr; }
         .model-picker { align-items: flex-start; flex-direction: column; gap: 7px; }
+        .launch-offer { align-items: flex-start; flex-direction: column; gap: 4px; }
+        .launch-offer span { text-align: left; }
         section { padding: 40px 0; }
       }
 
@@ -537,9 +560,13 @@
     <main id="top">
       <div class="intro">
         <div class="shell">
-          <p class="eyebrow">Verified AntSeed provider</p>
+          <p class="eyebrow">24-hour adoption sprint · through 20 Jul 18:23 CST</p>
           <h1>Surplus Value Router</h1>
-          <p class="lede">OpenAI-compatible services with explicit peer routing, response authentication, and copy-ready first workloads for high-demand and lowest-cost models.</p>
+          <p class="lede">Explicitly pin this verified AntSeed peer, then run a real OpenAI-compatible workload through a deliberately subsidized high-demand route.</p>
+          <div class="launch-offer">
+            <strong>gpt-5.5 launch snapshot: $0.0105 input / $0.063 output per 1M tokens</strong>
+            <span>Signed live catalog controls · Base USDC settlement</span>
+          </div>
           <div class="actions hero-actions">
             <a class="action" href="#integrations" data-select-tab="tab-antstation">Find in AntStation</a>
             <a class="action" href="#first-workload">Run the starter workload</a>
@@ -610,12 +637,12 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
           </div>
           <div class="first-call" id="first-workload">
             <h3>Step 04: Choose a real first workload</h3>
-            <p id="starter-summary"><code id="starter-model-name">gpt-5.4</code> <span id="starter-summary-text">has strong recent demand and a deliberately subsidized published price. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.</span></p>
+            <p id="starter-summary"><code id="starter-model-name">gpt-5.5</code> <span id="starter-summary-text">has strong recent demand and a controlled 21% raw-cost adoption price that currently ranks first among exact offers. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.</span></p>
             <div class="model-picker">
               <span class="model-picker-label">Starter model</span>
               <div class="model-selector" role="group" aria-label="Starter model">
-                <button class="model-option" type="button" aria-pressed="true" data-starter-model="gpt-5.4">gpt-5.4</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.5">gpt-5.5</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.4">gpt-5.4</button>
+                <button class="model-option" type="button" aria-pressed="true" data-starter-model="gpt-5.5">gpt-5.5</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="glm-5.2">glm-5.2</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.8">claude-opus-4.8</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.6">claude-opus-4.6</button>
@@ -629,10 +656,10 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
             <div class="command">
               <pre id="cmd-first-call"><code>curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.4","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.5","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
               <button class="copy-button" type="button" data-copy-target="cmd-first-call">Copy</button>
             </div>
-            <p class="notice" id="starter-price">Published snapshot: $0.00625 input / $0.0375 output per 1M tokens. Inspect the signed live catalog before use; never send artificial traffic just to test the route.</p>
+            <p class="notice" id="starter-price">Published snapshot: $0.0105 input / $0.063 output per 1M tokens. Inspect the signed live catalog before use; never send artificial traffic just to test the route.</p>
           </div>
         </div>
       </section>
@@ -667,7 +694,7 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
             <div class="command">
               <pre id="code-cli"><code>curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.4","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.5","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-cli">Copy</button>
             </div>
           </div>
@@ -753,11 +780,11 @@ custom_providers:
             <div class="command">
               <pre id="prompt-antfeed"><code>Use AntFeed MCP to look up "Surplus Value Router".
 Verify seller 0xc50DE6922b00677c93007c01924586dE887ced7b,
-inspect gpt-5.4, glm-5.2, gemini-3.1-pro-preview, and claude-fable-5 pricing,
+inspect gpt-5.5, claude-sonnet-5, claude-opus-4.6, and glm-5.2 pricing,
 then ask me before create_session.</code></pre>
               <button class="copy-button" type="button" data-copy-target="prompt-antfeed">Copy</button>
             </div>
-            <p class="notice"><code>create_session</code> can move buyer funds. Keep host confirmation enabled and review the provider, service, and deposit before approving it.</p>
+            <p class="notice">AntFeed refreshes its provider directory hourly, so a newly published launch price can briefly appear stale. Compare it with this page and the signed live catalog before approving <code>create_session</code>, which can move buyer funds.</p>
           </div>
         </div>
       </section>
@@ -910,7 +937,7 @@ then ask me before create_session.</code></pre>
       async function copyRouteLink() {
         const button = document.getElementById("copy-route-link");
         const active = document.querySelector('[data-starter-model][aria-pressed="true"]');
-        const model = active?.dataset.starterModel || "gpt-5.4";
+        const model = active?.dataset.starterModel || "gpt-5.5";
         const url = button.dataset.routeUrl || starterRouteUrl(model).toString();
         const original = button.textContent;
         try {
@@ -963,9 +990,9 @@ then ask me before create_session.</code></pre>
       if (requestedStarterModel && STARTER_MODELS[requestedStarterModel]) {
         selectStarterModel(requestedStarterModel, false);
       } else if (requestedStarterModel) {
-        selectStarterModel("gpt-5.4");
+        selectStarterModel("gpt-5.5");
       } else {
-        selectStarterModel("gpt-5.4", false);
+        selectStarterModel("gpt-5.5", false);
       }
 
       const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
