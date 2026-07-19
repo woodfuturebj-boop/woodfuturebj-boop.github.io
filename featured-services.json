@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T16:43:00Z",
+  "updatedAt": "2026-07-19T18:02:00Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
     "label": "AntSeed Top models by users",
@@ -16,11 +16,11 @@
       "focus": "Rank-one high-demand coding route"
     },
     {
-      "id": "opus-4.7",
-      "input": 0.3061375,
-      "output": 1.5306875,
+      "id": "claude-opus-4.7",
+      "input": 0.1940598,
+      "output": 0.970299,
       "protocol": "OpenAI Chat Completions",
-      "focus": "Premium coding and reasoning"
+      "focus": "Lower-priced alias for high-demand Opus 4.7"
     },
     {
       "id": "gpt-5.5",
