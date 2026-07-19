@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T16:22:00Z",
+  "updatedAt": "2026-07-19T16:43:00Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
     "label": "AntSeed Top models by users",
@@ -17,8 +17,8 @@
     },
     {
       "id": "opus-4.7",
-      "input": 1.1755523511,
-      "output": 5.8777617555,
+      "input": 0.3061375,
+      "output": 1.5306875,
       "protocol": "OpenAI Chat Completions",
       "focus": "Premium coding and reasoning"
     },
@@ -66,8 +66,8 @@
     },
     {
       "id": "kimi-k3",
-      "input": 0.432825,
-      "output": 2.164125,
+      "input": 0.3675465,
+      "output": 1.837734,
       "protocol": "OpenAI Chat Completions",
       "focus": "Rank-one agent and coding route"
     },
