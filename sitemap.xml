@@ -12,4 +12,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://woodfuturebj-boop.github.io/provider-status.json</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

@@ -592,11 +592,11 @@
           <div class="status-strip" aria-live="polite">
             <div class="status-item">
               <span class="status-label">Network status</span>
-              <span class="status-value status-warn" id="network-status">Checking index</span>
+              <span class="status-value status-warn" id="network-status">Checking status</span>
             </div>
             <div class="status-item">
               <span class="status-label">Advertised services</span>
-              <span class="status-value" id="service-count">47</span>
+              <span class="status-value" id="service-count">49</span>
             </div>
             <div class="status-item">
               <span class="status-label">Settlement</span>
@@ -1042,23 +1042,40 @@ https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload</code></pre>
       async function loadStatus() {
         const networkStatus = document.getElementById("network-status");
         const proofStatus = document.getElementById("proof-status");
+        let providerStatusLoaded = false;
         try {
-          const response = await fetch("https://network.antseed.com/stats", { cache: "no-store" });
-          if (!response.ok) throw new Error("network stats unavailable");
-          const stats = await response.json();
-          const peer = (stats.peers || []).find((item) => item.peerId === PEER_ID);
-          networkStatus.textContent = peer ? "Indexed" : "DHT propagation";
-          networkStatus.className = `status-value ${peer ? "status-good" : "status-warn"}`;
-          if (peer) {
-            const serviceCount = (peer.providers || []).reduce(
-              (count, provider) => count + (provider.services || []).length,
-              0,
-            );
-            document.getElementById("service-count").textContent = String(serviceCount || 47);
-          }
+          const response = await fetch("provider-status.json", { cache: "no-store" });
+          if (!response.ok) throw new Error("provider status unavailable");
+          const status = await response.json();
+          const peerMatches = String(status.peerId || "").toLowerCase() === PEER_ID;
+          const healthy = peerMatches && status.publicMetadataOk && status.freshDhtFound && status.okForOrganicCalls;
+          networkStatus.textContent = healthy ? "Public + DHT" : "Review status";
+          networkStatus.className = `status-value ${healthy ? "status-good" : "status-warn"}`;
+          networkStatus.title = status.generatedAt ? `Monitor snapshot: ${status.generatedAt}` : "Monitor snapshot";
+          document.getElementById("service-count").textContent = String(status.serviceCount || 49);
+          providerStatusLoaded = true;
         } catch {
-          networkStatus.textContent = "Check via CLI";
-          networkStatus.className = "status-value status-warn";
+          try {
+            const response = await fetch("https://network.antseed.com/stats", { cache: "no-store" });
+            if (!response.ok) throw new Error("network stats unavailable");
+            const stats = await response.json();
+            const peer = (stats.peers || []).find((item) => item.peerId === PEER_ID);
+            networkStatus.textContent = peer ? "Indexed sample" : "Check via CLI";
+            networkStatus.className = `status-value ${peer ? "status-good" : "status-warn"}`;
+          } catch {
+            networkStatus.textContent = "Check via CLI";
+            networkStatus.className = "status-value status-warn";
+          }
+        }
+
+        if (providerStatusLoaded) {
+          fetch("https://network.antseed.com/stats", { cache: "no-store" })
+            .then((response) => response.ok ? response.json() : null)
+            .then((stats) => {
+              const indexed = (stats?.peers || []).some((item) => item.peerId === PEER_ID);
+              networkStatus.dataset.directoryIndexed = String(indexed);
+            })
+            .catch(() => {});
         }
 
         try {

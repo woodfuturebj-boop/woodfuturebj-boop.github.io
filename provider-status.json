@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-19T14:58:01Z",
+  "peerId": "c50de6922b00677c93007c01924586de887ced7b",
+  "publicAddress": "192.220.28.51:6882",
+  "serviceCount": 49,
+  "maxConcurrency": 10,
+  "publicMetadataOk": true,
+  "freshDhtFound": true,
+  "expectedEndpointSeen": true,
+  "okForOrganicCalls": true,
+  "consecutiveOrganicVisibilityFailures": 0,
+  "status": "public+dht",
+  "source": "Bounded local monitor snapshot; inspect the signed live peer catalog before paid use."
+}
