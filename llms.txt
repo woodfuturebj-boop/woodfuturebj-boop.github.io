@@ -7,7 +7,7 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Seller wallet: 0xc50DE6922b00677c93007c01924586dE887ced7b
 - Settlement: Base mainnet USDC
 - AntStation download: https://github.com/AntSeed/antseed/releases/latest
-- AntStation Discover search: gpt-5.6-sol-pro, kimi-k3, or Surplus Value Router | GPT/GLM/Claude
+- AntStation Discover search: opus-4.7 first; alternatives gpt-5.6-sol-pro, kimi-k3, or Surplus Value Router | GPT/GLM/Claude
 - AntStation path: open Discover, select this provider and a service, then start a real chat; the selection pins both provider and service
 - Live catalog: antseed network peer c50de6922b00677c93007c01924586de887ced7b
 - Public monitor snapshot: https://woodfuturebj-boop.github.io/provider-status.json
