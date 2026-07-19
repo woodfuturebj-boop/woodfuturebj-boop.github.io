@@ -940,6 +940,12 @@ https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload</code></pre>
         return url;
       }
 
+      function shareRouteUrl(model) {
+        const socialRoutes = new Set(["gpt-5.5", "gpt-5.6-sol-pro", "kimi-k3"]);
+        if (socialRoutes.has(model)) return new URL(`routes/${model}/`, window.location.origin);
+        return starterRouteUrl(model);
+      }
+
       function shareText(model, route) {
         return `AntSeed route: ${model} at a published ${route.input} input / ${route.output} output per 1M tokens. Verified peer, Base USDC, explicit pin. Real workloads only.`;
       }
@@ -969,10 +975,11 @@ https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload</code></pre>
         linkButton.dataset.routeUrl = routeUrl.toString();
         linkButton.title = routeUrl.toString();
         const message = shareText(model, route);
-        document.querySelector("#share-copy code").textContent = `${message}\n\n${routeUrl}`;
+        const socialRouteUrl = shareRouteUrl(model);
+        document.querySelector("#share-copy code").textContent = `${message}\n\n${socialRouteUrl}`;
         const shareUrl = new URL("https://twitter.com/intent/tweet");
         shareUrl.searchParams.set("text", message);
-        shareUrl.searchParams.set("url", routeUrl.toString());
+        shareUrl.searchParams.set("url", socialRouteUrl.toString());
         document.getElementById("share-x").href = shareUrl.toString();
         if (updateUrl) history.replaceState(null, "", routeUrl);
       }
