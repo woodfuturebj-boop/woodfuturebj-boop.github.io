@@ -901,8 +901,8 @@ https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload</code></pre>
           summary: "has strong recent multilingual demand and a deliberately subsidized published price",
         },
         "kimi-k3": {
-          input: "$0.6965",
-          output: "$3.4825",
+          input: "$0.432825",
+          output: "$2.164125",
           summary: "has meaningful recent agent demand and a controlled adoption price that currently ranks first among indexed exact offers",
         },
         "claude-opus-4.8": {
@@ -944,8 +944,17 @@ https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload</code></pre>
         const route = STARTER_MODELS[model];
         if (!route) return;
         const routeUrl = starterRouteUrl(model);
+        let activeButton = null;
         document.querySelectorAll("[data-starter-model]").forEach((button) => {
-          button.setAttribute("aria-pressed", String(button.dataset.starterModel === model));
+          const selected = button.dataset.starterModel === model;
+          button.setAttribute("aria-pressed", String(selected));
+          if (selected) activeButton = button;
+        });
+        window.requestAnimationFrame(() => {
+          const selector = activeButton?.parentElement;
+          if (!selector) return;
+          const left = activeButton.offsetLeft - (selector.clientWidth - activeButton.offsetWidth) / 2;
+          selector.scrollTo({ left: Math.max(0, left), behavior: "auto" });
         });
         document.querySelector("#cmd-first-call code").textContent = starterCommand(model);
         document.querySelector("#code-cli code").textContent = starterCommand(model);

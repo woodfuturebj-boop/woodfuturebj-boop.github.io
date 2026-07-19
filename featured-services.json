@@ -61,8 +61,8 @@
     },
     {
       "id": "kimi-k3",
-      "input": 0.6965,
-      "output": 3.4825,
+      "input": 0.432825,
+      "output": 2.164125,
       "protocol": "OpenAI Chat Completions",
       "focus": "Rank-one agent and coding route"
     },
