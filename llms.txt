@@ -34,6 +34,9 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Current-demand Sol route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol
 - Public gpt-5.6-sol route: https://woodfuturebj-boop.github.io/routes/gpt-5.6-sol/
 - Published gpt-5.6-sol snapshot: $0.10 input / $0.60 output per 1M tokens
+- Current-demand Gemini Flash route: c50de6922b00677c93007c01924586de887ced7b@gemini-3-5-flash
+- Public gemini-3-5-flash route: https://woodfuturebj-boop.github.io/routes/gemini-3-5-flash/
+- Published gemini-3-5-flash snapshot: $0.104013 input / $0.624073 output per 1M tokens
 - High-demand multilingual route: c50de6922b00677c93007c01924586de887ced7b@glm-5.2
 - Public glm-5.2 route: https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload
 - High-demand agent route: c50de6922b00677c93007c01924586de887ced7b@kimi-k3
