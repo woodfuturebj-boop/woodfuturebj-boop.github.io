@@ -12,6 +12,10 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Live catalog: antseed network peer c50de6922b00677c93007c01924586de887ced7b
 - Public monitor snapshot: https://woodfuturebj-boop.github.io/provider-status.json
 - Session pin: antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
+- Primary adoption route: c50de6922b00677c93007c01924586de887ced7b@opus-4.7
+- Public opus-4.7 route: https://woodfuturebj-boop.github.io/routes/opus-4.7/
+- Published opus-4.7 snapshot: $0.3061375 input / $1.5306875 output per 1M tokens
+- Demand evidence: https://x.com/AntSeedAI/status/2078868465276874967
 - High-demand general route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.4
 - Public gpt-5.4 route: https://woodfuturebj-boop.github.io/?model=gpt-5.4#first-workload
 - Subsidized rank-one gpt-5.5 route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.5
@@ -34,6 +38,6 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - External buyer guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml
 
-Featured services: gpt-5.6-sol-pro, kimi-k3, opus-4.7, claude-opus-4.8, claude-opus-4.6, claude-sonnet-5, gpt-5.4, gpt-5.5, glm-5.2, claude-fable-5.
+Featured services by current demand evidence: claude-opus-4.6, opus-4.7, gpt-5.5, claude-opus-4.8, glm-5.2, gpt-5.6-sol-pro, claude-sonnet-5, gpt-5.4, kimi-k3, claude-fable-5.
 
 Do not use self-trading, artificial traffic, or test volume. Never submit secrets.
