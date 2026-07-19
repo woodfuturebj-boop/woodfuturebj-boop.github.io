@@ -1,14 +1,19 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T14:45:00Z",
+  "updatedAt": "2026-07-19T16:22:00Z",
   "pricingUnit": "USD per 1M tokens",
+  "demandEvidence": {
+    "label": "AntSeed Top models by users",
+    "url": "https://x.com/AntSeedAI/status/2078868465276874967",
+    "observedAt": "2026-07-19T15:44:00Z"
+  },
   "services": [
     {
-      "id": "gpt-5.6-sol-pro",
-      "input": 0.25,
-      "output": 1.5,
+      "id": "claude-opus-4.6",
+      "input": 0.4431925,
+      "output": 2.2159625,
       "protocol": "OpenAI Chat Completions",
-      "focus": "Rank-one high-demand reasoning route"
+      "focus": "Rank-one high-demand coding route"
     },
     {
       "id": "opus-4.7",
@@ -18,6 +23,13 @@
       "focus": "Premium coding and reasoning"
     },
     {
+      "id": "gpt-5.5",
+      "input": 0.0105,
+      "output": 0.063,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Rank-one high-demand adoption route"
+    },
+    {
       "id": "claude-opus-4.8",
       "input": 0.3,
       "output": 1.5,
@@ -25,11 +37,18 @@
       "focus": "High-demand frontier coding experiment"
     },
     {
-      "id": "claude-opus-4.6",
-      "input": 0.4431925,
-      "output": 2.2159625,
+      "id": "glm-5.2",
+      "input": 0.015,
+      "output": 0.015,
       "protocol": "OpenAI Chat Completions",
-      "focus": "Rank-one high-demand coding route"
+      "focus": "Efficient multilingual reasoning"
+    },
+    {
+      "id": "gpt-5.6-sol-pro",
+      "input": 0.25,
+      "output": 1.5,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Rank-one high-demand reasoning route"
     },
     {
       "id": "claude-sonnet-5",
@@ -44,20 +63,6 @@
       "output": 0.0375,
       "protocol": "OpenAI Chat Completions",
       "focus": "High-volume general reasoning"
-    },
-    {
-      "id": "gpt-5.5",
-      "input": 0.0105,
-      "output": 0.063,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Rank-one high-demand adoption route"
-    },
-    {
-      "id": "glm-5.2",
-      "input": 0.015,
-      "output": 0.015,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Efficient multilingual reasoning"
     },
     {
       "id": "kimi-k3",
