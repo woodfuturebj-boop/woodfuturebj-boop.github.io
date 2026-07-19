@@ -9,9 +9,13 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Live catalog: antseed network peer c50de6922b00677c93007c01924586de887ced7b
 - Session pin: antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 - High-demand general route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.4
+- Public gpt-5.4 route: https://woodfuturebj-boop.github.io/?model=gpt-5.4#first-workload
 - High-demand multilingual route: c50de6922b00677c93007c01924586de887ced7b@glm-5.2
+- Public glm-5.2 route: https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload
 - High-demand frontier coding route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.8
+- Public claude-opus-4.8 route: https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload
 - Low-cost first workload: c50de6922b00677c93007c01924586de887ced7b@minimax-m2.7
+- Public minimax-m2.7 route: https://woodfuturebj-boop.github.io/?model=minimax-m2.7#first-workload
 - AntFeed MCP: npx -y @antfeed/mcp
 - External buyer guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml

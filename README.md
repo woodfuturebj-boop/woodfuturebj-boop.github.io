@@ -30,6 +30,14 @@ The live page also provides copy-ready selectors for `glm-5.2`,
 use the one-request `peer@model` prefix and do not replace the buyer's saved
 connection.
 
+Model-specific public links preselect the matching route and keep the workload
+command ready to copy:
+
+- [`gpt-5.4`](https://woodfuturebj-boop.github.io/?model=gpt-5.4#first-workload)
+- [`glm-5.2`](https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload)
+- [`claude-opus-4.8`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload)
+- [`minimax-m2.7`](https://woodfuturebj-boop.github.io/?model=minimax-m2.7#first-workload)
+
 ## Featured services
 
 - `gpt-5.4` - active high-demand rank-one pricing experiment

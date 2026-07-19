@@ -305,6 +305,26 @@
         outline-offset: -2px;
       }
 
+      .route-link-button {
+        flex: 0 0 auto;
+        min-height: 38px;
+        padding: 0 13px;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        background: var(--paper);
+        color: var(--blue);
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 720;
+      }
+
+      .route-link-button:hover { background: var(--blue-soft); }
+
+      .route-link-button:focus-visible {
+        outline: 2px solid var(--blue);
+        outline-offset: 2px;
+      }
+
       .command {
         position: relative;
         margin: 12px 0 0;
@@ -594,6 +614,7 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.8">claude-opus-4.8</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="minimax-m2.7">minimax-m2.7</button>
               </div>
+              <button class="route-link-button" type="button" id="copy-route-link" aria-live="polite">Copy route link</button>
             </div>
             <div class="command">
               <pre id="cmd-first-call"><code>curl http://127.0.0.1:8377/v1/chat/completions \
@@ -815,9 +836,17 @@ then ask me before create_session.</code></pre>
   -d '{"model":"${PEER_ID}@${model}","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'`;
       }
 
-      function selectStarterModel(model) {
+      function starterRouteUrl(model) {
+        const url = new URL(window.location.href);
+        url.searchParams.set("model", model);
+        url.hash = "first-workload";
+        return url;
+      }
+
+      function selectStarterModel(model, updateUrl = true) {
         const route = STARTER_MODELS[model];
         if (!route) return;
+        const routeUrl = starterRouteUrl(model);
         document.querySelectorAll("[data-starter-model]").forEach((button) => {
           button.setAttribute("aria-pressed", String(button.dataset.starterModel === model));
         });
@@ -826,6 +855,34 @@ then ask me before create_session.</code></pre>
         document.getElementById("starter-model-name").textContent = model;
         document.getElementById("starter-summary-text").textContent = `${route.summary}. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.`;
         document.getElementById("starter-price").textContent = `Published snapshot: ${route.input} input / ${route.output} output per 1M tokens. Inspect the signed live catalog before use; never send artificial traffic just to test the route.`;
+        const linkButton = document.getElementById("copy-route-link");
+        linkButton.dataset.routeUrl = routeUrl.toString();
+        linkButton.title = routeUrl.toString();
+        if (updateUrl) history.replaceState(null, "", routeUrl);
+      }
+
+      async function copyRouteLink() {
+        const button = document.getElementById("copy-route-link");
+        const active = document.querySelector('[data-starter-model][aria-pressed="true"]');
+        const model = active?.dataset.starterModel || "gpt-5.4";
+        const url = button.dataset.routeUrl || starterRouteUrl(model).toString();
+        const original = button.textContent;
+        try {
+          await navigator.clipboard.writeText(url);
+          button.textContent = "Link copied";
+        } catch {
+          const field = document.createElement("textarea");
+          field.value = url;
+          field.setAttribute("readonly", "");
+          field.style.position = "fixed";
+          field.style.opacity = "0";
+          document.body.appendChild(field);
+          field.select();
+          const copied = document.execCommand("copy");
+          field.remove();
+          button.textContent = copied ? "Link copied" : "Copy unavailable";
+        }
+        window.setTimeout(() => { button.textContent = original; }, 1400);
       }
 
       async function copyText(button) {
@@ -853,6 +910,17 @@ then ask me before create_session.</code></pre>
       document.querySelectorAll("[data-starter-model]").forEach((button) => {
         button.addEventListener("click", () => selectStarterModel(button.dataset.starterModel));
       });
+
+      document.getElementById("copy-route-link").addEventListener("click", copyRouteLink);
+
+      const requestedStarterModel = new URLSearchParams(window.location.search).get("model");
+      if (requestedStarterModel && STARTER_MODELS[requestedStarterModel]) {
+        selectStarterModel(requestedStarterModel, false);
+      } else if (requestedStarterModel) {
+        selectStarterModel("gpt-5.4");
+      } else {
+        selectStarterModel("gpt-5.4", false);
+      }
 
       const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
       function selectTab(tab) {
