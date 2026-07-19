@@ -28,6 +28,12 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Public gpt-5.5 route: https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload
 - High-demand reasoning route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol-pro
 - Public gpt-5.6-sol-pro route: https://woodfuturebj-boop.github.io/?model=gpt-5.6-sol-pro#first-workload
+- Current-demand Terra route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-terra
+- Public gpt-5.6-terra route: https://woodfuturebj-boop.github.io/routes/gpt-5.6-terra/
+- Published gpt-5.6-terra snapshot: $0.05 input / $0.30 output per 1M tokens
+- Current-demand Sol route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol
+- Public gpt-5.6-sol route: https://woodfuturebj-boop.github.io/routes/gpt-5.6-sol/
+- Published gpt-5.6-sol snapshot: $0.10 input / $0.60 output per 1M tokens
 - High-demand multilingual route: c50de6922b00677c93007c01924586de887ced7b@glm-5.2
 - Public glm-5.2 route: https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload
 - High-demand agent route: c50de6922b00677c93007c01924586de887ced7b@kimi-k3

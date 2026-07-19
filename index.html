@@ -689,6 +689,8 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4-7">claude-opus-4-7</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.5">gpt-5.5</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.6-sol-pro">gpt-5.6-sol-pro</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.6-terra">gpt-5.6-terra</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.6-sol">gpt-5.6-sol</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.4">gpt-5.4</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="glm-5.2">glm-5.2</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="kimi-k3">kimi-k3</button>
@@ -954,6 +956,16 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
           output: "$1.5",
           summary: "has strong recent reasoning demand and a controlled adoption price that currently ranks first among indexed exact offers",
         },
+        "gpt-5.6-terra": {
+          input: "$0.05",
+          output: "$0.3",
+          summary: "has current network demand and a 50% raw-cost adoption price that ranks first among exact offers",
+        },
+        "gpt-5.6-sol": {
+          input: "$0.1",
+          output: "$0.6",
+          summary: "has current network demand and a 50% raw-cost adoption price that ranks first among exact offers",
+        },
         "glm-5.2": {
           input: "$0.02",
           output: "$0.005",
@@ -1000,7 +1012,7 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
       }
 
       function shareRouteUrl(model) {
-        const socialRoutes = new Set(["opus-4.7", "claude-opus-4.7", "claude-opus-4-7", "gpt-5.5", "gpt-5.6-sol-pro", "kimi-k3"]);
+        const socialRoutes = new Set(["opus-4.7", "claude-opus-4.7", "claude-opus-4-7", "gpt-5.5", "gpt-5.6-sol-pro", "gpt-5.6-terra", "gpt-5.6-sol", "kimi-k3"]);
         if (socialRoutes.has(model)) return new URL(`routes/${model}/`, window.location.origin);
         return starterRouteUrl(model);
       }
