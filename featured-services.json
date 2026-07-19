@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T13:22:16Z",
+  "updatedAt": "2026-07-19T13:40:05Z",
   "pricingUnit": "USD per 1M tokens",
   "services": [
     {
@@ -23,6 +23,13 @@
       "output": 1.5,
       "protocol": "OpenAI Chat Completions",
       "focus": "High-demand frontier coding experiment"
+    },
+    {
+      "id": "claude-opus-4.6",
+      "input": 0.4431925,
+      "output": 2.2159625,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Rank-one high-demand coding route"
     },
     {
       "id": "claude-sonnet-5",

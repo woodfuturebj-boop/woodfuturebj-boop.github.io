@@ -33,7 +33,7 @@ curl http://127.0.0.1:8377/v1/chat/completions \
 ```
 
 The live page also provides copy-ready selectors for `glm-5.2`,
-`gpt-5.5`, `claude-opus-4.8`, `claude-sonnet-5`, `gemini-3.1-pro-preview`, `claude-fable-5`, and the
+`gpt-5.5`, `claude-opus-4.8`, `claude-opus-4.6`, `claude-sonnet-5`, `gemini-3.1-pro-preview`, `claude-fable-5`, and the
 lowest-cost featured route, `minimax-m2.7`. All six
 use the one-request `peer@model` prefix and do not replace the buyer's saved
 connection.
@@ -45,6 +45,7 @@ command ready to copy:
 - [`gpt-5.5`](https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload)
 - [`glm-5.2`](https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload)
 - [`claude-opus-4.8`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload)
+- [`claude-opus-4.6`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.6#first-workload)
 - [`claude-sonnet-5`](https://woodfuturebj-boop.github.io/?model=claude-sonnet-5#first-workload)
 - [`gemini-3.1-pro-preview`](https://woodfuturebj-boop.github.io/?model=gemini-3.1-pro-preview#first-workload)
 - [`claude-fable-5`](https://woodfuturebj-boop.github.io/?model=claude-fable-5#first-workload)
@@ -56,6 +57,7 @@ command ready to copy:
 - `gpt-5.5` - active high-demand rank-one adoption route
 - `glm-5.2` - active multilingual rank-one pricing experiment
 - `claude-opus-4.8` - active high-demand frontier coding pricing experiment
+- `claude-opus-4.6` - active high-demand rank-one coding route
 - `gemini-3.1-pro-preview` - active rank-one Gemini reasoning experiment
 - `claude-fable-5` - active rank-one long-form and coding experiment
 - `minimax-m2.7` - lowest-cost first workload
