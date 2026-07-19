@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T09:00:39Z",
+  "updatedAt": "2026-07-19T09:41:24Z",
   "pricingUnit": "USD per 1M tokens",
   "services": [
     {
@@ -33,15 +33,15 @@
     },
     {
       "id": "gpt-5.4",
-      "input": 0.12500025,
-      "output": 0.7500015,
+      "input": 0.00625,
+      "output": 0.0375,
       "protocol": "OpenAI Chat Completions",
       "focus": "High-volume general reasoning"
     },
     {
       "id": "glm-5.2",
-      "input": 0.30352560705,
-      "output": 0.958501917,
+      "input": 0.015,
+      "output": 0.015,
       "protocol": "OpenAI Chat Completions",
       "focus": "Efficient multilingual reasoning"
     }
