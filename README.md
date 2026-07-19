@@ -16,23 +16,27 @@ antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'
 ```
 
-Run one real workload through the lowest-cost featured route without changing
+Run one real workload through the high-demand `gpt-5.4` route without changing
 your saved connection:
 
 ```bash
 curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@minimax-m2.7","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.4","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
 ```
+
+The live page also provides copy-ready selectors for `glm-5.2` and the
+lowest-cost featured route, `minimax-m2.7`. All three use the one-request
+`peer@model` prefix and do not replace the buyer's saved connection.
 
 ## Featured services
 
-- `minimax-m2.7` - low-cost first workload
+- `gpt-5.4` - active high-demand rank-one pricing experiment
+- `glm-5.2` - active multilingual rank-one pricing experiment
+- `minimax-m2.7` - lowest-cost first workload
 - `opus-4.7`
 - `opus-4.8`
 - `claude-sonnet-5`
-- `gpt-5.4`
-- `glm-5.2`
 
 The provider still advertises its broader catalog. Inspect signed live metadata and current pricing with:
 

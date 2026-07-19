@@ -7,7 +7,7 @@
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Surplus Value Router | AntSeed Provider">
-    <meta property="og:description" content="Install, fund, and explicitly pin a verified AntSeed provider, with a low-cost first workload on minimax-m2.7.">
+    <meta property="og:description" content="Install, fund, and explicitly pin a verified AntSeed provider, then choose a high-demand or lowest-cost first workload.">
     <meta property="og:url" content="https://woodfuturebj-boop.github.io/">
     <meta property="og:image" content="https://woodfuturebj-boop.github.io/assets/antseed-mark.svg">
     <meta name="twitter:card" content="summary">
@@ -256,6 +256,55 @@
       .first-call h3 { margin-bottom: 7px; font-size: 20px; }
       .first-call p { max-width: 720px; color: var(--muted); }
 
+      .model-picker {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 18px 0 4px;
+      }
+
+      .model-picker-label {
+        flex: 0 0 auto;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 720;
+      }
+
+      .model-selector {
+        display: inline-flex;
+        max-width: 100%;
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--paper);
+      }
+
+      .model-option {
+        flex: 0 0 auto;
+        min-height: 38px;
+        padding: 0 13px;
+        border: 0;
+        border-right: 1px solid var(--line);
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 12px;
+        font-weight: 720;
+      }
+
+      .model-option:last-child { border-right: 0; }
+
+      .model-option[aria-pressed="true"] {
+        background: var(--green-soft);
+        color: var(--green);
+      }
+
+      .model-option:focus-visible {
+        outline: 2px solid var(--blue);
+        outline-offset: -2px;
+      }
+
       .command {
         position: relative;
         margin: 12px 0 0;
@@ -424,6 +473,7 @@
         .status-item:nth-child(2) { border-right: 0; }
         .status-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
         .steps, .trust-grid { grid-template-columns: 1fr; }
+        .model-picker { align-items: flex-start; flex-direction: column; gap: 7px; }
         section { padding: 40px 0; }
       }
 
@@ -465,7 +515,7 @@
         <div class="shell">
           <p class="eyebrow">Verified AntSeed provider</p>
           <h1>Surplus Value Router</h1>
-          <p class="lede">OpenAI-compatible services with explicit peer routing, response authentication, and a low-cost first workload on <code>minimax-m2.7</code>.</p>
+          <p class="lede">OpenAI-compatible services with explicit peer routing, response authentication, and copy-ready first workloads for high-demand and lowest-cost models.</p>
           <div class="actions hero-actions">
             <a class="action" href="#first-workload">Run the starter workload</a>
             <a class="action secondary" href="#connect">Connect this peer</a>
@@ -534,15 +584,23 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
             </div>
           </div>
           <div class="first-call" id="first-workload">
-            <h3>Step 04: Start with the low-cost route</h3>
-            <p><code>minimax-m2.7</code> is published near 50% of its current raw cost and was exact-price rank 1 at the 2026-07-19 09:00 UTC snapshot. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.</p>
+            <h3>Step 04: Choose a real first workload</h3>
+            <p id="starter-summary"><code id="starter-model-name">gpt-5.4</code> <span id="starter-summary-text">has strong recent demand and was exact-price rank 1 after the 2026-07-19 09:45 UTC pricing update. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.</span></p>
+            <div class="model-picker">
+              <span class="model-picker-label">Starter model</span>
+              <div class="model-selector" role="group" aria-label="Starter model">
+                <button class="model-option" type="button" aria-pressed="true" data-starter-model="gpt-5.4">gpt-5.4</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="glm-5.2">glm-5.2</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="minimax-m2.7">minimax-m2.7</button>
+              </div>
+            </div>
             <div class="command">
               <pre id="cmd-first-call"><code>curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@minimax-m2.7","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.4","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
               <button class="copy-button" type="button" data-copy-target="cmd-first-call">Copy</button>
             </div>
-            <p class="notice">Published snapshot: $0.000900002 input / $0.003600007 output per 1M tokens. Inspect the signed live catalog before use; never send artificial traffic just to test the route.</p>
+            <p class="notice" id="starter-price">Published snapshot: $0.00625 input / $0.0375 output per 1M tokens. Inspect the signed live catalog before use; never send artificial traffic just to test the route.</p>
           </div>
         </div>
       </section>
@@ -566,7 +624,7 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
             <div class="command">
               <pre id="code-cli"><code>curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@minimax-m2.7","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.4","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-cli">Copy</button>
             </div>
           </div>
@@ -652,7 +710,8 @@ custom_providers:
             <div class="command">
               <pre id="prompt-antfeed"><code>Use AntFeed MCP to look up "Surplus Value Router".
 Verify seller 0xc50DE6922b00677c93007c01924586dE887ced7b,
-inspect minimax-m2.7 pricing, and ask me before create_session.</code></pre>
+inspect gpt-5.4, glm-5.2, and minimax-m2.7 pricing,
+then ask me before create_session.</code></pre>
               <button class="copy-button" type="button" data-copy-target="prompt-antfeed">Copy</button>
             </div>
             <p class="notice"><code>create_session</code> can move buyer funds. Keep host confirmation enabled and review the provider, service, and deposit before approving it.</p>
@@ -663,7 +722,7 @@ inspect minimax-m2.7 pricing, and ask me before create_session.</code></pre>
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Six services are highlighted for beta onboarding. Start with <code>minimax-m2.7</code> for the lowest published first-workload price; the broader catalog remains advertised for compatibility.</p>
+          <p class="section-copy">Six services are highlighted for beta onboarding. Choose <code>gpt-5.4</code> or <code>glm-5.2</code> for the active high-demand pricing experiment, or <code>minimax-m2.7</code> for the lowest published first-workload price.</p>
           <div class="table-wrap">
             <table>
               <thead>
@@ -726,6 +785,42 @@ inspect minimax-m2.7 pricing, and ask me before create_session.</code></pre>
 
     <script>
       const PEER_ID = "c50de6922b00677c93007c01924586de887ced7b";
+      const STARTER_MODELS = {
+        "gpt-5.4": {
+          input: "$0.00625",
+          output: "$0.0375",
+          summary: "has strong recent demand and was exact-price rank 1 after the 2026-07-19 09:45 UTC pricing update",
+        },
+        "glm-5.2": {
+          input: "$0.015",
+          output: "$0.015",
+          summary: "has strong recent multilingual demand and was exact-price rank 1 after the 2026-07-19 09:45 UTC pricing update",
+        },
+        "minimax-m2.7": {
+          input: "$0.000900002",
+          output: "$0.003600007",
+          summary: "is the lowest-cost featured route and was exact-price rank 1 at the 2026-07-19 09:00 UTC snapshot",
+        },
+      };
+
+      function starterCommand(model) {
+        return `curl http://127.0.0.1:8377/v1/chat/completions \\
+  -H "content-type: application/json" \\
+  -d '{"model":"${PEER_ID}@${model}","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'`;
+      }
+
+      function selectStarterModel(model) {
+        const route = STARTER_MODELS[model];
+        if (!route) return;
+        document.querySelectorAll("[data-starter-model]").forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.starterModel === model));
+        });
+        document.querySelector("#cmd-first-call code").textContent = starterCommand(model);
+        document.querySelector("#code-cli code").textContent = starterCommand(model);
+        document.getElementById("starter-model-name").textContent = model;
+        document.getElementById("starter-summary-text").textContent = `${route.summary}. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.`;
+        document.getElementById("starter-price").textContent = `Published snapshot: ${route.input} input / ${route.output} output per 1M tokens. Inspect the signed live catalog before use; never send artificial traffic just to test the route.`;
+      }
 
       async function copyText(button) {
         const target = document.getElementById(button.dataset.copyTarget);
@@ -747,6 +842,10 @@ inspect minimax-m2.7 pricing, and ask me before create_session.</code></pre>
 
       document.querySelectorAll("[data-copy-target]").forEach((button) => {
         button.addEventListener("click", () => copyText(button));
+      });
+
+      document.querySelectorAll("[data-starter-model]").forEach((button) => {
+        button.addEventListener("click", () => selectStarterModel(button.dataset.starterModel));
       });
 
       const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
@@ -805,7 +904,7 @@ inspect minimax-m2.7 pricing, and ask me before create_session.</code></pre>
       }
 
       function formatPrice(value) {
-        return `$${Number(value).toLocaleString("en-US", { maximumFractionDigits: 6 })}`;
+        return `$${Number(value).toLocaleString("en-US", { maximumFractionDigits: 9 })}`;
       }
 
       async function loadServices() {
