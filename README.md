@@ -25,17 +25,18 @@ curl http://127.0.0.1:8377/v1/chat/completions \
   -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.4","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
 ```
 
-The live page also provides copy-ready selectors for `glm-5.2` and the
-lowest-cost featured route, `minimax-m2.7`. All three use the one-request
-`peer@model` prefix and do not replace the buyer's saved connection.
+The live page also provides copy-ready selectors for `glm-5.2`,
+`claude-opus-4.8`, and the lowest-cost featured route, `minimax-m2.7`. All four
+use the one-request `peer@model` prefix and do not replace the buyer's saved
+connection.
 
 ## Featured services
 
 - `gpt-5.4` - active high-demand rank-one pricing experiment
 - `glm-5.2` - active multilingual rank-one pricing experiment
+- `claude-opus-4.8` - active high-demand frontier coding pricing experiment
 - `minimax-m2.7` - lowest-cost first workload
 - `opus-4.7`
-- `opus-4.8`
 - `claude-sonnet-5`
 
 The provider still advertises its broader catalog. Inspect signed live metadata and current pricing with:

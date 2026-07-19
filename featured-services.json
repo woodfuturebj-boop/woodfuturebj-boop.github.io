@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T09:41:24Z",
+  "updatedAt": "2026-07-19T10:58:09Z",
   "pricingUnit": "USD per 1M tokens",
   "services": [
     {
@@ -18,11 +18,11 @@
       "focus": "Premium coding and reasoning"
     },
     {
-      "id": "opus-4.8",
-      "input": 1.61881823763,
-      "output": 8.09409118815,
+      "id": "claude-opus-4.8",
+      "input": 0.3,
+      "output": 1.5,
       "protocol": "OpenAI Chat Completions",
-      "focus": "Frontier coding and complex tasks"
+      "focus": "High-demand frontier coding experiment"
     },
     {
       "id": "claude-sonnet-5",

@@ -591,6 +591,7 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
               <div class="model-selector" role="group" aria-label="Starter model">
                 <button class="model-option" type="button" aria-pressed="true" data-starter-model="gpt-5.4">gpt-5.4</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="glm-5.2">glm-5.2</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.8">claude-opus-4.8</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="minimax-m2.7">minimax-m2.7</button>
               </div>
             </div>
@@ -634,7 +635,7 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
             <p>The AntSeed wrapper configures the local proxy and placeholder API key.</p>
             <div class="command">
               <pre id="code-claude"><code>npm install -g @anthropic-ai/claude-code
-antseed claude --model opus-4.7</code></pre>
+antseed claude --model claude-opus-4.8</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-claude">Copy</button>
             </div>
           </div>
@@ -647,7 +648,7 @@ antseed claude --model opus-4.7</code></pre>
 pi install git:github.com/AntSeed/pi-antseed
 pi
 # In Pi: /reload
-# Then:  /model antseed/opus-4.7</code></pre>
+# Then:  /model antseed/claude-opus-4.8</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-pi">Copy</button>
             </div>
           </div>
@@ -659,7 +660,7 @@ pi
               <pre id="code-langchain"><code>from langchain_openai import ChatOpenAI
 
 llm = ChatOpenAI(
-    model="opus-4.7",
+    model="claude-opus-4.8",
     base_url="http://127.0.0.1:8377/v1",
     api_key="antseed",
 )
@@ -673,7 +674,7 @@ print(llm.invoke("Hello").content)</code></pre>
             <p>Register AntSeed as a custom Chat Completions provider.</p>
             <div class="command">
               <pre id="code-hermes"><code>model:
-  default: opus-4.7
+  default: claude-opus-4.8
   provider: antseed
 custom_providers:
   - name: antseed
@@ -682,7 +683,7 @@ custom_providers:
     api_mode: chat_completions
     models:
       - opus-4.7
-      - opus-4.8
+      - claude-opus-4.8
       - claude-sonnet-5</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-hermes">Copy</button>
             </div>
@@ -710,7 +711,7 @@ custom_providers:
             <div class="command">
               <pre id="prompt-antfeed"><code>Use AntFeed MCP to look up "Surplus Value Router".
 Verify seller 0xc50DE6922b00677c93007c01924586dE887ced7b,
-inspect gpt-5.4, glm-5.2, and minimax-m2.7 pricing,
+inspect gpt-5.4, glm-5.2, claude-opus-4.8, and minimax-m2.7 pricing,
 then ask me before create_session.</code></pre>
               <button class="copy-button" type="button" data-copy-target="prompt-antfeed">Copy</button>
             </div>
@@ -722,7 +723,7 @@ then ask me before create_session.</code></pre>
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Six services are highlighted for beta onboarding. Choose <code>gpt-5.4</code> or <code>glm-5.2</code> for the active high-demand pricing experiment, or <code>minimax-m2.7</code> for the lowest published first-workload price.</p>
+          <p class="section-copy">Six services are highlighted for beta onboarding. Choose <code>gpt-5.4</code>, <code>glm-5.2</code>, or <code>claude-opus-4.8</code> for an active high-demand pricing experiment, or <code>minimax-m2.7</code> for the lowest published first-workload price.</p>
           <div class="table-wrap">
             <table>
               <thead>
@@ -795,6 +796,11 @@ then ask me before create_session.</code></pre>
           input: "$0.015",
           output: "$0.015",
           summary: "has strong recent multilingual demand and was exact-price rank 1 after the 2026-07-19 09:45 UTC pricing update",
+        },
+        "claude-opus-4.8": {
+          input: "$0.3",
+          output: "$1.5",
+          summary: "has more than 16,000 recent requests and is published at 50% of the current raw-cost snapshot, where the computed exact-price rank is 1",
         },
         "minimax-m2.7": {
           input: "$0.000900002",
