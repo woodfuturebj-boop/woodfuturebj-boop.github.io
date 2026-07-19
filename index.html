@@ -860,7 +860,7 @@ then ask me before create_session.</code></pre>
             <h3>Share the real-workload route</h3>
             <p>Invite an independent AntSeed buyer without rewards, test traffic, or artificial volume.</p>
             <div class="actions">
-              <a class="action" href="https://twitter.com/intent/tweet?text=24-hour%20AntSeed%20adoption%20sprint%3A%20gpt-5.5%20at%20a%20published%20%240.0105%20input%20%2F%20%240.063%20output%20per%201M%20tokens.%20Verified%20peer%2C%20Base%20USDC%2C%20explicit%20pin.%20Real%20workloads%20only.&amp;url=https%3A%2F%2Fwoodfuturebj-boop.github.io%2F%3Fmodel%3Dgpt-5.5%23first-workload" target="_blank" rel="noopener">Share on X</a>
+              <a class="action" id="share-x" href="https://twitter.com/intent/tweet" target="_blank" rel="noopener">Share on X</a>
             </div>
             <div class="command">
               <pre id="share-copy"><code>24-hour AntSeed adoption sprint: gpt-5.5 at a published $0.0105 input / $0.063 output per 1M tokens. Verified peer, Base USDC, explicit pin. Real workloads only.
@@ -940,6 +940,10 @@ https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload</code></pre>
         return url;
       }
 
+      function shareText(model, route) {
+        return `AntSeed route: ${model} at a published ${route.input} input / ${route.output} output per 1M tokens. Verified peer, Base USDC, explicit pin. Real workloads only.`;
+      }
+
       function selectStarterModel(model, updateUrl = true) {
         const route = STARTER_MODELS[model];
         if (!route) return;
@@ -964,6 +968,12 @@ https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload</code></pre>
         const linkButton = document.getElementById("copy-route-link");
         linkButton.dataset.routeUrl = routeUrl.toString();
         linkButton.title = routeUrl.toString();
+        const message = shareText(model, route);
+        document.querySelector("#share-copy code").textContent = `${message}\n\n${routeUrl}`;
+        const shareUrl = new URL("https://twitter.com/intent/tweet");
+        shareUrl.searchParams.set("text", message);
+        shareUrl.searchParams.set("url", routeUrl.toString());
+        document.getElementById("share-x").href = shareUrl.toString();
         if (updateUrl) history.replaceState(null, "", routeUrl);
       }
 
