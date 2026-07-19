@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Connect an AntSeed buyer to Surplus Value Router and run a low-cost, explicitly pinned OpenAI-compatible workload with Base USDC settlement.">
+    <meta name="description" content="Find Surplus Value Router in AntStation Discover or explicitly pin it from the AntSeed CLI, then run a low-cost OpenAI-compatible workload with Base USDC settlement.">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Surplus Value Router | AntSeed Provider">
-    <meta property="og:description" content="Install, fund, and explicitly pin a verified AntSeed provider, then choose a high-demand or lowest-cost first workload.">
+    <meta property="og:description" content="Find this verified provider in AntStation Discover or pin it from the CLI, then choose a low-cost first workload.">
     <meta property="og:url" content="https://woodfuturebj-boop.github.io/">
     <meta property="og:image" content="https://woodfuturebj-boop.github.io/assets/antseed-provider-card.png">
     <meta property="og:image:width" content="1200">
@@ -15,7 +15,7 @@
     <meta property="og:image:type" content="image/png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Surplus Value Router | AntSeed Provider">
-    <meta name="twitter:description" content="Explicit peer routing for verified OpenAI-compatible AntSeed services.">
+    <meta name="twitter:description" content="AntStation Discover and explicit peer routing for verified OpenAI-compatible AntSeed services.">
     <meta name="twitter:image" content="https://woodfuturebj-boop.github.io/assets/antseed-provider-card.png">
     <link rel="canonical" href="https://woodfuturebj-boop.github.io/">
     <link rel="icon" href="assets/antseed-mark.svg" type="image/svg+xml">
@@ -541,6 +541,7 @@
           <h1>Surplus Value Router</h1>
           <p class="lede">OpenAI-compatible services with explicit peer routing, response authentication, and copy-ready first workloads for high-demand and lowest-cost models.</p>
           <div class="actions hero-actions">
+            <a class="action" href="#integrations" data-select-tab="tab-antstation">Find in AntStation</a>
             <a class="action" href="#first-workload">Run the starter workload</a>
             <a class="action secondary" href="#connect">Connect this peer</a>
             <a class="action secondary" href="#integrations" data-select-tab="tab-antfeed">Use AntFeed MCP</a>
@@ -574,7 +575,7 @@
       <section id="connect">
         <div class="shell">
           <h2>Connect in three steps</h2>
-          <p class="section-copy">AntSeed buyer auto-selection is disabled in the default flow. Install the buyer, fund it, then pin this peer explicitly.</p>
+          <p class="section-copy">Use AntStation Discover for the shortest visual path, or install the CLI buyer, fund it, then pin this peer explicitly.</p>
           <div class="steps">
             <div class="step">
               <span class="step-number">Step 01</span>
@@ -609,7 +610,7 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
           </div>
           <div class="first-call" id="first-workload">
             <h3>Step 04: Choose a real first workload</h3>
-            <p id="starter-summary"><code id="starter-model-name">gpt-5.4</code> <span id="starter-summary-text">has strong recent demand and was exact-price rank 1 after the 2026-07-19 09:45 UTC pricing update. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.</span></p>
+            <p id="starter-summary"><code id="starter-model-name">gpt-5.4</code> <span id="starter-summary-text">has strong recent demand and a deliberately subsidized published price. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.</span></p>
             <div class="model-picker">
               <span class="model-picker-label">Starter model</span>
               <div class="model-selector" role="group" aria-label="Starter model">
@@ -636,9 +637,10 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
       <section id="integrations">
         <div class="shell">
           <h2>Use your existing tools</h2>
-          <p class="section-copy">All examples assume the buyer proxy is running and this peer is pinned.</p>
+          <p class="section-copy">AntStation can discover and pin the provider visually. The remaining examples assume the buyer proxy is running and this peer is pinned.</p>
           <div class="tabs" role="tablist" aria-label="Integration examples">
-            <button class="tab-button" type="button" role="tab" id="tab-cli" aria-controls="panel-cli" aria-selected="true">OpenAI client</button>
+            <button class="tab-button" type="button" role="tab" id="tab-antstation" aria-controls="panel-antstation" aria-selected="true">AntStation</button>
+            <button class="tab-button" type="button" role="tab" id="tab-cli" aria-controls="panel-cli" aria-selected="false">OpenAI client</button>
             <button class="tab-button" type="button" role="tab" id="tab-claude" aria-controls="panel-claude" aria-selected="false">Claude Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-pi" aria-controls="panel-pi" aria-selected="false">Pi</button>
             <button class="tab-button" type="button" role="tab" id="tab-langchain" aria-controls="panel-langchain" aria-selected="false">LangChain</button>
@@ -646,7 +648,17 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
             <button class="tab-button" type="button" role="tab" id="tab-antfeed" aria-controls="panel-antfeed" aria-selected="false">AntFeed MCP</button>
           </div>
 
-          <div class="tab-panel" role="tabpanel" id="panel-cli" aria-labelledby="tab-cli">
+          <div class="tab-panel" role="tabpanel" id="panel-antstation" aria-labelledby="tab-antstation">
+            <h3>AntStation Discover</h3>
+            <p>Install the official desktop app, fund the buyer with Base USDC, then open <strong>Discover</strong>. Search for <code>Surplus Value Router</code> or choose the peer with that name, select the service you need, and start a real chat. Selecting the Discover result pins both this provider and the service.</p>
+            <div class="actions">
+              <a class="action" href="https://github.com/AntSeed/antseed/releases/latest" target="_blank" rel="noopener">Download AntStation</a>
+              <a class="action secondary" href="https://antseed.com/docs/" target="_blank" rel="noopener">Open official docs</a>
+            </div>
+            <p class="notice">Provider name: <code>Surplus Value Router | GPT/GLM/Claude</code>. Peer: <code>c50de6922b00677c93007c01924586de887ced7b</code>. Verify the provider and live price before funding a session.</p>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-cli" aria-labelledby="tab-cli" hidden>
             <h3>OpenAI-compatible clients</h3>
             <p>Point any OpenAI Chat Completions client at the local proxy.</p>
             <div class="command">
@@ -750,7 +762,7 @@ then ask me before create_session.</code></pre>
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Eight services are highlighted for beta onboarding. Choose <code>gpt-5.4</code>, <code>glm-5.2</code>, <code>gemini-3.1-pro-preview</code>, <code>claude-fable-5</code>, or <code>claude-opus-4.8</code> for an active rank-one pricing experiment, or <code>minimax-m2.7</code> for the lowest published first-workload price.</p>
+          <p class="section-copy">Eight services are highlighted for beta onboarding. The featured routes use deliberately subsidized published prices to reduce first-use cost. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
           <div class="table-wrap">
             <table>
               <thead>
@@ -817,32 +829,32 @@ then ask me before create_session.</code></pre>
         "gpt-5.4": {
           input: "$0.00625",
           output: "$0.0375",
-          summary: "has strong recent demand and was exact-price rank 1 after the 2026-07-19 09:45 UTC pricing update",
+          summary: "has strong recent demand and a deliberately subsidized published price",
         },
         "glm-5.2": {
           input: "$0.015",
           output: "$0.015",
-          summary: "has strong recent multilingual demand and was exact-price rank 1 after the 2026-07-19 09:45 UTC pricing update",
+          summary: "has strong recent multilingual demand and a deliberately subsidized published price",
         },
         "claude-opus-4.8": {
           input: "$0.3",
           output: "$1.5",
-          summary: "has more than 16,000 recent requests and is published at 50% of the current raw-cost snapshot, where the computed exact-price rank is 1",
+          summary: "has substantial recent demand and is published with a controlled adoption subsidy",
         },
         "gemini-3.1-pro-preview": {
           input: "$0.1",
           output: "$0.6",
-          summary: "has more than 4,700 recent requests and moved from exact-price rank 2 to rank 1 at 50% of the current raw-cost snapshot",
+          summary: "has substantial recent demand and a low published first-workload price",
         },
         "claude-fable-5": {
           input: "$0.896607",
           output: "$4.483032",
-          summary: "has more than 2,900 recent requests and moved from exact-price rank 2 to rank 1 at 50% of the current raw-cost snapshot",
+          summary: "has meaningful recent demand and a low published first-workload price",
         },
         "minimax-m2.7": {
           input: "$0.000900002",
           output: "$0.003600007",
-          summary: "is the lowest-cost featured route and was exact-price rank 1 at the 2026-07-19 09:00 UTC snapshot",
+          summary: "is the lowest-cost featured route in the current published catalog",
         },
       };
 
