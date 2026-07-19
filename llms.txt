@@ -6,6 +6,9 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Peer ID: c50de6922b00677c93007c01924586de887ced7b
 - Seller wallet: 0xc50DE6922b00677c93007c01924586dE887ced7b
 - Settlement: Base mainnet USDC
+- AntStation download: https://github.com/AntSeed/antseed/releases/latest
+- AntStation Discover search: Surplus Value Router | GPT/GLM/Claude
+- AntStation path: open Discover, select this provider and a service, then start a real chat; the selection pins both provider and service
 - Live catalog: antseed network peer c50de6922b00677c93007c01924586de887ced7b
 - Session pin: antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 - High-demand general route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.4

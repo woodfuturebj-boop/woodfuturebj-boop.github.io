@@ -6,7 +6,14 @@ Live site: https://woodfuturebj-boop.github.io/
 
 ## Connect
 
-AntSeed buyer auto-selection is disabled in the default flow. Start a buyer and pin this peer explicitly:
+The shortest visual path is the official [AntStation desktop app](https://github.com/AntSeed/antseed/releases/latest):
+
+1. Fund the buyer with Base USDC.
+2. Open **Discover** and search for `Surplus Value Router`.
+3. Choose `Surplus Value Router | GPT/GLM/Claude`, select a service, and start a real chat.
+
+Selecting a Discover result pins both the provider and service. For CLI buyers,
+start a buyer and pin this peer explicitly:
 
 ```bash
 npm install -g @antseed/cli
