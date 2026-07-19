@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Connect an AntSeed buyer to Surplus Value Router, a verified OpenAI-compatible provider settling in USDC on Base.">
+    <meta name="description" content="Connect an AntSeed buyer to Surplus Value Router and run a low-cost, explicitly pinned OpenAI-compatible workload with Base USDC settlement.">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Surplus Value Router | AntSeed Provider">
-    <meta property="og:description" content="Install, fund, and pin a verified AntSeed provider for OpenAI-compatible services with Base USDC settlement.">
+    <meta property="og:description" content="Install, fund, and explicitly pin a verified AntSeed provider, with a low-cost first workload on minimax-m2.7.">
     <meta property="og:url" content="https://woodfuturebj-boop.github.io/">
     <meta property="og:image" content="https://woodfuturebj-boop.github.io/assets/antseed-mark.svg">
     <meta name="twitter:card" content="summary">
@@ -465,11 +465,11 @@
         <div class="shell">
           <p class="eyebrow">Verified AntSeed provider</p>
           <h1>Surplus Value Router</h1>
-          <p class="lede">OpenAI-compatible services with explicit peer routing, response authentication, and direct USDC settlement on Base.</p>
+          <p class="lede">OpenAI-compatible services with explicit peer routing, response authentication, and a low-cost first workload on <code>minimax-m2.7</code>.</p>
           <div class="actions hero-actions">
-            <a class="action" href="#connect">Connect now</a>
+            <a class="action" href="#first-workload">Run the starter workload</a>
+            <a class="action secondary" href="#connect">Connect this peer</a>
             <a class="action secondary" href="#integrations" data-select-tab="tab-antfeed">Use AntFeed MCP</a>
-            <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=beta.yml">Get Beta help</a>
           </div>
           <div class="peer-line">
             <strong>Peer</strong>
@@ -533,15 +533,16 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
               </div>
             </div>
           </div>
-          <div class="first-call">
-            <h3>Step 04: Run a real workload</h3>
-            <p>Replace the message with a task you actually need completed. Do not create artificial traffic just to test the route.</p>
+          <div class="first-call" id="first-workload">
+            <h3>Step 04: Start with the low-cost route</h3>
+            <p><code>minimax-m2.7</code> is published near 50% of its current raw cost and was exact-price rank 1 at the 2026-07-19 09:00 UTC snapshot. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.</p>
             <div class="command">
               <pre id="cmd-first-call"><code>curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"opus-4.7","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@minimax-m2.7","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
               <button class="copy-button" type="button" data-copy-target="cmd-first-call">Copy</button>
             </div>
+            <p class="notice">Published snapshot: $0.000900002 input / $0.003600007 output per 1M tokens. Inspect the signed live catalog before use; never send artificial traffic just to test the route.</p>
           </div>
         </div>
       </section>
@@ -565,7 +566,7 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
             <div class="command">
               <pre id="code-cli"><code>curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"opus-4.7","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@minimax-m2.7","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-cli">Copy</button>
             </div>
           </div>
@@ -651,7 +652,7 @@ custom_providers:
             <div class="command">
               <pre id="prompt-antfeed"><code>Use AntFeed MCP to look up "Surplus Value Router".
 Verify seller 0xc50DE6922b00677c93007c01924586dE887ced7b,
-inspect opus-4.7 pricing, and ask me before create_session.</code></pre>
+inspect minimax-m2.7 pricing, and ask me before create_session.</code></pre>
               <button class="copy-button" type="button" data-copy-target="prompt-antfeed">Copy</button>
             </div>
             <p class="notice"><code>create_session</code> can move buyer funds. Keep host confirmation enabled and review the provider, service, and deposit before approving it.</p>
@@ -662,7 +663,7 @@ inspect opus-4.7 pricing, and ask me before create_session.</code></pre>
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Five services are highlighted for beta onboarding. The provider continues to advertise the broader catalog for compatibility.</p>
+          <p class="section-copy">Six services are highlighted for beta onboarding. Start with <code>minimax-m2.7</code> for the lowest published first-workload price; the broader catalog remains advertised for compatibility.</p>
           <div class="table-wrap">
             <table>
               <thead>

@@ -16,8 +16,18 @@ antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'
 ```
 
+Run one real workload through the lowest-cost featured route without changing
+your saved connection:
+
+```bash
+curl http://127.0.0.1:8377/v1/chat/completions \
+  -H "content-type: application/json" \
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@minimax-m2.7","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
+```
+
 ## Featured services
 
+- `minimax-m2.7` - low-cost first workload
 - `opus-4.7`
 - `opus-4.8`
 - `claude-sonnet-5`
