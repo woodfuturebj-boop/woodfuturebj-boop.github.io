@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T18:02:00Z",
+  "updatedAt": "2026-07-19T18:15:00Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
     "label": "AntSeed Top models by users",
@@ -38,8 +38,8 @@
     },
     {
       "id": "glm-5.2",
-      "input": 0.015,
-      "output": 0.015,
+      "input": 0.02,
+      "output": 0.005,
       "protocol": "OpenAI Chat Completions",
       "focus": "Efficient multilingual reasoning"
     },
