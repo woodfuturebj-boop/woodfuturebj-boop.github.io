@@ -13,10 +13,14 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Session pin: antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 - High-demand general route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.4
 - Public gpt-5.4 route: https://woodfuturebj-boop.github.io/?model=gpt-5.4#first-workload
+- Subsidized rank-one gpt-5.5 route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.5
+- Public gpt-5.5 route: https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload
 - High-demand multilingual route: c50de6922b00677c93007c01924586de887ced7b@glm-5.2
 - Public glm-5.2 route: https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload
 - High-demand frontier coding route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.8
 - Public claude-opus-4.8 route: https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload
+- Rank-one coding route: c50de6922b00677c93007c01924586de887ced7b@claude-sonnet-5
+- Public claude-sonnet-5 route: https://woodfuturebj-boop.github.io/?model=claude-sonnet-5#first-workload
 - Rank-one Gemini route: c50de6922b00677c93007c01924586de887ced7b@gemini-3.1-pro-preview
 - Public gemini-3.1-pro-preview route: https://woodfuturebj-boop.github.io/?model=gemini-3.1-pro-preview#first-workload
 - Rank-one Fable route: c50de6922b00677c93007c01924586de887ced7b@claude-fable-5
@@ -27,6 +31,6 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - External buyer guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml
 
-Featured services: minimax-m2.7, opus-4.7, claude-opus-4.8, claude-sonnet-5, gpt-5.4, glm-5.2, gemini-3.1-pro-preview, claude-fable-5.
+Featured services: minimax-m2.7, opus-4.7, claude-opus-4.8, claude-sonnet-5, gpt-5.4, gpt-5.5, glm-5.2, gemini-3.1-pro-preview, claude-fable-5.
 
 Do not use self-trading, artificial traffic, or test volume. Never submit secrets.

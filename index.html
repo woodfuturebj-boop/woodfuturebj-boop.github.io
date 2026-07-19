@@ -615,8 +615,10 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
               <span class="model-picker-label">Starter model</span>
               <div class="model-selector" role="group" aria-label="Starter model">
                 <button class="model-option" type="button" aria-pressed="true" data-starter-model="gpt-5.4">gpt-5.4</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.5">gpt-5.5</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="glm-5.2">glm-5.2</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.8">claude-opus-4.8</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-sonnet-5">claude-sonnet-5</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="gemini-3.1-pro-preview">gemini-3.1-pro-preview</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-fable-5">claude-fable-5</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="minimax-m2.7">minimax-m2.7</button>
@@ -762,7 +764,7 @@ then ask me before create_session.</code></pre>
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Eight services are highlighted for beta onboarding. The featured routes use deliberately subsidized published prices to reduce first-use cost. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
+          <p class="section-copy">Nine services are highlighted for beta onboarding. The featured routes use deliberately subsidized published prices to reduce first-use cost. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
           <div class="table-wrap">
             <table>
               <thead>
@@ -831,6 +833,11 @@ then ask me before create_session.</code></pre>
           output: "$0.0375",
           summary: "has strong recent demand and a deliberately subsidized published price",
         },
+        "gpt-5.5": {
+          input: "$0.0105",
+          output: "$0.063",
+          summary: "has strong recent demand and a controlled 21% raw-cost adoption price that currently ranks first among exact offers",
+        },
         "glm-5.2": {
           input: "$0.015",
           output: "$0.015",
@@ -840,6 +847,11 @@ then ask me before create_session.</code></pre>
           input: "$0.3",
           output: "$1.5",
           summary: "has substantial recent demand and is published with a controlled adoption subsidy",
+        },
+        "claude-sonnet-5": {
+          input: "$0.1845495",
+          output: "$0.9227445",
+          summary: "has strong recent coding demand and a controlled adoption price that currently ranks first among exact offers",
         },
         "gemini-3.1-pro-preview": {
           input: "$0.1",

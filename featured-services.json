@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T12:00:22Z",
+  "updatedAt": "2026-07-19T13:22:16Z",
   "pricingUnit": "USD per 1M tokens",
   "services": [
     {
@@ -26,10 +26,10 @@
     },
     {
       "id": "claude-sonnet-5",
-      "input": 0.5500011,
-      "output": 2.7500055,
+      "input": 0.1845495,
+      "output": 0.9227445,
       "protocol": "OpenAI Chat Completions",
-      "focus": "Balanced coding and agent workloads"
+      "focus": "Rank-one coding and agent adoption route"
     },
     {
       "id": "gpt-5.4",
@@ -37,6 +37,13 @@
       "output": 0.0375,
       "protocol": "OpenAI Chat Completions",
       "focus": "High-volume general reasoning"
+    },
+    {
+      "id": "gpt-5.5",
+      "input": 0.0105,
+      "output": 0.063,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Rank-one high-demand adoption route"
     },
     {
       "id": "glm-5.2",
