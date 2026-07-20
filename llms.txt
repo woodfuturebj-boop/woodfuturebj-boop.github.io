@@ -12,15 +12,16 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Live catalog: antseed network peer c50de6922b00677c93007c01924586de887ced7b
 - Public monitor snapshot: https://woodfuturebj-boop.github.io/provider-status.json
 - Session pin: antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
-- Primary lower-priced adoption route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.7
+- Primary canonical route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.7
 - Official demand-name route: c50de6922b00677c93007c01924586de887ced7b@opus-4.7
 - Public opus-4.7 route: https://woodfuturebj-boop.github.io/routes/opus-4.7/
 - Published opus-4.7 snapshot: $0.3061375 input / $1.5306875 output per 1M tokens
-- Rank-one canonical alias: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.7
+- Canonical alias: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.7
 - Public canonical alias route: https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/
-- Published claude-opus-4.7 snapshot: $0.1940598 input / $0.970299 output per 1M tokens
-- Rank-one compatibility alias: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-7
+- Published claude-opus-4.7 snapshot: $0.495 input / $2.475 output per 1M tokens
+- Compatibility alias: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-7
 - Public compatibility alias route: https://woodfuturebj-boop.github.io/routes/claude-opus-4-7/
+- Published claude-opus-4-7 snapshot: $0.495 input / $2.475 output per 1M tokens
 - Demand evidence: https://x.com/AntSeedAI/status/2078868465276874967
 - High-demand general route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.4
 - Public gpt-5.4 route: https://woodfuturebj-boop.github.io/?model=gpt-5.4#first-workload
