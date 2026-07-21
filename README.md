@@ -1,4 +1,4 @@
-# Surplus Value Router
+# NovaRoute AI
 
 Public AntSeed provider connection, verification, and beta onboarding site.
 
@@ -9,8 +9,8 @@ Live site: https://woodfuturebj-boop.github.io/
 The shortest visual path is the official [AntStation desktop app](https://github.com/AntSeed/antseed/releases/latest):
 
 1. Fund the buyer with Base USDC.
-2. Open **Discover** and search for `gpt-5.6-sol-pro`, `kimi-k3`, or `Surplus Value Router`.
-3. Choose `Surplus Value Router | GPT/GLM/Claude`, select a service, and start a real chat.
+2. Open **Discover** and search for `gpt-5.6-sol-pro`, `kimi-k3`, or `NovaRoute AI`.
+3. Choose `NovaRoute AI`, select a service, and start a real chat.
 
 Selecting a Discover result pins both the provider and service. For CLI buyers,
 start a buyer and pin this peer explicitly:
@@ -76,7 +76,7 @@ antseed network peer c50de6922b00677c93007c01924586de887ced7b
 
 This seller is indexed by AntFeed under wallet
 `0xc50DE6922b00677c93007c01924586dE887ced7b`. MCP-compatible agents can install
-`@antfeed/mcp`, look up `Surplus Value Router`, inspect pricing, and connect a
+`@antfeed/mcp`, look up `NovaRoute AI`, inspect pricing, and connect a
 local AntSeed buyer after explicit user confirmation. AntFeed refreshes its
 provider directory hourly, so compare newly published launch prices with the
 signed live catalog before approving a session.

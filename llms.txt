@@ -1,4 +1,4 @@
-# Surplus Value Router
+# NovaRoute AI
 
 Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 

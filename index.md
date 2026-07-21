@@ -1,4 +1,4 @@
-# Surplus Value Router
+# NovaRoute AI
 
 Verified AntSeed provider with explicit peer routing and Base USDC settlement.
 
