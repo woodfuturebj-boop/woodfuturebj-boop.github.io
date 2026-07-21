@@ -14,9 +14,15 @@
   </url>
   <url>
     <loc>https://woodfuturebj-boop.github.io/provider-status.json</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-21</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://woodfuturebj-boop.github.io/routes/opus-4.7/</loc>

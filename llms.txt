@@ -22,6 +22,9 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Compatibility alias: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-7
 - Public compatibility alias route: https://woodfuturebj-boop.github.io/routes/claude-opus-4-7/
 - Published claude-opus-4-7 snapshot: $0.495 input / $2.475 output per 1M tokens
+- Current-demand fast Opus route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-8-fast
+- Public claude-opus-4-8-fast route: https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/
+- Published claude-opus-4-8-fast snapshot: $1.50 input / $7.50 output per 1M tokens
 - Demand evidence: https://x.com/AntSeedAI/status/2078868465276874967
 - High-demand general route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.4
 - Public gpt-5.4 route: https://woodfuturebj-boop.github.io/?model=gpt-5.4#first-workload
@@ -44,6 +47,7 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Public kimi-k3 route: https://woodfuturebj-boop.github.io/?model=kimi-k3#first-workload
 - High-demand frontier coding route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.8
 - Public claude-opus-4.8 route: https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload
+- Published claude-opus-4.8 snapshot: $0.8613 input / $4.3065 output per 1M tokens
 - Rank-one Claude coding route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 - Public claude-opus-4.6 route: https://woodfuturebj-boop.github.io/?model=claude-opus-4.6#first-workload
 - Rank-one coding route: c50de6922b00677c93007c01924586de887ced7b@claude-sonnet-5
@@ -54,6 +58,6 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - External buyer guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml
 
-Featured services by current demand evidence: claude-opus-4.6, opus-4.7, gpt-5.5, claude-opus-4.8, glm-5.2, gpt-5.6-sol-pro, claude-sonnet-5, gpt-5.4, kimi-k3, claude-fable-5.
+Featured services by current demand evidence: claude-opus-4-8-fast, claude-opus-4.6, opus-4.7, gpt-5.5, claude-opus-4.8, glm-5.2, gpt-5.6-sol-pro, claude-sonnet-5, gpt-5.4, kimi-k3, claude-fable-5.
 
 Do not use self-trading, artificial traffic, or test volume. Never submit secrets.

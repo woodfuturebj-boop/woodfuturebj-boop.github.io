@@ -33,7 +33,7 @@ curl http://127.0.0.1:8377/v1/chat/completions \
 ```
 
 The live page also provides copy-ready selectors for `gpt-5.6-sol-pro`,
-`kimi-k3`, `glm-5.2`, `gpt-5.5`, `claude-opus-4.8`, `claude-opus-4.6`,
+`kimi-k3`, `glm-5.2`, `gpt-5.5`, `claude-opus-4-8-fast`, `claude-opus-4.8`, `claude-opus-4.6`,
 `claude-sonnet-5`, and `claude-fable-5`. All routes use the one-request
 `peer@model` prefix and do not replace the buyer's saved
 connection.
@@ -46,6 +46,7 @@ command ready to copy:
 - [`gpt-5.6-sol-pro`](https://woodfuturebj-boop.github.io/?model=gpt-5.6-sol-pro#first-workload)
 - [`glm-5.2`](https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload)
 - [`kimi-k3`](https://woodfuturebj-boop.github.io/?model=kimi-k3#first-workload)
+- [`claude-opus-4-8-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/) - current-demand rank-one route; published snapshot `$1.50` input / `$7.50` output per 1M tokens
 - [`claude-opus-4.8`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload)
 - [`claude-opus-4.6`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.6#first-workload)
 - [`claude-sonnet-5`](https://woodfuturebj-boop.github.io/?model=claude-sonnet-5#first-workload)
@@ -58,6 +59,7 @@ command ready to copy:
 - `gpt-5.6-sol-pro` - active high-demand rank-one reasoning route
 - `glm-5.2` - active multilingual rank-one pricing experiment
 - `kimi-k3` - active rank-one agent and coding route
+- `claude-opus-4-8-fast` - active current-demand rank-one fast Opus route
 - `claude-opus-4.8` - active high-demand frontier coding pricing experiment
 - `claude-opus-4.6` - active high-demand rank-one coding route
 - `claude-fable-5` - active rank-one long-form and coding experiment
