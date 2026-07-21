@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-21T08:23:34Z",
+  "generatedAt": "2026-07-21T10:10:14Z",
   "peerId": "c50de6922b00677c93007c01924586de887ced7b",
-  "publicAddress": "192.220.28.51:6882",
+  "publicAddress": "149.28.69.249:6882",
   "serviceCount": 53,
   "maxConcurrency": 10,
   "publicMetadataOk": true,
@@ -11,5 +11,5 @@
   "okForOrganicCalls": true,
   "consecutiveOrganicVisibilityFailures": 0,
   "status": "public+dht",
-  "source": "Bounded local monitor snapshot; inspect the signed live peer catalog before paid use."
+  "source": "Vultr cloud monitor snapshot; inspect the signed live peer catalog before paid use."
 }
