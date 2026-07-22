@@ -15,22 +15,22 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Primary canonical route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.7
 - Official demand-name route: c50de6922b00677c93007c01924586de887ced7b@opus-4.7
 - Public opus-4.7 route: https://woodfuturebj-boop.github.io/routes/opus-4.7/
-- Published opus-4.7 snapshot: $0.3061375 input / $1.5306875 output per 1M tokens
+- Pricing: inspect the signed live catalog before use
 - Canonical alias: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.7
 - Public canonical alias route: https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/
-- Published claude-opus-4.7 snapshot: $0.495 input / $2.475 output per 1M tokens
+- Pricing: inspect the signed live catalog before use
 - Compatibility alias: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-7
 - Public compatibility alias route: https://woodfuturebj-boop.github.io/routes/claude-opus-4-7/
-- Published claude-opus-4-7 snapshot: $0.495 input / $2.475 output per 1M tokens
+- Pricing: inspect the signed live catalog before use
 - Current-demand fast Opus route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-8-fast
 - Public claude-opus-4-8-fast route: https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/
-- Published claude-opus-4-8-fast snapshot: $1.50 input / $7.50 output per 1M tokens
+- Pricing: inspect the signed live catalog before use
 - Demand-backed fast Opus route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-7-fast
 - Public claude-opus-4-7-fast route: https://woodfuturebj-boop.github.io/routes/claude-opus-4-7-fast/
-- Published claude-opus-4-7-fast snapshot: $1.80 input / $9.00 output per 1M tokens
+- Pricing: inspect the signed live catalog before use
 - Read-only specialist code audit agent: c50de6922b00677c93007c01924586de887ced7b@novaroute-code-audit-v1
 - Public specialist agent route: https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/
-- Published specialist snapshot: $1.80 input / $9.00 output per 1M tokens
+- Pricing: inspect the signed live catalog before use
 - Specialist scope: findings-first code review, Web3 transaction safety, and release readiness; no transaction execution
 - Demand evidence: https://x.com/AntSeedAI/status/2078868465276874967
 - High-demand general route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.4
@@ -41,20 +41,20 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Public gpt-5.6-sol-pro route: https://woodfuturebj-boop.github.io/?model=gpt-5.6-sol-pro#first-workload
 - Current-demand Terra route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-terra
 - Public gpt-5.6-terra route: https://woodfuturebj-boop.github.io/routes/gpt-5.6-terra/
-- Published gpt-5.6-terra snapshot: $0.05 input / $0.30 output per 1M tokens
+- Pricing: inspect the signed live catalog before use
 - Current-demand Sol route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol
 - Public gpt-5.6-sol route: https://woodfuturebj-boop.github.io/routes/gpt-5.6-sol/
-- Published gpt-5.6-sol snapshot: $0.10 input / $0.60 output per 1M tokens
+- Pricing: inspect the signed live catalog before use
 - Current-demand Gemini Flash route: c50de6922b00677c93007c01924586de887ced7b@gemini-3-5-flash
 - Public gemini-3-5-flash route: https://woodfuturebj-boop.github.io/routes/gemini-3-5-flash/
-- Published gemini-3-5-flash snapshot: $0.0597 input / $0.3582 output per 1M tokens
+- Pricing: inspect the signed live catalog before use
 - High-demand multilingual route: c50de6922b00677c93007c01924586de887ced7b@glm-5.2
 - Public glm-5.2 route: https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload
 - High-demand agent route: c50de6922b00677c93007c01924586de887ced7b@kimi-k3
 - Public kimi-k3 route: https://woodfuturebj-boop.github.io/?model=kimi-k3#first-workload
 - High-demand frontier coding route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.8
 - Public claude-opus-4.8 route: https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload
-- Published claude-opus-4.8 snapshot: $0.8613 input / $4.3065 output per 1M tokens
+- Pricing: inspect the signed live catalog before use
 - Rank-one Claude coding route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 - Public claude-opus-4.6 route: https://woodfuturebj-boop.github.io/?model=claude-opus-4.6#first-workload
 - Rank-one coding route: c50de6922b00677c93007c01924586de887ced7b@claude-sonnet-5
@@ -62,9 +62,9 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Rank-one Fable route: c50de6922b00677c93007c01924586de887ced7b@claude-fable-5
 - Public claude-fable-5 route: https://woodfuturebj-boop.github.io/?model=claude-fable-5#first-workload
 - AntFeed MCP: npx -y @antfeed/mcp
-- External buyer guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
+- External buyer connection guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml
 
-Featured services by current demand evidence and specialist capability: novaroute-code-audit-v1, claude-opus-4-7-fast, claude-opus-4-8-fast, claude-opus-4.6, opus-4.7, gpt-5.5, claude-opus-4.8, glm-5.2, gpt-5.6-sol-pro, claude-sonnet-5, gpt-5.4, kimi-k3, claude-fable-5.
+Featured production services by current demand evidence and specialist capability: novaroute-code-audit-v1, claude-opus-4-7-fast, claude-opus-4-8-fast, claude-opus-4.6, opus-4.7, gpt-5.5, claude-opus-4.8, glm-5.2, gpt-5.6-sol-pro, claude-sonnet-5, gpt-5.4, kimi-k3, claude-fable-5.
 
 Do not use self-trading, artificial traffic, or test volume. Never submit secrets.

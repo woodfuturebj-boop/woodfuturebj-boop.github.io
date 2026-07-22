@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-22T06:47:44Z",
+  "updatedAt": "2026-07-22T12:47:52.623Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
     "label": "AntSeed Top models by users",
@@ -24,22 +24,22 @@
     },
     {
       "id": "claude-opus-4-8-fast",
-      "input": 1.5,
-      "output": 7.5,
+      "input": 1.4925,
+      "output": 7.4625,
       "protocol": "OpenAI Chat Completions",
       "focus": "Rank-one fast Opus route with current paid demand"
     },
     {
       "id": "claude-opus-4.6",
-      "input": 0.4431925,
-      "output": 2.2159625,
+      "input": 0.5359365,
+      "output": 2.6796825,
       "protocol": "OpenAI Chat Completions",
       "focus": "Rank-one high-demand coding route"
     },
     {
       "id": "claude-opus-4.7",
-      "input": 0.495,
-      "output": 2.475,
+      "input": 0.25,
+      "output": 1.25,
       "protocol": "OpenAI Chat Completions",
       "focus": "Canonical alias for high-demand Opus 4.7"
     },
@@ -52,15 +52,15 @@
     },
     {
       "id": "claude-opus-4.8",
-      "input": 0.8613,
-      "output": 4.3065,
+      "input": 0.3,
+      "output": 1.5,
       "protocol": "OpenAI Chat Completions",
-      "focus": "High-demand frontier coding experiment"
+      "focus": "High-demand frontier coding route"
     },
     {
       "id": "glm-5.2",
-      "input": 0.02,
-      "output": 0.005,
+      "input": 0.015,
+      "output": 0.01,
       "protocol": "OpenAI Chat Completions",
       "focus": "Efficient multilingual reasoning"
     },
@@ -80,29 +80,29 @@
     },
     {
       "id": "claude-sonnet-5",
-      "input": 0.1845495,
-      "output": 0.9227445,
+      "input": 0.1,
+      "output": 0.5,
       "protocol": "OpenAI Chat Completions",
       "focus": "Rank-one coding and agent adoption route"
     },
     {
       "id": "gpt-5.4",
-      "input": 0.00625,
-      "output": 0.0375,
+      "input": 0.0125,
+      "output": 0.075,
       "protocol": "OpenAI Chat Completions",
       "focus": "High-volume general reasoning"
     },
     {
       "id": "kimi-k3",
-      "input": 0.3675465,
-      "output": 1.837734,
+      "input": 0.15,
+      "output": 0.75,
       "protocol": "OpenAI Chat Completions",
       "focus": "Rank-one agent and coding route"
     },
     {
       "id": "claude-fable-5",
-      "input": 0.896607,
-      "output": 4.483032,
+      "input": 0.54,
+      "output": 2.7,
       "protocol": "OpenAI Chat Completions",
       "focus": "Rank-one long-form and coding route"
     }

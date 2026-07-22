@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pin NovaRoute AI on AntSeed and run the high-demand Opus 4.7 upstream through the claude-opus-4.7 route at $0.495 input and $2.475 output per 1M tokens.">
+    <meta name="description" content="Pin NovaRoute AI on AntSeed and run real OpenAI-compatible workloads through a verified cloud provider with signed live pricing.">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta property="og:type" content="website">
     <meta property="og:title" content="NovaRoute AI | AntSeed Provider">
@@ -15,7 +15,7 @@
     <meta property="og:image:type" content="image/png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="NovaRoute AI | AntSeed Provider">
-    <meta name="twitter:description" content="Pin this verified AntSeed peer and run claude-opus-4.7 at a published $0.495 / $2.475 per 1M-token snapshot.">
+    <meta name="twitter:description" content="Pin this verified AntSeed peer and inspect signed live pricing before running a real workload.">
     <meta name="twitter:image" content="https://woodfuturebj-boop.github.io/assets/antseed-claude-opus47-card.png">
     <link rel="canonical" href="https://woodfuturebj-boop.github.io/">
     <link rel="icon" href="assets/antseed-mark.svg" type="image/svg+xml">
@@ -603,12 +603,12 @@
     <main id="top">
       <div class="intro">
         <div class="shell">
-          <p class="eyebrow">Live AntSeed provider · monitored 20 Jul 2026</p>
+          <p class="eyebrow">Production AntSeed provider · continuously monitored</p>
           <h1>NovaRoute AI</h1>
           <p class="lede">Explicitly pin this verified AntSeed peer, then run a real OpenAI-compatible workload through a published high-demand route. Check the signed live catalog before sending work.</p>
           <div class="launch-offer">
-            <strong>claude-opus-4.7 published snapshot: $0.495 input / $2.475 output per 1M tokens</strong>
-            <span>Same high-demand Opus 4.7 upstream · signed live catalog · Base USDC</span>
+            <strong>claude-opus-4.7 with signed live directory pricing</strong>
+            <span>High-demand Opus 4.7 route · persistent provider pin · Base USDC</span>
           </div>
           <div class="actions hero-actions">
             <a class="action" href="https://github.com/AntSeed/antseed/releases/latest" target="_blank" rel="noopener">Download AntStation</a>
@@ -628,7 +628,7 @@
             </div>
             <div class="status-item">
               <span class="status-label">Advertised services</span>
-              <span class="status-value" id="service-count">53</span>
+              <span class="status-value" id="service-count">55</span>
             </div>
             <div class="status-item">
               <span class="status-label">Settlement</span>
@@ -711,7 +711,7 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
   -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.7","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
               <button class="copy-button" type="button" data-copy-target="cmd-first-call">Copy</button>
             </div>
-            <p class="notice" id="starter-price">Published snapshot: $0.495 input / $2.475 output per 1M tokens. Inspect the signed live catalog before use; never send artificial traffic just to test the route.</p>
+            <p class="notice" id="starter-price">Loading the signed live directory price. Never send artificial traffic just to test the route.</p>
           </div>
         </div>
       </section>
@@ -845,7 +845,7 @@ before create_session.</code></pre>
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Fourteen services are highlighted for beta onboarding. Prices shown are current published snapshots. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
+          <p class="section-copy">Fourteen production services are highlighted for common coding, reasoning, and agent workloads. Prices shown are published snapshots. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
           <p class="section-copy">Demand evidence: this seller exposes six of the seven models in AntSeed's July 19 <a href="https://x.com/AntSeedAI/status/2078868465276874967" target="_blank" rel="noopener">Top models by users</a> snapshot; five are prioritized below.</p>
           <div class="table-wrap">
             <table>
@@ -884,18 +884,26 @@ before create_session.</code></pre>
               <h3>Response authentication</h3>
               <p><code>verification.response-auth.v1</code> is advertised in signed metadata.</p>
             </div>
+            <div class="trust-item">
+              <h3>Persistent provider pin</h3>
+              <p>AntStation and CLI selections persist across buyer-proxy restarts, so a production workload stays on the explicitly selected peer.</p>
+            </div>
+            <div class="trust-item">
+              <h3>Public health evidence</h3>
+              <p><a href="provider-status.json">The monitor snapshot</a> records the cloud endpoint, DHT visibility, service count, and organic-call readiness.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="support">
         <div class="shell">
-          <h2>Beta and support</h2>
-          <p class="section-copy">Need help getting a real workload connected today? Open the short onboarding form before or after installing a buyer. A buyer hash is optional until your buyer exists. Real external usage only; self-trading and artificial volume are not accepted.</p>
+          <h2>Connection support</h2>
+          <p class="section-copy">Need help connecting a real workload? Open the short support form before or after installing a buyer. A buyer hash is optional until your buyer exists. Real external usage only; self-trading and artificial volume are not accepted.</p>
           <div class="actions">
             <a class="action" href="https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=beta.yml">Get onboarding help</a>
-            <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md">24-hour Beta guide</a>
-            <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/issues/1">Beta overview</a>
+            <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md">Buyer connection guide</a>
+            <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/issues/1">Connection overview</a>
             <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml">Report an issue</a>
             <a class="action secondary" href="https://antseed.com/docs/">AntSeed docs</a>
           </div>
@@ -906,13 +914,13 @@ before create_session.</code></pre>
               <a class="action" id="share-x" href="https://twitter.com/intent/tweet" target="_blank" rel="noopener">Share on X</a>
             </div>
             <div class="command">
-              <pre id="share-copy"><code>AntSeed route: claude-opus-4.7 at a published $0.495 input / $2.475 output per 1M tokens. Same high-demand Opus 4.7 upstream, verified peer, Base USDC, explicit pin. Real workloads only.
+              <pre id="share-copy"><code>AntSeed route: claude-opus-4.7 with signed live directory pricing. High-demand Opus 4.7 route, verified peer, Base USDC, explicit pin. Real workloads only.
 
 https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
               <button class="copy-button" type="button" data-copy-target="share-copy">Copy</button>
             </div>
             <div class="command">
-              <pre id="share-copy-zh"><code>AntSeed 真实工作负载路由：claude-opus-4.7，公开价格为每 100 万 tokens 输入 $0.495、输出 $2.475。与高需求 Opus 4.7 使用同一上游；已验证 peer，Base USDC，需显式 pin。仅用于真实任务。
+              <pre id="share-copy-zh"><code>AntSeed 真实工作负载路由：claude-opus-4.7，使用签名目录实时价格。高需求 Opus 4.7 路由；已验证 peer，Base USDC，需显式 pin。仅用于真实任务。
 
 https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
               <button class="copy-button" type="button" data-copy-target="share-copy-zh">复制中文邀请</button>
@@ -931,23 +939,23 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
       const DEFAULT_STARTER_MODEL = "claude-opus-4.7";
       const STARTER_MODELS = {
         "opus-4.7": {
-          input: "$0.3061375",
-          output: "$1.5306875",
+          input: "$0.25",
+          output: "$1.25",
           summary: "is second in AntSeed's July 19 Top models by users snapshot and has a controlled exact-rank-one price",
         },
         "claude-opus-4.7": {
-          input: "$0.495",
-          output: "$2.475",
+          input: "$0.25",
+          output: "$1.25",
           summary: "is a canonical alias for the same high-demand Opus 4.7 upstream and uses the live published pricing",
         },
         "claude-opus-4-7": {
-          input: "$0.495",
-          output: "$2.475",
+          input: "$0.25",
+          output: "$1.25",
           summary: "is a hyphenated compatibility alias for the same high-demand Opus 4.7 upstream and uses the live published pricing",
         },
         "gpt-5.4": {
-          input: "$0.00625",
-          output: "$0.0375",
+          input: "$0.0125",
+          output: "$0.075",
           summary: "has strong recent demand and a current published price",
         },
         "gpt-5.5": {
@@ -966,8 +974,8 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
           summary: "has current network demand and a 50% raw-cost adoption price that ranks first among exact offers",
         },
         "gpt-5.6-sol": {
-          input: "$0.1",
-          output: "$0.6",
+          input: "$0.15",
+          output: "$0.9",
           summary: "has current network demand and a 50% raw-cost adoption price that ranks first among exact offers",
         },
         "gemini-3-5-flash": {
@@ -976,13 +984,13 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
           summary: "has current network demand and a demand-backed 20% raw-cost price projected to rank first among exact offers",
         },
         "glm-5.2": {
-          input: "$0.02",
-          output: "$0.005",
+          input: "$0.015",
+          output: "$0.01",
           summary: "has strong recent multilingual demand and a current published price",
         },
         "kimi-k3": {
-          input: "$0.3675465",
-          output: "$1.837734",
+          input: "$0.15",
+          output: "$0.75",
           summary: "has meaningful recent agent demand and a controlled adoption price that currently ranks first among indexed exact offers",
         },
         "claude-opus-4-7-fast": {
@@ -996,28 +1004,28 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
           summary: "is a read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews",
         },
         "claude-opus-4-8-fast": {
-          input: "$1.50",
-          output: "$7.50",
+          input: "$1.4925",
+          output: "$7.4625",
           summary: "has current paid demand and a 50% raw-cost price that ranks first among exact offers",
         },
         "claude-opus-4.8": {
-          input: "$0.8613",
-          output: "$4.3065",
+          input: "$0.3",
+          output: "$1.5",
           summary: "has substantial recent demand and a current published price",
         },
         "claude-opus-4.6": {
-          input: "$0.4431925",
-          output: "$2.2159625",
+          input: "$0.5359365",
+          output: "$2.6796825",
           summary: "has substantial recent coding demand and a controlled adoption price that currently ranks first among exact offers",
         },
         "claude-sonnet-5": {
-          input: "$0.1845495",
-          output: "$0.9227445",
+          input: "$0.1",
+          output: "$0.5",
           summary: "has strong recent coding demand and a controlled adoption price that currently ranks first among exact offers",
         },
         "claude-fable-5": {
-          input: "$0.896607",
-          output: "$4.483032",
+          input: "$0.54",
+          output: "$2.7",
           summary: "has meaningful recent demand and a low published first-workload price",
         },
       };
@@ -1045,14 +1053,14 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
         const upstream = model === "claude-opus-4.7" || model === "claude-opus-4-7"
           ? " Same high-demand Opus 4.7 upstream."
           : "";
-        return `AntSeed route: ${model} at a published ${route.input} input / ${route.output} output per 1M tokens.${upstream} Verified peer, Base USDC, explicit pin. Real workloads only.`;
+        return `AntSeed route: ${model} with signed live directory pricing.${upstream} Verified peer, Base USDC, explicit pin. Real workloads only.`;
       }
 
       function shareTextZh(model, route) {
         const upstream = model === "claude-opus-4.7" || model === "claude-opus-4-7"
           ? "与高需求 Opus 4.7 使用同一上游；"
           : "";
-        return `AntSeed 真实工作负载路由：${model}，公开价格为每 100 万 tokens 输入 ${route.input}、输出 ${route.output}。${upstream}已验证 peer，Base USDC，需显式 pin。仅用于真实任务。`;
+        return `AntSeed 真实工作负载路由：${model}，使用签名目录实时价格。${upstream}已验证 peer，Base USDC，需显式 pin。仅用于真实任务。`;
       }
 
       function selectStarterModel(model, updateUrl = true) {
@@ -1075,7 +1083,7 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
         document.querySelector("#code-cli code").textContent = starterCommand(model);
         document.getElementById("starter-model-name").textContent = model;
         document.getElementById("starter-summary-text").textContent = `${route.summary}. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.`;
-        document.getElementById("starter-price").textContent = `Published snapshot: ${route.input} input / ${route.output} output per 1M tokens. Inspect the signed live catalog before use; never send artificial traffic just to test the route.`;
+        document.getElementById("starter-price").textContent = `Directory price: ${route.input} input / ${route.output} output per 1M tokens. Confirm it in the signed live catalog before use; never send artificial traffic just to test the route.`;
         const linkButton = document.getElementById("copy-route-link");
         linkButton.dataset.routeUrl = routeUrl.toString();
         linkButton.title = routeUrl.toString();
@@ -1233,6 +1241,29 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
           const response = await fetch("featured-services.json", { cache: "no-store" });
           if (!response.ok) throw new Error("catalog unavailable");
           const catalog = await response.json();
+          try {
+            const liveResponse = await fetch("https://network.antseed.com/stats", { cache: "no-store" });
+            if (!liveResponse.ok) throw new Error("network stats unavailable");
+            const stats = await liveResponse.json();
+            const peer = (stats.peers || []).find((item) => item.peerId === PEER_ID);
+            const livePricing = peer?.providers?.[0]?.servicePricing || {};
+            catalog.services.forEach((service) => {
+              const price = livePricing[service.id];
+              if (!price) return;
+              service.input = price.inputUsdPerMillion;
+              service.output = price.outputUsdPerMillion;
+            });
+            Object.entries(STARTER_MODELS).forEach(([model, route]) => {
+              const price = livePricing[model];
+              if (!price) return;
+              route.input = formatPrice(price.inputUsdPerMillion);
+              route.output = formatPrice(price.outputUsdPerMillion);
+            });
+            const active = document.querySelector('[data-starter-model][aria-pressed="true"]');
+            selectStarterModel(active?.dataset.starterModel || DEFAULT_STARTER_MODEL, false);
+          } catch {
+            // The checked-in snapshot remains a safe fallback when the directory is unavailable.
+          }
           body.textContent = "";
           catalog.services.forEach((service) => {
             const row = document.createElement("tr");

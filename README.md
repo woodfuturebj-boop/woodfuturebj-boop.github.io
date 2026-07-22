@@ -1,6 +1,6 @@
 # NovaRoute AI
 
-Public AntSeed provider connection, verification, and beta onboarding site.
+Public AntSeed provider connection, verification, and production support site.
 
 Live site: https://woodfuturebj-boop.github.io/
 
@@ -23,8 +23,8 @@ antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'
 ```
 
-Run one real workload through the 24-hour `gpt-5.5` adoption route without changing
-your saved connection:
+Run one real workload through the pinned `gpt-5.5` route without changing your
+saved connection:
 
 ```bash
 curl http://127.0.0.1:8377/v1/chat/completions \
@@ -44,12 +44,12 @@ command ready to copy:
 - [`gpt-5.4`](https://woodfuturebj-boop.github.io/?model=gpt-5.4#first-workload)
 - [`gpt-5.5`](https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload)
 - [`gpt-5.6-sol-pro`](https://woodfuturebj-boop.github.io/?model=gpt-5.6-sol-pro#first-workload)
-- [`gemini-3-5-flash`](https://woodfuturebj-boop.github.io/routes/gemini-3-5-flash/) - demand-backed route; published snapshot `$0.0597` input / `$0.3582` output per 1M tokens
+- [`gemini-3-5-flash`](https://woodfuturebj-boop.github.io/routes/gemini-3-5-flash/) - demand-backed route; inspect signed live pricing before use
 - [`glm-5.2`](https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload)
 - [`kimi-k3`](https://woodfuturebj-boop.github.io/?model=kimi-k3#first-workload)
-- [`claude-opus-4-7-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-7-fast/) - stable demand-backed route; published snapshot `$1.80` input / `$9.00` output per 1M tokens
-- [`novaroute-code-audit-v1`](https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/) - read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews; published snapshot `$1.80` input / `$9.00` output per 1M tokens
-- [`claude-opus-4-8-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/) - current-demand rank-one route; published snapshot `$1.50` input / `$7.50` output per 1M tokens
+- [`claude-opus-4-7-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-7-fast/) - stable demand-backed route; inspect signed live pricing before use
+- [`novaroute-code-audit-v1`](https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/) - read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews
+- [`claude-opus-4-8-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/) - current-demand rank-one route; inspect signed live pricing before use
 - [`claude-opus-4.8`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload)
 - [`claude-opus-4.6`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.6#first-workload)
 - [`claude-sonnet-5`](https://woodfuturebj-boop.github.io/?model=claude-sonnet-5#first-workload)
@@ -57,18 +57,18 @@ command ready to copy:
 
 ## Featured services
 
-- `gpt-5.4` - active high-demand rank-one pricing experiment
-- `gpt-5.5` - active high-demand route; published snapshot `$0.01311` input / `$0.065493` output per 1M tokens
+- `gpt-5.4` - active high-demand rank-one route
+- `gpt-5.5` - active high-demand route with signed live directory pricing
 - `claude-opus-4-7-fast` - active stable demand-backed fast Opus route at 50% raw cost
 - `novaroute-code-audit-v1` - active read-only specialist agent backed by the same verified 50% raw-cost upstream
 - `gpt-5.6-sol-pro` - active high-demand rank-one reasoning route
 - `gemini-3-5-flash` - active demand-backed 20% raw-cost rank-uplift route
-- `glm-5.2` - active multilingual rank-one pricing experiment
+- `glm-5.2` - active multilingual rank-one route
 - `kimi-k3` - active rank-one agent and coding route
 - `claude-opus-4-8-fast` - active current-demand rank-one fast Opus route
-- `claude-opus-4.8` - active high-demand frontier coding pricing experiment
+- `claude-opus-4.8` - active high-demand frontier coding route
 - `claude-opus-4.6` - active high-demand rank-one coding route
-- `claude-fable-5` - active rank-one long-form and coding experiment
+- `claude-fable-5` - active rank-one long-form and coding route
 - `opus-4.7`
 - `claude-sonnet-5`
 
@@ -87,7 +87,7 @@ local AntSeed buyer after explicit user confirmation. AntFeed refreshes its
 provider directory hourly, so compare newly published launch prices with the
 signed live catalog before approving a session.
 
-See the [24-hour external buyer guide](https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md).
+See the [external buyer connection guide](https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md).
 
 ## Verification
 
@@ -98,4 +98,4 @@ See the [24-hour external buyer guide](https://github.com/woodfuturebj-boop/ants
 
 No private keys, API keys, or provider credentials are stored in this repository.
 
-External buyer beta: https://github.com/woodfuturebj-boop/antseed-proof/issues/1
+External buyer support: https://github.com/woodfuturebj-boop/antseed-proof/issues/1
