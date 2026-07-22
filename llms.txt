@@ -12,6 +12,7 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Live catalog: antseed network peer c50de6922b00677c93007c01924586de887ced7b
 - Public monitor snapshot: https://woodfuturebj-boop.github.io/provider-status.json
 - Session pin: antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
+- Clean shutdown: after the real workload finishes, stop the foreground buyer with Ctrl+C and wait for "Disconnected. All channels finalized."; do not force-kill it
 - Primary canonical route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.7
 - Official demand-name route: c50de6922b00677c93007c01924586de887ced7b@opus-4.7
 - Public opus-4.7 route: https://woodfuturebj-boop.github.io/routes/opus-4.7/

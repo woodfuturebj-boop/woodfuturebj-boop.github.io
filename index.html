@@ -678,6 +678,7 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
               </div>
             </div>
           </div>
+          <p class="notice"><strong>Finish cleanly:</strong> When the real workload is done, stop the foreground buyer with <code>Ctrl+C</code> and wait for <code>Disconnected. All channels finalized.</code> before closing the terminal. Do not force-kill the buyer process; graceful shutdown finalizes the payment channel normally and releases unused deposit.</p>
           <div class="first-call" id="first-workload">
             <h3>Step 04: Choose a real first workload</h3>
             <p id="starter-summary"><code id="starter-model-name">claude-opus-4.7</code> <span id="starter-summary-text">is a canonical alias for the same high-demand Opus 4.7 upstream and uses the live published pricing. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.</span></p>

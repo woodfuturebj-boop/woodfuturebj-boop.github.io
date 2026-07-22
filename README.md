@@ -23,6 +23,11 @@ antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'
 ```
 
+When a foreground buyer workload is finished, press `Ctrl+C` and wait for
+`Disconnected. All channels finalized.` before closing the terminal. Avoid
+force-killing the buyer process; graceful shutdown lets AntSeed finalize the
+payment channel normally and release unused deposit.
+
 Run one real workload through the pinned `gpt-5.5` route without changing your
 saved connection:
 
