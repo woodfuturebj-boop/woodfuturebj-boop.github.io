@@ -31,10 +31,10 @@
     },
     {
       "id": "gpt-5.5",
-      "input": 0.0105,
-      "output": 0.063,
+      "input": 0.01311,
+      "output": 0.065493,
       "protocol": "OpenAI Chat Completions",
-      "focus": "Rank-one high-demand adoption route"
+      "focus": "High-demand route priced below the verified non-zero exact competitor"
     },
     {
       "id": "claude-opus-4.8",

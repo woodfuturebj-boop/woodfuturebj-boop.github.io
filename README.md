@@ -56,7 +56,7 @@ command ready to copy:
 ## Featured services
 
 - `gpt-5.4` - active high-demand rank-one pricing experiment
-- `gpt-5.5` - active high-demand rank-one adoption route
+- `gpt-5.5` - active high-demand route; published snapshot `$0.01311` input / `$0.065493` output per 1M tokens
 - `gpt-5.6-sol-pro` - active high-demand rank-one reasoning route
 - `gemini-3-5-flash` - active demand-backed 20% raw-cost rank-uplift route
 - `glm-5.2` - active multilingual rank-one pricing experiment
