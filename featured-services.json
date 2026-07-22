@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-21T08:27:00Z",
+  "updatedAt": "2026-07-22T02:47:00Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
     "label": "AntSeed Top models by users",
@@ -56,6 +56,13 @@
       "output": 1.5,
       "protocol": "OpenAI Chat Completions",
       "focus": "Rank-one high-demand reasoning route"
+    },
+    {
+      "id": "gemini-3-5-flash",
+      "input": 0.0597,
+      "output": 0.3582,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Demand-backed 20% raw-cost route projected exact rank one"
     },
     {
       "id": "claude-sonnet-5",
