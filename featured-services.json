@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-22T02:47:00Z",
+  "updatedAt": "2026-07-22T04:34:41Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
     "label": "AntSeed Top models by users",
@@ -8,6 +8,13 @@
     "observedAt": "2026-07-19T15:44:00Z"
   },
   "services": [
+    {
+      "id": "claude-opus-4-7-fast",
+      "input": 1.8,
+      "output": 9,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Stable demand-backed fast Opus route at 50% raw cost"
+    },
     {
       "id": "claude-opus-4-8-fast",
       "input": 1.5,
