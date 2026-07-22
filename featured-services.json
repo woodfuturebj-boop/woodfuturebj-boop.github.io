@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-22T04:34:41Z",
+  "updatedAt": "2026-07-22T06:47:44Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
     "label": "AntSeed Top models by users",
@@ -8,6 +8,13 @@
     "observedAt": "2026-07-19T15:44:00Z"
   },
   "services": [
+    {
+      "id": "novaroute-code-audit-v1",
+      "input": 1.8,
+      "output": 9,
+      "protocol": "Ant Agent / OpenAI Chat Completions",
+      "focus": "Read-only code, Web3 transaction-safety, and release-readiness reviews"
+    },
     {
       "id": "claude-opus-4-7-fast",
       "input": 1.8,

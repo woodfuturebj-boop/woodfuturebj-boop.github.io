@@ -33,7 +33,7 @@ curl http://127.0.0.1:8377/v1/chat/completions \
 ```
 
 The live page also provides copy-ready selectors for `gpt-5.6-sol-pro`,
-`gemini-3-5-flash`, `kimi-k3`, `glm-5.2`, `gpt-5.5`, `claude-opus-4-7-fast`, `claude-opus-4-8-fast`, `claude-opus-4.8`, `claude-opus-4.6`,
+`gemini-3-5-flash`, `kimi-k3`, `glm-5.2`, `gpt-5.5`, `claude-opus-4-7-fast`, `novaroute-code-audit-v1`, `claude-opus-4-8-fast`, `claude-opus-4.8`, `claude-opus-4.6`,
 `claude-sonnet-5`, and `claude-fable-5`. All routes use the one-request
 `peer@model` prefix and do not replace the buyer's saved
 connection.
@@ -48,6 +48,7 @@ command ready to copy:
 - [`glm-5.2`](https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload)
 - [`kimi-k3`](https://woodfuturebj-boop.github.io/?model=kimi-k3#first-workload)
 - [`claude-opus-4-7-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-7-fast/) - stable demand-backed route; published snapshot `$1.80` input / `$9.00` output per 1M tokens
+- [`novaroute-code-audit-v1`](https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/) - read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews; published snapshot `$1.80` input / `$9.00` output per 1M tokens
 - [`claude-opus-4-8-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/) - current-demand rank-one route; published snapshot `$1.50` input / `$7.50` output per 1M tokens
 - [`claude-opus-4.8`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload)
 - [`claude-opus-4.6`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.6#first-workload)
@@ -59,6 +60,7 @@ command ready to copy:
 - `gpt-5.4` - active high-demand rank-one pricing experiment
 - `gpt-5.5` - active high-demand route; published snapshot `$0.01311` input / `$0.065493` output per 1M tokens
 - `claude-opus-4-7-fast` - active stable demand-backed fast Opus route at 50% raw cost
+- `novaroute-code-audit-v1` - active read-only specialist agent backed by the same verified 50% raw-cost upstream
 - `gpt-5.6-sol-pro` - active high-demand rank-one reasoning route
 - `gemini-3-5-flash` - active demand-backed 20% raw-cost rank-uplift route
 - `glm-5.2` - active multilingual rank-one pricing experiment

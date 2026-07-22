@@ -696,6 +696,7 @@ curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'</code></pre>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="glm-5.2">glm-5.2</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="kimi-k3">kimi-k3</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4-7-fast">claude-opus-4-7-fast</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="novaroute-code-audit-v1">novaroute-code-audit-v1</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4-8-fast">claude-opus-4-8-fast</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.8">claude-opus-4.8</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.6">claude-opus-4.6</button>
@@ -844,7 +845,7 @@ before create_session.</code></pre>
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Eleven services are highlighted for beta onboarding. Prices shown are current published snapshots. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
+          <p class="section-copy">Fourteen services are highlighted for beta onboarding. Prices shown are current published snapshots. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
           <p class="section-copy">Demand evidence: this seller exposes six of the seven models in AntSeed's July 19 <a href="https://x.com/AntSeedAI/status/2078868465276874967" target="_blank" rel="noopener">Top models by users</a> snapshot; five are prioritized below.</p>
           <div class="table-wrap">
             <table>
@@ -989,6 +990,11 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
           output: "$9.00",
           summary: "has stable paid demand evidence and a 50% raw-cost price projected to rank first among exact offers",
         },
+        "novaroute-code-audit-v1": {
+          input: "$1.80",
+          output: "$9.00",
+          summary: "is a read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews",
+        },
         "claude-opus-4-8-fast": {
           input: "$1.50",
           output: "$7.50",
@@ -1030,7 +1036,7 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
       }
 
       function shareRouteUrl(model) {
-        const socialRoutes = new Set(["opus-4.7", "claude-opus-4.7", "claude-opus-4-7", "gpt-5.5", "gpt-5.6-sol-pro", "gpt-5.6-terra", "gpt-5.6-sol", "gemini-3-5-flash", "kimi-k3", "claude-opus-4-7-fast", "claude-opus-4-8-fast"]);
+        const socialRoutes = new Set(["opus-4.7", "claude-opus-4.7", "claude-opus-4-7", "gpt-5.5", "gpt-5.6-sol-pro", "gpt-5.6-terra", "gpt-5.6-sol", "gemini-3-5-flash", "kimi-k3", "claude-opus-4-7-fast", "novaroute-code-audit-v1", "claude-opus-4-8-fast"]);
         if (socialRoutes.has(model)) return new URL(`routes/${model}/`, window.location.origin);
         return starterRouteUrl(model);
       }
@@ -1178,7 +1184,7 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/</code></pre>
           networkStatus.textContent = healthy ? "Public + DHT" : "Review status";
           networkStatus.className = `status-value ${healthy ? "status-good" : "status-warn"}`;
           networkStatus.title = status.generatedAt ? `Monitor snapshot: ${status.generatedAt}` : "Monitor snapshot";
-          document.getElementById("service-count").textContent = String(status.serviceCount || 54);
+          document.getElementById("service-count").textContent = String(status.serviceCount || 55);
           providerStatusLoaded = true;
         } catch {
           try {
