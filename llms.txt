@@ -55,6 +55,10 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Pricing: inspect the signed live catalog before use
 - High-demand multilingual route: c50de6922b00677c93007c01924586de887ced7b@glm-5.2
 - Public glm-5.2 route: https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload
+- Official top-10 token-volume route: c50de6922b00677c93007c01924586de887ced7b@minimax-m2.7
+- Public minimax-m2.7 route: https://woodfuturebj-boop.github.io/routes/minimax-m2.7/
+- Demand evidence: https://x.com/AntSeedAI/status/2077010692012470320
+- Pricing: inspect the signed live catalog before use
 - High-demand agent route: c50de6922b00677c93007c01924586de887ced7b@kimi-k3
 - Public kimi-k3 route: https://woodfuturebj-boop.github.io/?model=kimi-k3#first-workload
 - Top-sales Claude route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
@@ -74,6 +78,6 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - External buyer connection guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml
 
-Featured production services by current demand evidence and specialist capability: claude-opus-4.6, gpt-5.6-sol, gpt-5.6-sol-pro, opus-4.7, claude-opus-4.7, claude-sonnet-5, claude-fable-5, kimi-k3, glm-5.2, gpt-5.5, gpt-5.4, and novaroute-code-audit-v1.
+Featured production services by current demand evidence and specialist capability: claude-opus-4.6, gpt-5.6-sol, gpt-5.6-sol-pro, opus-4.7, claude-opus-4.7, claude-sonnet-5, claude-fable-5, kimi-k3, glm-5.2, minimax-m2.7, gpt-5.5, gpt-5.4, and novaroute-code-audit-v1.
 
 Do not use self-trading, artificial traffic, or test volume. Never submit secrets.

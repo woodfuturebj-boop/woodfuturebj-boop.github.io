@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "updatedAt": "2026-07-25T16:36:40Z",
+  "updatedAt": "2026-07-25T17:58:25Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
-    "label": "AntSeed Top models by sales plus current exact-offer audit",
+    "label": "AntSeed sales and token-volume snapshots plus current exact-offer audit",
     "url": "https://x.com/AntSeedAI/status/2081002378795377145",
+    "tokenVolumeUrl": "https://x.com/AntSeedAI/status/2077010692012470320",
     "observedAt": "2026-07-25T13:03:24Z",
     "marketUrl": "https://www.surplusintelligence.ai/api/inference/markets"
   },
@@ -71,6 +72,13 @@
       "output": 0.036,
       "protocol": "OpenAI Chat Completions",
       "focus": "Highest recent request count in the latest upstream sample"
+    },
+    {
+      "id": "minimax-m2.7",
+      "input": 0.0216,
+      "output": 0.0864,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Eighth in AntSeed's official token-volume snapshot"
     },
     {
       "id": "gpt-5.5",

@@ -66,6 +66,32 @@
                 "price": "1.485",
                 "unitText": "per 1M output tokens"
               }
+            },
+            {
+              "@type": "Offer",
+              "name": "minimax-m2.7 input tokens",
+              "url": "https://woodfuturebj-boop.github.io/routes/minimax-m2.7/",
+              "priceCurrency": "USD",
+              "price": "0.0216",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "priceCurrency": "USD",
+                "price": "0.0216",
+                "unitText": "per 1M input tokens"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "minimax-m2.7 output tokens",
+              "url": "https://woodfuturebj-boop.github.io/routes/minimax-m2.7/",
+              "priceCurrency": "USD",
+              "price": "0.0864",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "priceCurrency": "USD",
+                "price": "0.0864",
+                "unitText": "per 1M output tokens"
+              }
             }
           ]
         }
@@ -700,6 +726,7 @@ antseed buyer balance</code></pre>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="gemini-3-5-flash">gemini-3-5-flash</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.4">gpt-5.4</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="glm-5.2">glm-5.2</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="minimax-m2.7">minimax-m2.7</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="kimi-k3">kimi-k3</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4-7-fast">claude-opus-4-7-fast</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="novaroute-code-audit-v1">novaroute-code-audit-v1</button>
@@ -876,6 +903,7 @@ custom_providers:
     models:
       - claude-opus-4.6
       - opus-4.7
+      - minimax-m2.7
       - claude-sonnet-5</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-hermes">Copy</button>
             </div>
@@ -922,8 +950,8 @@ before create_session.</code></pre>
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Thirteen production services are highlighted for common coding, reasoning, and agent workloads. Prices shown are published snapshots. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
-          <p class="section-copy">Demand evidence: <code>claude-opus-4.6</code> ranks first, <code>gpt-5.5</code> fourth, and <code>opus-4.7</code> fifth in AntSeed's July 25 <a href="https://x.com/AntSeedAI/status/2081002378795377145" target="_blank" rel="noopener">Top models by sales</a> snapshot. This peer offers all three with signed live pricing.</p>
+          <p class="section-copy">Fourteen production services are highlighted for common coding, reasoning, and agent workloads. Prices shown are published snapshots. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
+          <p class="section-copy">Demand evidence: <code>claude-opus-4.6</code> ranks first, <code>gpt-5.5</code> fourth, and <code>opus-4.7</code> fifth in AntSeed's July 25 <a href="https://x.com/AntSeedAI/status/2081002378795377145" target="_blank" rel="noopener">Top models by sales</a> snapshot. <code>minimax-m2.7</code> ranks eighth in the July 14 <a href="https://x.com/AntSeedAI/status/2077010692012470320" target="_blank" rel="noopener">Top models by token volume</a> snapshot. This peer offers all four with signed live pricing.</p>
           <div class="table-wrap">
             <table>
               <thead>
@@ -1065,6 +1093,11 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
           output: "$0.036",
           summary: "has the strongest recent request count in the current market sample and ranks first among indexed exact offers",
         },
+        "minimax-m2.7": {
+          input: "$0.0216",
+          output: "$0.0864",
+          summary: "ranks eighth in AntSeed's official top models by token-volume snapshot and has signed live pricing",
+        },
         "kimi-k3": {
           input: "$0.1782",
           output: "$0.891",
@@ -1116,7 +1149,7 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
       }
 
       function shareRouteUrl(model) {
-        const socialRoutes = new Set(["opus-4.7", "claude-opus-4.7", "claude-opus-4-7", "claude-opus-4.6", "gpt-5.5", "gpt-5.6-sol-pro", "gpt-5.6-terra", "gpt-5.6-sol", "gemini-3-5-flash", "kimi-k3", "claude-opus-4-7-fast", "novaroute-code-audit-v1", "claude-opus-4-8-fast"]);
+        const socialRoutes = new Set(["opus-4.7", "claude-opus-4.7", "claude-opus-4-7", "claude-opus-4.6", "gpt-5.5", "gpt-5.6-sol-pro", "gpt-5.6-terra", "gpt-5.6-sol", "gemini-3-5-flash", "minimax-m2.7", "kimi-k3", "claude-opus-4-7-fast", "novaroute-code-audit-v1", "claude-opus-4-8-fast"]);
         if (socialRoutes.has(model)) return new URL(`routes/${model}/`, window.location.origin);
         return starterRouteUrl(model);
       }
@@ -1127,6 +1160,9 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
         }
         if (model === "claude-opus-4.6") {
           return "AntSeed route: claude-opus-4.6 with signed live directory pricing. Latest official sales rank one and lowest indexed exact-offer price. Verified peer, Base USDC, explicit pin. Real workloads only.";
+        }
+        if (model === "minimax-m2.7") {
+          return "AntSeed route: minimax-m2.7 ranks eighth in AntSeed's official token-volume snapshot. Signed live pricing, verified peer, Base USDC, explicit pin. Real workloads only.";
         }
         const upstream = model === "claude-opus-4.7" || model === "claude-opus-4-7"
           ? " Same high-demand Opus 4.7 upstream."
@@ -1140,6 +1176,9 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
         }
         if (model === "claude-opus-4.6") {
           return "AntSeed 真实工作负载路由：claude-opus-4.6，使用签名目录实时价格。最新官方销售榜第一，精确同名报价中价格最低。已验证 peer，Base USDC，需显式 pin。仅用于真实任务。";
+        }
+        if (model === "minimax-m2.7") {
+          return "AntSeed 真实工作负载路由：minimax-m2.7，在官方 token 用量榜中排名第八。签名目录实时价格，已验证 peer，Base USDC，需显式 pin。仅用于真实任务。";
         }
         const upstream = model === "claude-opus-4.7" || model === "claude-opus-4-7"
           ? "与高需求 Opus 4.7 使用同一上游；"
@@ -1191,7 +1230,7 @@ llm = ChatOpenAI(
     base_url="http://127.0.0.1:8377/v1",
     api_key="antseed",
 )`);
-        const hermesModels = [model, "opus-4.7", "claude-sonnet-5"]
+        const hermesModels = [model, "opus-4.7", "minimax-m2.7", "claude-sonnet-5"]
           .filter((value, index, values) => values.indexOf(value) === index)
           .map((value) => `      - ${value}`)
           .join("\n");

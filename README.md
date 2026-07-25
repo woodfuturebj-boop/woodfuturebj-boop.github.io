@@ -69,7 +69,7 @@ guide](https://aider.chat/docs/llms/openai-compat.html) and [Continue OpenAI
 provider guide](https://docs.continue.dev/customize/model-providers/top-level/openai).
 
 The live page also provides copy-ready selectors for `gpt-5.6-sol`, `gpt-5.6-sol-pro`,
-`gemini-3-5-flash`, `kimi-k3`, `glm-5.2`, `gpt-5.5`, `claude-opus-4-7-fast`, `novaroute-code-audit-v1`, `claude-opus-4-8-fast`, `claude-opus-4.6`,
+`gemini-3-5-flash`, `kimi-k3`, `glm-5.2`, `minimax-m2.7`, `gpt-5.5`, `claude-opus-4-7-fast`, `novaroute-code-audit-v1`, `claude-opus-4-8-fast`, `claude-opus-4.6`,
 `claude-sonnet-5`, and `claude-fable-5`. All routes use the one-request
 `peer@model` prefix and do not replace the buyer's saved
 connection.
@@ -83,6 +83,7 @@ command ready to copy:
 - [`gpt-5.6-sol-pro`](https://woodfuturebj-boop.github.io/?model=gpt-5.6-sol-pro#first-workload)
 - [`gemini-3-5-flash`](https://woodfuturebj-boop.github.io/routes/gemini-3-5-flash/) - demand-backed route; inspect signed live pricing before use
 - [`glm-5.2`](https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload)
+- [`minimax-m2.7`](https://woodfuturebj-boop.github.io/routes/minimax-m2.7/) - eighth in AntSeed's official token-volume snapshot; inspect signed live pricing before use
 - [`kimi-k3`](https://woodfuturebj-boop.github.io/?model=kimi-k3#first-workload)
 - [`claude-opus-4-7-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-7-fast/) - stable demand-backed route; inspect signed live pricing before use
 - [`novaroute-code-audit-v1`](https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/) - read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews
@@ -101,6 +102,7 @@ command ready to copy:
 - `claude-fable-5` - high-value long-form demand; exact rank one
 - `kimi-k3` - agent and coding demand; exact rank one
 - `glm-5.2` - highest request count in the latest upstream sample
+- `minimax-m2.7` - eighth in AntSeed's official top models by token-volume snapshot
 - `gpt-5.5` - strong request demand with signed live directory pricing
 - `gpt-5.4` - general reasoning demand; exact rank one
 - `novaroute-code-audit-v1` - read-only specialist agent
