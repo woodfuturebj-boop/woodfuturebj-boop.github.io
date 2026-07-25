@@ -9,8 +9,11 @@ Live site: https://woodfuturebj-boop.github.io/
 The shortest visual path is the official [AntStation desktop app](https://github.com/AntSeed/antseed/releases/latest):
 
 1. Fund the buyer with Base USDC.
-2. Open **Discover** and search for `gpt-5.6-sol`, `gpt-5.6-sol-pro`, or `NovaRoute AI`.
+2. Open **Discover** and search the exact provider name `NovaRoute AI` first.
 3. Choose `NovaRoute AI`, select a service, and start a real chat.
+
+Searching by service name such as `gpt-5.6-sol` is a useful fallback, but it
+can return several peers; the exact provider name narrows the list directly.
 
 Selecting a Discover result pins both the provider and service. For CLI buyers,
 fund first, then start the proxy with this peer pinned in the startup command:
