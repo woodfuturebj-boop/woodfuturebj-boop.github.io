@@ -26,6 +26,7 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Pricing: inspect the signed live catalog before use
 - Read-only specialist code audit agent: c50de6922b00677c93007c01924586de887ced7b@novaroute-code-audit-v1
 - Public specialist agent route: https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/
+- AntFeed specialist service page: https://www.antfeed.org/services/novaroute-code-audit-v1
 - Pricing: inspect the signed live catalog before use
 - Specialist scope: findings-first code review, Web3 transaction safety, and release readiness; no transaction execution
 - Demand evidence: https://x.com/AntSeedAI/status/2081002378795377145
