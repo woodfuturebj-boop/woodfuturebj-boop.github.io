@@ -1,108 +1,108 @@
 {
   "version": 2,
-  "updatedAt": "2026-07-25T10:38:46.044Z",
+  "updatedAt": "2026-07-25T11:58:52.670Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
     "label": "Current upstream market sample",
     "url": "https://www.surplusintelligence.ai/api/inference/markets",
-    "observedAt": "2026-07-25T10:38:46.044Z"
+    "observedAt": "2026-07-25T11:58:52.670Z"
   },
   "services": [
     {
       "id": "gpt-5.6-sol",
-      "input": 0.09,
+      "input": 0.54,
       "output": 0.54,
       "protocol": "OpenAI Chat Completions",
       "focus": "Highest upstream dollar volume in the current sample; exact rank one"
     },
     {
       "id": "gpt-5.6-sol-pro",
-      "input": 0.15,
-      "output": 0.9,
+      "input": 0.594,
+      "output": 3.564,
       "protocol": "OpenAI Chat Completions",
       "focus": "Current high-value reasoning demand; exact rank one in the latest sample"
     },
     {
       "id": "opus-4.7",
-      "input": 0.15147,
-      "output": 0.75735,
+      "input": 0.29106,
+      "output": 1.47312,
       "protocol": "OpenAI Chat Completions",
       "focus": "High-value Opus demand; exact rank one in the latest sample"
     },
     {
       "id": "claude-opus-4.7",
-      "input": 0.15147,
-      "output": 0.75735,
+      "input": 0.29106,
+      "output": 1.47312,
       "protocol": "OpenAI Chat Completions",
       "focus": "Canonical alias for the high-value Opus 4.7 route"
     },
     {
       "id": "claude-sonnet-5",
-      "input": 0.06,
-      "output": 0.3,
+      "input": 0.236412,
+      "output": 1.18206,
       "protocol": "OpenAI Chat Completions",
       "focus": "High-value coding demand; exact rank one in the latest sample"
     },
     {
       "id": "claude-opus-4.8",
-      "input": 0.181764,
-      "output": 0.90882,
+      "input": 0.3564,
+      "output": 1.77012,
       "protocol": "OpenAI Chat Completions",
       "focus": "Frontier coding demand; exact rank one in the latest sample"
     },
     {
       "id": "claude-fable-5",
-      "input": 0.623268,
-      "output": 3.11634,
+      "input": 0.7128,
+      "output": 3.564,
       "protocol": "OpenAI Chat Completions",
       "focus": "High-value long-form demand; exact rank one in the latest sample"
     },
     {
       "id": "kimi-k3",
-      "input": 0.1196622,
-      "output": 0.5983101,
+      "input": 0.1782,
+      "output": 0.891,
       "protocol": "OpenAI Chat Completions",
       "focus": "Agent and coding demand; exact rank one in the latest sample"
     },
     {
       "id": "claude-opus-4.6",
-      "input": 0.15,
-      "output": 0.75,
+      "input": 0.297,
+      "output": 1.485,
       "protocol": "OpenAI Chat Completions",
       "focus": "Coding demand; exact rank one in the latest sample"
     },
     {
       "id": "glm-5.2",
       "input": 0.021,
-      "output": 0.006,
+      "output": 0.036,
       "protocol": "OpenAI Chat Completions",
       "focus": "Highest recent request count in the latest upstream sample"
     },
     {
       "id": "gpt-5.5",
-      "input": 0.015,
-      "output": 0.09,
+      "input": 0.06,
+      "output": 0.36,
       "protocol": "OpenAI Chat Completions",
       "focus": "Strong recent request demand with signed live directory pricing"
     },
     {
       "id": "gpt-5.4",
-      "input": 0.0075,
-      "output": 0.045,
+      "input": 0.015,
+      "output": 0.09,
       "protocol": "OpenAI Chat Completions",
       "focus": "General reasoning demand; exact rank one in the latest sample"
     },
     {
       "id": "gemini-3-5-flash",
-      "input": 0.0654954,
-      "output": 0.3929712,
+      "input": 0.177309,
+      "output": 1.063854,
       "protocol": "OpenAI Chat Completions",
       "focus": "Fast multimodal-family demand; exact rank one in the latest sample"
     },
     {
       "id": "novaroute-code-audit-v1",
-      "input": 0.108,
-      "output": 0.54,
+      "input": 4.2984,
+      "output": 21.492,
       "protocol": "Ant Agent / OpenAI Chat Completions",
       "focus": "Read-only code, Web3 transaction-safety, and release-readiness reviews"
     }
