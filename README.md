@@ -97,7 +97,6 @@ command ready to copy:
 - `claude-opus-4.6` - first in the latest official model-sales snapshot; lowest-priced indexed exact offer
 - `gpt-5.6-sol` - highest upstream dollar volume in the current market sample; exact rank one
 - `gpt-5.6-sol-pro` - second-highest current reasoning volume; exact rank one
-- `opus-4.7` / `claude-opus-4.7` - current high-value Opus demand; exact rank one
 - `claude-sonnet-5` - high-value coding demand; exact rank one
 - `claude-fable-5` - high-value long-form demand; exact rank one
 - `kimi-k3` - agent and coding demand; exact rank one

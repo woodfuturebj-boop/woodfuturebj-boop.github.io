@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-07-25T17:58:25Z",
+  "updatedAt": "2026-07-25T18:15:00Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
     "label": "AntSeed sales and token-volume snapshots plus current exact-offer audit",
@@ -30,20 +30,6 @@
       "output": 3.564,
       "protocol": "OpenAI Chat Completions",
       "focus": "Current high-value reasoning demand; exact rank one in the latest sample"
-    },
-    {
-      "id": "opus-4.7",
-      "input": 0.29106,
-      "output": 1.47312,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "High-value Opus demand; exact rank one in the latest sample"
-    },
-    {
-      "id": "claude-opus-4.7",
-      "input": 0.29106,
-      "output": 1.47312,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Canonical alias for the high-value Opus 4.7 route"
     },
     {
       "id": "claude-sonnet-5",

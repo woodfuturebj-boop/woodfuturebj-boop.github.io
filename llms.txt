@@ -18,15 +18,6 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Primary high-value route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 - Primary-route evidence: first in AntSeed's 2026-07-25 official model-sales snapshot and lowest-priced indexed exact offer
 - Public primary route: https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/
-- Official demand-name route: c50de6922b00677c93007c01924586de887ced7b@opus-4.7
-- Public opus-4.7 route: https://woodfuturebj-boop.github.io/routes/opus-4.7/
-- Pricing: inspect the signed live catalog before use
-- Canonical alias: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.7
-- Public canonical alias route: https://woodfuturebj-boop.github.io/routes/claude-opus-4.7/
-- Pricing: inspect the signed live catalog before use
-- Compatibility alias: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-7
-- Public compatibility alias route: https://woodfuturebj-boop.github.io/routes/claude-opus-4-7/
-- Pricing: inspect the signed live catalog before use
 - Current-demand fast Opus route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-8-fast
 - Public claude-opus-4-8-fast route: https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/
 - Pricing: inspect the signed live catalog before use
@@ -78,6 +69,6 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - External buyer connection guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml
 
-Featured production services by current demand evidence and specialist capability: claude-opus-4.6, gpt-5.6-sol, gpt-5.6-sol-pro, opus-4.7, claude-opus-4.7, claude-sonnet-5, claude-fable-5, kimi-k3, glm-5.2, minimax-m2.7, gpt-5.5, gpt-5.4, and novaroute-code-audit-v1.
+Featured production services by current demand evidence and specialist capability: claude-opus-4.6, gpt-5.6-sol, gpt-5.6-sol-pro, claude-sonnet-5, claude-fable-5, kimi-k3, glm-5.2, minimax-m2.7, gpt-5.5, gpt-5.4, and novaroute-code-audit-v1.
 
 Do not use self-trading, artificial traffic, or test volume. Never submit secrets.

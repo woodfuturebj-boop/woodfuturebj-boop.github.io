@@ -716,9 +716,6 @@ antseed buyer balance</code></pre>
             <div class="model-picker">
               <span class="model-picker-label">Starter model</span>
               <div class="model-selector" role="group" aria-label="Starter model">
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.7">claude-opus-4.7</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="opus-4.7">opus-4.7</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4-7">claude-opus-4-7</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.5">gpt-5.5</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.6-sol-pro">gpt-5.6-sol-pro</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.6-terra">gpt-5.6-terra</button>
@@ -902,7 +899,7 @@ custom_providers:
     api_mode: chat_completions
     models:
       - claude-opus-4.6
-      - opus-4.7
+      - gpt-5.6-sol
       - minimax-m2.7
       - claude-sonnet-5</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-hermes">Copy</button>
@@ -934,7 +931,7 @@ custom_providers:
 Verify seller 0xc50DE6922b00677c93007c01924586dE887ced7b.
 For a real code, Web3 transaction-safety, or release-readiness review,
 compare novaroute-code-audit-v1 first. Otherwise compare claude-opus-4.6,
-gpt-5.6-sol, and opus-4.7 with other exact offers.
+gpt-5.6-sol, minimax-m2.7, and gpt-5.5 with other exact offers.
 If one fits my real workload, show the pinned model route and ask me
 before create_session.</code></pre>
               <button class="copy-button" type="button" data-copy-target="prompt-antfeed">Copy</button>
@@ -950,8 +947,8 @@ before create_session.</code></pre>
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Fourteen production services are highlighted for common coding, reasoning, and agent workloads. Prices shown are published snapshots. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
-          <p class="section-copy">Demand evidence: <code>claude-opus-4.6</code> ranks first, <code>gpt-5.5</code> fourth, and <code>opus-4.7</code> fifth in AntSeed's July 25 <a href="https://x.com/AntSeedAI/status/2081002378795377145" target="_blank" rel="noopener">Top models by sales</a> snapshot. <code>minimax-m2.7</code> ranks eighth in the July 14 <a href="https://x.com/AntSeedAI/status/2077010692012470320" target="_blank" rel="noopener">Top models by token volume</a> snapshot. This peer offers all four with signed live pricing.</p>
+          <p class="section-copy">Twelve production services are highlighted for common coding, reasoning, and agent workloads. Prices shown are published snapshots. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
+          <p class="section-copy">Demand evidence: <code>claude-opus-4.6</code> ranks first and <code>gpt-5.5</code> fourth in AntSeed's July 25 <a href="https://x.com/AntSeedAI/status/2081002378795377145" target="_blank" rel="noopener">Top models by sales</a> snapshot. <code>minimax-m2.7</code> ranks eighth in the July 14 <a href="https://x.com/AntSeedAI/status/2077010692012470320" target="_blank" rel="noopener">Top models by token volume</a> snapshot. This peer offers these routes with signed live pricing.</p>
           <div class="table-wrap">
             <table>
               <thead>
@@ -1043,21 +1040,6 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
       const PEER_ID = "c50de6922b00677c93007c01924586de887ced7b";
       const DEFAULT_STARTER_MODEL = "claude-opus-4.6";
       const STARTER_MODELS = {
-        "opus-4.7": {
-          input: "$0.29106",
-          output: "$1.47312",
-          summary: "has current high-value demand and ranks first among indexed exact offers",
-        },
-        "claude-opus-4.7": {
-          input: "$0.29106",
-          output: "$1.47312",
-          summary: "is a canonical alias for a current high-value route and uses the live published pricing",
-        },
-        "claude-opus-4-7": {
-          input: "$0.29106",
-          output: "$1.47312",
-          summary: "is a hyphenated compatibility alias for a current high-value route and uses the live published pricing",
-        },
         "gpt-5.4": {
           input: "$0.015",
           output: "$0.09",
@@ -1149,7 +1131,7 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
       }
 
       function shareRouteUrl(model) {
-        const socialRoutes = new Set(["opus-4.7", "claude-opus-4.7", "claude-opus-4-7", "claude-opus-4.6", "gpt-5.5", "gpt-5.6-sol-pro", "gpt-5.6-terra", "gpt-5.6-sol", "gemini-3-5-flash", "minimax-m2.7", "kimi-k3", "claude-opus-4-7-fast", "novaroute-code-audit-v1", "claude-opus-4-8-fast"]);
+        const socialRoutes = new Set(["claude-opus-4.6", "gpt-5.5", "gpt-5.6-sol-pro", "gpt-5.6-terra", "gpt-5.6-sol", "gemini-3-5-flash", "minimax-m2.7", "kimi-k3", "claude-opus-4-7-fast", "novaroute-code-audit-v1", "claude-opus-4-8-fast"]);
         if (socialRoutes.has(model)) return new URL(`routes/${model}/`, window.location.origin);
         return starterRouteUrl(model);
       }
@@ -1164,10 +1146,7 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
         if (model === "minimax-m2.7") {
           return "AntSeed route: minimax-m2.7 ranks eighth in AntSeed's official token-volume snapshot. Signed live pricing, verified peer, Base USDC, explicit pin. Real workloads only.";
         }
-        const upstream = model === "claude-opus-4.7" || model === "claude-opus-4-7"
-          ? " Same high-demand Opus 4.7 upstream."
-          : "";
-        return `AntSeed route: ${model} with signed live directory pricing.${upstream} Verified peer, Base USDC, explicit pin. Real workloads only.`;
+        return `AntSeed route: ${model} with signed live directory pricing. Verified peer, Base USDC, explicit pin. Real workloads only.`;
       }
 
       function shareTextZh(model, route) {
@@ -1180,10 +1159,7 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
         if (model === "minimax-m2.7") {
           return "AntSeed 真实工作负载路由：minimax-m2.7，在官方 token 用量榜中排名第八。签名目录实时价格，已验证 peer，Base USDC，需显式 pin。仅用于真实任务。";
         }
-        const upstream = model === "claude-opus-4.7" || model === "claude-opus-4-7"
-          ? "与高需求 Opus 4.7 使用同一上游；"
-          : "";
-        return `AntSeed 真实工作负载路由：${model}，使用签名目录实时价格。${upstream}已验证 peer，Base USDC，需显式 pin。仅用于真实任务。`;
+        return `AntSeed 真实工作负载路由：${model}，使用签名目录实时价格。已验证 peer，Base USDC，需显式 pin。仅用于真实任务。`;
       }
 
       function updateIntegrationCommands(model) {
@@ -1230,7 +1206,7 @@ llm = ChatOpenAI(
     base_url="http://127.0.0.1:8377/v1",
     api_key="antseed",
 )`);
-        const hermesModels = [model, "opus-4.7", "minimax-m2.7", "claude-sonnet-5"]
+        const hermesModels = [model, "gpt-5.6-sol", "minimax-m2.7", "claude-sonnet-5"]
           .filter((value, index, values) => values.indexOf(value) === index)
           .map((value) => `      - ${value}`)
           .join("\n");
