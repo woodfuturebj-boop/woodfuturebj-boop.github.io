@@ -143,7 +143,7 @@ buyer detection once at startup.
 
 See the [external buyer connection guide](https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md).
 Agents can load the guarded
-[`novaroute-antseed-buyer` skill](https://github.com/woodfuturebj-boop/antseed-proof/blob/main/skills/novaroute-antseed-buyer/SKILL.md)
+[`novaroute-antseed-buyer` skill](https://github.com/woodfuturebj-boop/antseed-proof/tree/main/skills/novaroute-antseed-buyer)
 for read-only verification and an explicit-confirmation paid workflow.
 
 ## Verification
