@@ -861,6 +861,7 @@ models:
             <p>The AntSeed wrapper configures the local proxy and placeholder API key.</p>
             <div class="command">
               <pre id="code-claude"><code>npm install -g @anthropic-ai/claude-code
+antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 antseed claude --model claude-opus-4.6</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-claude">Copy</button>
             </div>
@@ -900,7 +901,7 @@ llm = ChatOpenAI(
             <p>Register AntSeed as a custom Chat Completions provider.</p>
             <div class="command">
               <pre id="code-hermes"><code>model:
-  default: claude-opus-4.6
+  default: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
   provider: antseed
 custom_providers:
   - name: antseed
@@ -908,10 +909,10 @@ custom_providers:
     api_key: antseed-p2p
     api_mode: chat_completions
     models:
-      - claude-opus-4.6
-      - gpt-5.6-sol
-      - minimax-m2.7
-      - claude-sonnet-5</code></pre>
+      - c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
+      - c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol
+      - c50de6922b00677c93007c01924586de887ced7b@minimax-m2.7
+      - c50de6922b00677c93007c01924586de887ced7b@claude-sonnet-5</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-hermes">Copy</button>
             </div>
           </div>
@@ -1203,6 +1204,7 @@ models:
       - edit
       - apply`);
         setCode("code-claude", `npm install -g @anthropic-ai/claude-code
+antseed buyer connection set --peer ${PEER_ID}
 antseed claude --model ${model}`);
         setCode("code-pi", `npm install -g @mariozechner/pi-coding-agent
 pi install git:github.com/AntSeed/pi-antseed
@@ -1219,10 +1221,10 @@ llm = ChatOpenAI(
 )`);
         const hermesModels = [model, "gpt-5.6-sol", "minimax-m2.7", "claude-sonnet-5"]
           .filter((value, index, values) => values.indexOf(value) === index)
-          .map((value) => `      - ${value}`)
+          .map((value) => `      - ${PEER_ID}@${value}`)
           .join("\n");
         setCode("code-hermes", `model:
-  default: ${model}
+  default: ${pinnedModel}
   provider: antseed
 custom_providers:
   - name: antseed
