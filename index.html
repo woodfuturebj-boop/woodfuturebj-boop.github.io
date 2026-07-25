@@ -675,6 +675,11 @@ antseed buyer balance</code></pre>
                 <pre id="cmd-pin"><code>antseed buyer start --peer c50de6922b00677c93007c01924586de887ced7b</code></pre>
                 <button class="copy-button" type="button" data-copy-target="cmd-pin">Copy</button>
               </div>
+              <p>Buyer already running? Switch it to this peer from another terminal without restarting the proxy.</p>
+              <div class="command">
+                <pre id="cmd-switch-pin"><code>antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b</code></pre>
+                <button class="copy-button" type="button" data-copy-target="cmd-switch-pin">Copy</button>
+              </div>
             </div>
           </div>
           <p class="notice"><strong>Finish cleanly:</strong> When the real workload is done, stop the foreground buyer with <code>Ctrl+C</code> and wait for <code>Disconnected. All channels finalized.</code> before closing the terminal. Do not force-kill the buyer process; graceful shutdown finalizes the payment channel normally and releases unused deposit.</p>
@@ -723,6 +728,8 @@ antseed buyer balance</code></pre>
           <div class="tabs" role="tablist" aria-label="Integration examples">
             <button class="tab-button" type="button" role="tab" id="tab-antstation" aria-controls="panel-antstation" aria-selected="true">AntStation</button>
             <button class="tab-button" type="button" role="tab" id="tab-cli" aria-controls="panel-cli" aria-selected="false">OpenAI client</button>
+            <button class="tab-button" type="button" role="tab" id="tab-codex" aria-controls="panel-codex" aria-selected="false">Codex</button>
+            <button class="tab-button" type="button" role="tab" id="tab-opencode" aria-controls="panel-opencode" aria-selected="false">OpenCode</button>
             <button class="tab-button" type="button" role="tab" id="tab-claude" aria-controls="panel-claude" aria-selected="false">Claude Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-pi" aria-controls="panel-pi" aria-selected="false">Pi</button>
             <button class="tab-button" type="button" role="tab" id="tab-langchain" aria-controls="panel-langchain" aria-selected="false">LangChain</button>
@@ -742,12 +749,35 @@ antseed buyer balance</code></pre>
 
           <div class="tab-panel" role="tabpanel" id="panel-cli" aria-labelledby="tab-cli" hidden>
             <h3>OpenAI-compatible clients</h3>
-            <p>Point any OpenAI Chat Completions client at the local proxy.</p>
+            <p>Pin this peer per request, so an existing session-wide connection does not need to change.</p>
             <div class="command">
               <pre id="code-cli"><code>curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.7","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
+  -H "x-antseed-pin-peer: c50de6922b00677c93007c01924586de887ced7b" \
+  -d '{"model":"gpt-5.6-sol","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-cli">Copy</button>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-codex" aria-labelledby="tab-codex" hidden>
+            <h3>OpenAI Codex CLI</h3>
+            <p>Pin this peer, then let the official AntSeed wrapper supply Codex's temporary provider configuration for one real coding session.</p>
+            <div class="command">
+              <pre id="code-codex"><code>npm install -g @openai/codex
+antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
+antseed codex --model gpt-5.6-sol</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-codex">Copy</button>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-opencode" aria-labelledby="tab-opencode" hidden>
+            <h3>OpenCode</h3>
+            <p>Use the AntSeed wrapper to create an isolated temporary OpenCode provider config for this pinned peer.</p>
+            <div class="command">
+              <pre id="code-opencode"><code>npm install -g opencode-ai
+antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
+antseed opencode --model gpt-5.6-sol</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-opencode">Copy</button>
             </div>
           </div>
 
@@ -763,13 +793,14 @@ antseed claude --model claude-opus-4.8</code></pre>
 
           <div class="tab-panel" role="tabpanel" id="panel-pi" aria-labelledby="tab-pi" hidden>
             <h3>Pi coding agent</h3>
-            <p>Install the official extension, reload Pi, then choose an AntSeed model.</p>
+            <p>Install the official extension, reload Pi, then select the route carrying this peer prefix. Pi pins the peer on every request.</p>
             <div class="command">
               <pre id="code-pi"><code>npm install -g @mariozechner/pi-coding-agent
 pi install git:github.com/AntSeed/pi-antseed
 pi
-# In Pi: /reload
-# Then:  /model antseed/claude-opus-4.8</code></pre>
+# In Pi: /reload, then open the model selector with Ctrl+L
+# Search: c50de6922b006
+# Choose: antseed/gpt-5.6-sol@c50de6922b006-...</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-pi">Copy</button>
             </div>
           </div>
@@ -838,6 +869,9 @@ before create_session.</code></pre>
               <button class="copy-button" type="button" data-copy-target="prompt-antfeed">Copy</button>
             </div>
             <p class="notice">AntFeed refreshes its provider directory hourly, so a newly published launch price can briefly appear stale. Compare it with this page and the signed live catalog before approving <code>create_session</code>, which can move buyer funds.</p>
+            <div class="actions">
+              <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/blob/main/skills/novaroute-antseed-buyer/SKILL.md" target="_blank" rel="noopener">Open guarded buyer skill</a>
+            </div>
           </div>
         </div>
       </section>

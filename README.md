@@ -21,6 +21,13 @@ antseed payments
 antseed buyer start --peer c50de6922b00677c93007c01924586de887ced7b
 ```
 
+If the buyer proxy is already running, change its session pin without a
+restart:
+
+```bash
+antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
+```
+
 When a foreground buyer workload is finished, press `Ctrl+C` and wait for
 `Disconnected. All channels finalized.` before closing the terminal. Avoid
 force-killing the buyer process; graceful shutdown lets AntSeed finalize the
@@ -33,6 +40,14 @@ In a second terminal, run one real workload through the pinned
 curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
   -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
+```
+
+For coding-agent workloads, the official wrappers avoid hand-written provider
+configuration:
+
+```bash
+antseed codex --model gpt-5.6-sol
+antseed opencode --model gpt-5.6-sol
 ```
 
 The live page also provides copy-ready selectors for `gpt-5.6-sol`, `gpt-5.6-sol-pro`,
@@ -90,6 +105,9 @@ provider directory hourly, so compare newly published launch prices with the
 signed live catalog before approving a session.
 
 See the [external buyer connection guide](https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md).
+Agents can load the guarded
+[`novaroute-antseed-buyer` skill](https://github.com/woodfuturebj-boop/antseed-proof/blob/main/skills/novaroute-antseed-buyer/SKILL.md)
+for read-only verification and an explicit-confirmation paid workflow.
 
 ## Verification
 
