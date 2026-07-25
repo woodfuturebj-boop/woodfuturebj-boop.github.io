@@ -1,110 +1,110 @@
 {
-  "version": 1,
-  "updatedAt": "2026-07-22T12:47:52.623Z",
+  "version": 2,
+  "updatedAt": "2026-07-25T10:38:46.044Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
-    "label": "AntSeed Top models by users",
-    "url": "https://x.com/AntSeedAI/status/2078868465276874967",
-    "observedAt": "2026-07-19T15:44:00Z"
+    "label": "Current upstream market sample",
+    "url": "https://www.surplusintelligence.ai/api/inference/markets",
+    "observedAt": "2026-07-25T10:38:46.044Z"
   },
   "services": [
     {
+      "id": "gpt-5.6-sol-pro",
+      "input": 0.15,
+      "output": 0.9,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Current high-value reasoning demand; exact rank one in the latest sample"
+    },
+    {
+      "id": "opus-4.7",
+      "input": 0.15147,
+      "output": 0.75735,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "High-value Opus demand; exact rank one in the latest sample"
+    },
+    {
+      "id": "claude-opus-4.7",
+      "input": 0.15147,
+      "output": 0.75735,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Canonical alias for the high-value Opus 4.7 route"
+    },
+    {
+      "id": "claude-sonnet-5",
+      "input": 0.06,
+      "output": 0.3,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "High-value coding demand; exact rank one in the latest sample"
+    },
+    {
+      "id": "claude-opus-4.8",
+      "input": 0.181764,
+      "output": 0.90882,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Frontier coding demand; exact rank one in the latest sample"
+    },
+    {
+      "id": "claude-fable-5",
+      "input": 0.623268,
+      "output": 3.11634,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "High-value long-form demand; exact rank one in the latest sample"
+    },
+    {
+      "id": "kimi-k3",
+      "input": 0.1196622,
+      "output": 0.5983101,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Agent and coding demand; exact rank one in the latest sample"
+    },
+    {
+      "id": "claude-opus-4.6",
+      "input": 0.15,
+      "output": 0.75,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Coding demand; exact rank one in the latest sample"
+    },
+    {
+      "id": "glm-5.2",
+      "input": 0.021,
+      "output": 0.006,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Highest recent request count in the latest upstream sample"
+    },
+    {
+      "id": "gpt-5.5",
+      "input": 0.015,
+      "output": 0.09,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Strong recent request demand with signed live directory pricing"
+    },
+    {
+      "id": "gpt-5.4",
+      "input": 0.0075,
+      "output": 0.045,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "General reasoning demand; exact rank one in the latest sample"
+    },
+    {
+      "id": "gemini-3-5-flash",
+      "input": 0.0654954,
+      "output": 0.3929712,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Fast multimodal-family demand; exact rank one in the latest sample"
+    },
+    {
       "id": "novaroute-code-audit-v1",
-      "input": 1.8,
-      "output": 9,
+      "input": 0.108,
+      "output": 0.54,
       "protocol": "Ant Agent / OpenAI Chat Completions",
       "focus": "Read-only code, Web3 transaction-safety, and release-readiness reviews"
     },
     {
-      "id": "claude-opus-4-7-fast",
-      "input": 1.8,
-      "output": 9,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Stable demand-backed fast Opus route at 50% raw cost"
-    },
-    {
       "id": "claude-opus-4-8-fast",
-      "input": 1.4925,
-      "output": 7.4625,
+      "input": 0.036,
+      "output": 0.18,
       "protocol": "OpenAI Chat Completions",
-      "focus": "Rank-one fast Opus route with current paid demand"
-    },
-    {
-      "id": "claude-opus-4.6",
-      "input": 0.5359365,
-      "output": 2.6796825,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Rank-one high-demand coding route"
-    },
-    {
-      "id": "claude-opus-4.7",
-      "input": 0.25,
-      "output": 1.25,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Canonical alias for high-demand Opus 4.7"
-    },
-    {
-      "id": "gpt-5.5",
-      "input": 0.01311,
-      "output": 0.065493,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "High-demand route priced below the verified non-zero exact competitor"
-    },
-    {
-      "id": "claude-opus-4.8",
-      "input": 0.3,
-      "output": 1.5,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "High-demand frontier coding route"
-    },
-    {
-      "id": "glm-5.2",
-      "input": 0.015,
-      "output": 0.01,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Efficient multilingual reasoning"
-    },
-    {
-      "id": "gpt-5.6-sol-pro",
-      "input": 0.25,
-      "output": 1.5,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Rank-one high-demand reasoning route"
-    },
-    {
-      "id": "gemini-3-5-flash",
-      "input": 0.0597,
-      "output": 0.3582,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Demand-backed 20% raw-cost route projected exact rank one"
-    },
-    {
-      "id": "claude-sonnet-5",
-      "input": 0.1,
-      "output": 0.5,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Rank-one coding and agent adoption route"
-    },
-    {
-      "id": "gpt-5.4",
-      "input": 0.0125,
-      "output": 0.075,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "High-volume general reasoning"
-    },
-    {
-      "id": "kimi-k3",
-      "input": 0.15,
-      "output": 0.75,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Rank-one agent and coding route"
-    },
-    {
-      "id": "claude-fable-5",
-      "input": 0.54,
-      "output": 2.7,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Rank-one long-form and coding route"
+      "focus": "Fast Opus route with signed live directory pricing"
     }
   ]
 }

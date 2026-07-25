@@ -13,14 +13,12 @@ The shortest visual path is the official [AntStation desktop app](https://github
 3. Choose `NovaRoute AI`, select a service, and start a real chat.
 
 Selecting a Discover result pins both the provider and service. For CLI buyers,
-start a buyer and pin this peer explicitly:
+fund first, then start the proxy with this peer pinned in the startup command:
 
 ```bash
 npm install -g @antseed/cli
-antseed buyer start
 antseed payments
-antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
-curl -s http://127.0.0.1:8377/v1/models | jq '.data[].id'
+antseed buyer start --peer c50de6922b00677c93007c01924586de887ced7b
 ```
 
 When a foreground buyer workload is finished, press `Ctrl+C` and wait for
@@ -28,13 +26,13 @@ When a foreground buyer workload is finished, press `Ctrl+C` and wait for
 force-killing the buyer process; graceful shutdown lets AntSeed finalize the
 payment channel normally and release unused deposit.
 
-Run one real workload through the pinned `gpt-5.5` route without changing your
-saved connection:
+In a second terminal, run one real workload through the pinned
+`gpt-5.6-sol-pro` route:
 
 ```bash
 curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.5","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol-pro","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
 ```
 
 The live page also provides copy-ready selectors for `gpt-5.6-sol-pro`,
@@ -62,20 +60,17 @@ command ready to copy:
 
 ## Featured services
 
-- `gpt-5.4` - active high-demand rank-one route
-- `gpt-5.5` - active high-demand route with signed live directory pricing
-- `claude-opus-4-7-fast` - active stable demand-backed fast Opus route at 50% raw cost
-- `novaroute-code-audit-v1` - active read-only specialist agent backed by the same verified 50% raw-cost upstream
-- `gpt-5.6-sol-pro` - active high-demand rank-one reasoning route
-- `gemini-3-5-flash` - active demand-backed 20% raw-cost rank-uplift route
-- `glm-5.2` - active multilingual rank-one route
-- `kimi-k3` - active rank-one agent and coding route
-- `claude-opus-4-8-fast` - active current-demand rank-one fast Opus route
-- `claude-opus-4.8` - active high-demand frontier coding route
-- `claude-opus-4.6` - active high-demand rank-one coding route
-- `claude-fable-5` - active rank-one long-form and coding route
-- `opus-4.7`
-- `claude-sonnet-5`
+- `gpt-5.6-sol-pro` - current high-value reasoning demand; exact rank one in the latest sample
+- `opus-4.7` / `claude-opus-4.7` - current high-value Opus demand; exact rank one
+- `claude-sonnet-5` - high-value coding demand; exact rank one
+- `claude-opus-4.8` - high-value frontier coding demand; exact rank one
+- `claude-fable-5` - high-value long-form demand; exact rank one
+- `kimi-k3` - agent and coding demand; exact rank one
+- `claude-opus-4.6` - coding demand; exact rank one
+- `glm-5.2` - highest request count in the latest upstream sample
+- `gpt-5.5` - strong request demand with signed live directory pricing
+- `gpt-5.4` - general reasoning demand; exact rank one
+- `novaroute-code-audit-v1` - read-only specialist agent
 
 The provider still advertises its broader catalog. Inspect signed live metadata and current pricing with:
 
