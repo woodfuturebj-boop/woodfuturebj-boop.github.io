@@ -613,6 +613,7 @@
           <div class="actions hero-actions">
             <a class="action" href="https://github.com/AntSeed/antseed/releases/latest" target="_blank" rel="noopener">Download AntStation</a>
             <a class="action" href="#first-workload">Run the starter workload</a>
+            <a class="action secondary" href="?model=novaroute-code-audit-v1#first-workload">Run code audit agent</a>
             <a class="action secondary" href="#connect">Connect this peer</a>
             <a class="action secondary" href="#integrations" data-select-tab="tab-antfeed">Use AntFeed MCP</a>
           </div>
@@ -1128,6 +1129,9 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
       }
 
       function shareText(model, route) {
+        if (model === "novaroute-code-audit-v1") {
+          return "AntSeed agent: novaroute-code-audit-v1 for findings-first code, Web3 transaction-safety, and release-readiness reviews. Read-only, verified peer, Base USDC, real workloads only.";
+        }
         if (model === "claude-opus-4.6") {
           return "AntSeed route: claude-opus-4.6 with signed live directory pricing. Latest official sales rank one and lowest indexed exact-offer price. Verified peer, Base USDC, explicit pin. Real workloads only.";
         }
@@ -1138,6 +1142,9 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
       }
 
       function shareTextZh(model, route) {
+        if (model === "novaroute-code-audit-v1") {
+          return "AntSeed 差异化审计代理：novaroute-code-audit-v1，用于结果优先的代码、Web3 交易安全和发布就绪审查。只读，已验证 peer，Base USDC，仅用于真实任务。";
+        }
         if (model === "claude-opus-4.6") {
           return "AntSeed 真实工作负载路由：claude-opus-4.6，使用签名目录实时价格。最新官方销售榜第一，精确同名报价中价格最低。已验证 peer，Base USDC，需显式 pin。仅用于真实任务。";
         }
@@ -1145,6 +1152,66 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
           ? "与高需求 Opus 4.7 使用同一上游；"
           : "";
         return `AntSeed 真实工作负载路由：${model}，使用签名目录实时价格。${upstream}已验证 peer，Base USDC，需显式 pin。仅用于真实任务。`;
+      }
+
+      function updateIntegrationCommands(model) {
+        const pinnedModel = `${PEER_ID}@${model}`;
+        const shortPeer = PEER_ID.slice(0, 12);
+        const setCode = (id, value) => {
+          document.querySelector(`#${id} code`).textContent = value;
+        };
+        setCode("code-codex", `npm install -g @openai/codex
+antseed buyer connection set --peer ${PEER_ID}
+antseed codex --model ${model}`);
+        setCode("code-opencode", `npm install -g opencode-ai
+antseed buyer connection set --peer ${PEER_ID}
+antseed opencode --model ${model}`);
+        setCode("code-aider", `export OPENAI_API_BASE=http://127.0.0.1:8377/v1
+export OPENAI_API_KEY=antseed-local
+aider --model openai/${pinnedModel}`);
+        setCode("code-continue", `name: NovaRoute AI
+version: 1.0.0
+schema: v1
+
+models:
+  - name: NovaRoute AI - ${model}
+    provider: openai
+    model: ${pinnedModel}
+    apiBase: http://127.0.0.1:8377/v1
+    apiKey: antseed-local
+    roles:
+      - chat
+      - edit
+      - apply`);
+        setCode("code-claude", `npm install -g @anthropic-ai/claude-code
+antseed claude --model ${model}`);
+        setCode("code-pi", `npm install -g @mariozechner/pi-coding-agent
+pi install git:github.com/AntSeed/pi-antseed
+pi
+# In Pi: /reload, then open the model selector with Ctrl+L
+# Search: ${shortPeer}
+# Choose: antseed/${model}@${shortPeer}-...`);
+        setCode("code-langchain", `from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(
+    model="${pinnedModel}",
+    base_url="http://127.0.0.1:8377/v1",
+    api_key="antseed",
+)`);
+        const hermesModels = [model, "opus-4.7", "claude-opus-4.8", "claude-sonnet-5"]
+          .filter((value, index, values) => values.indexOf(value) === index)
+          .map((value) => `      - ${value}`)
+          .join("\n");
+        setCode("code-hermes", `model:
+  default: ${model}
+  provider: antseed
+custom_providers:
+  - name: antseed
+    base_url: http://127.0.0.1:8377/v1
+    api_key: antseed-p2p
+    api_mode: chat_completions
+    models:
+${hermesModels}`);
       }
 
       function selectStarterModel(model, updateUrl = true) {
@@ -1165,6 +1232,7 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
         });
         document.querySelector("#cmd-first-call code").textContent = starterCommand(model);
         document.querySelector("#code-cli code").textContent = starterCommand(model);
+        updateIntegrationCommands(model);
         document.getElementById("starter-model-name").textContent = model;
         document.getElementById("starter-summary-text").textContent = `${route.summary}. The model-prefix route pins this provider for one request without changing your saved connection. Replace the message with a task you actually need completed.`;
         document.getElementById("starter-price").textContent = `Directory price: ${route.input} input / ${route.output} output per 1M tokens. Confirm it in the signed live catalog before use; never send artificial traffic just to test the route.`;

@@ -1,0 +1,54 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F5F7F6"/>
+  <rect x="18" y="18" width="1164" height="594" rx="8" fill="#FFFFFF" stroke="#17201C" stroke-width="2"/>
+  <rect x="18" y="18" width="1164" height="12" fill="#0C7A47"/>
+  <rect x="892" y="18" width="290" height="12" fill="#985B08"/>
+
+  <g transform="translate(54 49) scale(.7)" stroke="#0C7A47" stroke-width="2.6" stroke-linecap="round">
+    <line x1="37" y1="17" x2="28" y2="6"/>
+    <line x1="43" y1="17" x2="52" y2="6"/>
+    <line x1="34" y1="30" x2="18" y2="22"/>
+    <line x1="46" y1="30" x2="62" y2="22"/>
+    <line x1="33" y1="38" x2="14" y2="40"/>
+    <line x1="47" y1="38" x2="66" y2="40"/>
+    <line x1="34" y1="52" x2="16" y2="60"/>
+    <line x1="46" y1="52" x2="64" y2="60"/>
+  </g>
+  <g transform="translate(54 49) scale(.7)" fill="#0C7A47">
+    <circle cx="28" cy="6" r="3"/>
+    <circle cx="52" cy="6" r="3"/>
+    <circle cx="18" cy="22" r="3"/>
+    <circle cx="62" cy="22" r="3"/>
+    <circle cx="14" cy="40" r="3"/>
+    <circle cx="66" cy="40" r="3"/>
+    <circle cx="16" cy="60" r="3"/>
+    <circle cx="64" cy="60" r="3"/>
+    <ellipse cx="40" cy="22" rx="5" ry="5.5"/>
+    <ellipse cx="40" cy="36" rx="7" ry="8"/>
+    <ellipse cx="40" cy="55" rx="9" ry="12"/>
+  </g>
+
+  <text x="124" y="85" fill="#17201C" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700">NovaRoute AI</text>
+  <text x="304" y="85" fill="#5F6D66" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="600">· AntSeed</text>
+  <text x="63" y="153" fill="#985B08" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">DIFFERENTIATED READ-ONLY AGENT</text>
+  <text x="63" y="222" fill="#17201C" font-family="Inter, Arial, sans-serif" font-size="57" font-weight="800">Code &amp; Web3 Safety Audit</text>
+  <text x="63" y="266" fill="#4F5F57" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="650">novaroute-code-audit-v1</text>
+  <text x="63" y="306" fill="#4F5F57" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="600">Findings-first code review · transaction safety · release readiness</text>
+
+  <rect x="63" y="338" width="330" height="120" rx="6" fill="#E9F7EF" stroke="#0C7A47" stroke-width="2"/>
+  <text x="88" y="394" fill="#17201C" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">$4.2984</text>
+  <text x="88" y="429" fill="#4F5F57" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">input / 1M tokens</text>
+
+  <rect x="417" y="338" width="330" height="120" rx="6" fill="#FFF4DF" stroke="#985B08" stroke-width="2"/>
+  <text x="442" y="394" fill="#17201C" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">$21.492</text>
+  <text x="442" y="429" fill="#4F5F57" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">output / 1M tokens</text>
+
+  <rect x="785" y="338" width="352" height="172" rx="6" fill="#17201C"/>
+  <text x="815" y="386" fill="#54D996" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800">Verified specialist</text>
+  <text x="815" y="426" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="600">Explicit peer pin · Base USDC</text>
+  <text x="815" y="461" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="600">No transaction execution</text>
+  <text x="815" y="492" fill="#F8C66A" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Real repository workloads only</text>
+
+  <line x1="63" y1="542" x2="1137" y2="542" stroke="#D7DFDA" stroke-width="2"/>
+  <text x="63" y="582" fill="#5F6D66" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600">woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/</text>
+</svg>
