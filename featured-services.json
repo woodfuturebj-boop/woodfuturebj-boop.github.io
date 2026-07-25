@@ -9,6 +9,13 @@
   },
   "services": [
     {
+      "id": "gpt-5.6-sol",
+      "input": 0.09,
+      "output": 0.54,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "Highest upstream dollar volume in the current sample; exact rank one"
+    },
+    {
       "id": "gpt-5.6-sol-pro",
       "input": 0.15,
       "output": 0.9,
@@ -98,13 +105,6 @@
       "output": 0.54,
       "protocol": "Ant Agent / OpenAI Chat Completions",
       "focus": "Read-only code, Web3 transaction-safety, and release-readiness reviews"
-    },
-    {
-      "id": "claude-opus-4-8-fast",
-      "input": 0.036,
-      "output": 0.18,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Fast Opus route with signed live directory pricing"
     }
   ]
 }

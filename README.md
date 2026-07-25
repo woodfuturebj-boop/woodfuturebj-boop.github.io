@@ -9,7 +9,7 @@ Live site: https://woodfuturebj-boop.github.io/
 The shortest visual path is the official [AntStation desktop app](https://github.com/AntSeed/antseed/releases/latest):
 
 1. Fund the buyer with Base USDC.
-2. Open **Discover** and search for `gpt-5.6-sol-pro`, `kimi-k3`, or `NovaRoute AI`.
+2. Open **Discover** and search for `gpt-5.6-sol`, `gpt-5.6-sol-pro`, or `NovaRoute AI`.
 3. Choose `NovaRoute AI`, select a service, and start a real chat.
 
 Selecting a Discover result pins both the provider and service. For CLI buyers,
@@ -27,15 +27,15 @@ force-killing the buyer process; graceful shutdown lets AntSeed finalize the
 payment channel normally and release unused deposit.
 
 In a second terminal, run one real workload through the pinned
-`gpt-5.6-sol-pro` route:
+`gpt-5.6-sol` route:
 
 ```bash
 curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol-pro","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
 ```
 
-The live page also provides copy-ready selectors for `gpt-5.6-sol-pro`,
+The live page also provides copy-ready selectors for `gpt-5.6-sol`, `gpt-5.6-sol-pro`,
 `gemini-3-5-flash`, `kimi-k3`, `glm-5.2`, `gpt-5.5`, `claude-opus-4-7-fast`, `novaroute-code-audit-v1`, `claude-opus-4-8-fast`, `claude-opus-4.8`, `claude-opus-4.6`,
 `claude-sonnet-5`, and `claude-fable-5`. All routes use the one-request
 `peer@model` prefix and do not replace the buyer's saved
@@ -46,6 +46,7 @@ command ready to copy:
 
 - [`gpt-5.4`](https://woodfuturebj-boop.github.io/?model=gpt-5.4#first-workload)
 - [`gpt-5.5`](https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload)
+- [`gpt-5.6-sol`](https://woodfuturebj-boop.github.io/routes/gpt-5.6-sol/) - highest upstream dollar volume in the current sample; inspect signed live pricing before use
 - [`gpt-5.6-sol-pro`](https://woodfuturebj-boop.github.io/?model=gpt-5.6-sol-pro#first-workload)
 - [`gemini-3-5-flash`](https://woodfuturebj-boop.github.io/routes/gemini-3-5-flash/) - demand-backed route; inspect signed live pricing before use
 - [`glm-5.2`](https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload)
@@ -60,7 +61,8 @@ command ready to copy:
 
 ## Featured services
 
-- `gpt-5.6-sol-pro` - current high-value reasoning demand; exact rank one in the latest sample
+- `gpt-5.6-sol` - highest upstream dollar volume in the current sample; exact rank one
+- `gpt-5.6-sol-pro` - second-highest current reasoning volume; exact rank one
 - `opus-4.7` / `claude-opus-4.7` - current high-value Opus demand; exact rank one
 - `claude-sonnet-5` - high-value coding demand; exact rank one
 - `claude-opus-4.8` - high-value frontier coding demand; exact rank one
