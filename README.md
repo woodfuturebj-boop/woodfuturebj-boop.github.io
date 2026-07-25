@@ -12,7 +12,7 @@ The shortest visual path is the official [AntStation desktop app](https://github
 2. Open **Discover** and search the exact provider name `NovaRoute AI` first.
 3. Choose `NovaRoute AI`, select a service, and start a real chat.
 
-Searching by service name such as `gpt-5.6-sol` is a useful fallback, but it
+Searching by service name such as `claude-opus-4.6` is a useful fallback, but it
 can return several peers; the exact provider name narrows the list directly.
 
 Selecting a Discover result pins both the provider and service. For CLI buyers,
@@ -37,12 +37,13 @@ force-killing the buyer process; graceful shutdown lets AntSeed finalize the
 payment channel normally and release unused deposit.
 
 In a second terminal, run one real workload through the pinned
-`gpt-5.6-sol` route:
+`claude-opus-4.6` route. It ranks first in AntSeed's July 25 official
+model-sales snapshot and has the lowest indexed exact-offer price:
 
 ```bash
 curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
-  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
+  -d '{"model":"c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'
 ```
 
 For coding-agent workloads, the official wrappers avoid hand-written provider
@@ -87,20 +88,20 @@ command ready to copy:
 - [`novaroute-code-audit-v1`](https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/) - read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews
 - [`claude-opus-4-8-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/) - current-demand rank-one route; inspect signed live pricing before use
 - [`claude-opus-4.8`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload)
-- [`claude-opus-4.6`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.6#first-workload)
+- [`claude-opus-4.6`](https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/) - first in AntSeed's July 25 official model-sales snapshot and lowest-priced indexed exact offer
 - [`claude-sonnet-5`](https://woodfuturebj-boop.github.io/?model=claude-sonnet-5#first-workload)
 - [`claude-fable-5`](https://woodfuturebj-boop.github.io/?model=claude-fable-5#first-workload)
 
 ## Featured services
 
-- `gpt-5.6-sol` - highest upstream dollar volume in the current sample; exact rank one
+- `claude-opus-4.6` - first in the latest official model-sales snapshot; lowest-priced indexed exact offer
+- `gpt-5.6-sol` - highest upstream dollar volume in the current market sample; exact rank one
 - `gpt-5.6-sol-pro` - second-highest current reasoning volume; exact rank one
 - `opus-4.7` / `claude-opus-4.7` - current high-value Opus demand; exact rank one
 - `claude-sonnet-5` - high-value coding demand; exact rank one
 - `claude-opus-4.8` - high-value frontier coding demand; exact rank one
 - `claude-fable-5` - high-value long-form demand; exact rank one
 - `kimi-k3` - agent and coding demand; exact rank one
-- `claude-opus-4.6` - coding demand; exact rank one
 - `glm-5.2` - highest request count in the latest upstream sample
 - `gpt-5.5` - strong request demand with signed live directory pricing
 - `gpt-5.4` - general reasoning demand; exact rank one

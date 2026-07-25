@@ -1,13 +1,21 @@
 {
   "version": 2,
-  "updatedAt": "2026-07-25T11:58:52.670Z",
+  "updatedAt": "2026-07-25T16:36:40Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
-    "label": "Current upstream market sample",
-    "url": "https://www.surplusintelligence.ai/api/inference/markets",
-    "observedAt": "2026-07-25T11:58:52.670Z"
+    "label": "AntSeed Top models by sales plus current exact-offer audit",
+    "url": "https://x.com/AntSeedAI/status/2081002378795377145",
+    "observedAt": "2026-07-25T13:03:24Z",
+    "marketUrl": "https://www.surplusintelligence.ai/api/inference/markets"
   },
   "services": [
+    {
+      "id": "claude-opus-4.6",
+      "input": 0.297,
+      "output": 1.485,
+      "protocol": "OpenAI Chat Completions",
+      "focus": "First in AntSeed's latest official model-sales snapshot; lowest-priced indexed exact offer"
+    },
     {
       "id": "gpt-5.6-sol",
       "input": 0.54,
@@ -63,13 +71,6 @@
       "output": 0.891,
       "protocol": "OpenAI Chat Completions",
       "focus": "Agent and coding demand; exact rank one in the latest sample"
-    },
-    {
-      "id": "claude-opus-4.6",
-      "input": 0.297,
-      "output": 1.485,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Coding demand; exact rank one in the latest sample"
     },
     {
       "id": "glm-5.2",

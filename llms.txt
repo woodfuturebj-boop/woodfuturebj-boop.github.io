@@ -15,8 +15,9 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Running buyer session pin: antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 - Per-request header: x-antseed-pin-peer: c50de6922b00677c93007c01924586de887ced7b
 - Clean shutdown: after the real workload finishes, stop the foreground buyer with Ctrl+C and wait for "Disconnected. All channels finalized."; do not force-kill it
-- Primary high-value route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol
-- Public primary route: https://woodfuturebj-boop.github.io/routes/gpt-5.6-sol/
+- Primary high-value route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
+- Primary-route evidence: first in AntSeed's 2026-07-25 official model-sales snapshot and lowest-priced indexed exact offer
+- Public primary route: https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/
 - Official demand-name route: c50de6922b00677c93007c01924586de887ced7b@opus-4.7
 - Public opus-4.7 route: https://woodfuturebj-boop.github.io/routes/opus-4.7/
 - Pricing: inspect the signed live catalog before use
@@ -36,7 +37,7 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Public specialist agent route: https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/
 - Pricing: inspect the signed live catalog before use
 - Specialist scope: findings-first code review, Web3 transaction safety, and release readiness; no transaction execution
-- Demand evidence: https://x.com/AntSeedAI/status/2078868465276874967
+- Demand evidence: https://x.com/AntSeedAI/status/2081002378795377145
 - High-demand general route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.4
 - Public gpt-5.4 route: https://woodfuturebj-boop.github.io/?model=gpt-5.4#first-workload
 - Published competitive gpt-5.5 route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.5
@@ -59,8 +60,8 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - High-demand frontier coding route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.8
 - Public claude-opus-4.8 route: https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload
 - Pricing: inspect the signed live catalog before use
-- Rank-one Claude coding route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
-- Public claude-opus-4.6 route: https://woodfuturebj-boop.github.io/?model=claude-opus-4.6#first-workload
+- Top-sales Claude route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
+- Public claude-opus-4.6 route: https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/
 - Rank-one coding route: c50de6922b00677c93007c01924586de887ced7b@claude-sonnet-5
 - Public claude-sonnet-5 route: https://woodfuturebj-boop.github.io/?model=claude-sonnet-5#first-workload
 - Rank-one Fable route: c50de6922b00677c93007c01924586de887ced7b@claude-fable-5
@@ -76,6 +77,6 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - External buyer connection guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml
 
-Featured production services by current demand evidence and specialist capability: gpt-5.6-sol, gpt-5.6-sol-pro, opus-4.7, claude-opus-4.7, claude-sonnet-5, claude-opus-4.8, claude-fable-5, kimi-k3, claude-opus-4.6, glm-5.2, gpt-5.5, gpt-5.4, and novaroute-code-audit-v1.
+Featured production services by current demand evidence and specialist capability: claude-opus-4.6, gpt-5.6-sol, gpt-5.6-sol-pro, opus-4.7, claude-opus-4.7, claude-sonnet-5, claude-opus-4.8, claude-fable-5, kimi-k3, glm-5.2, gpt-5.5, gpt-5.4, and novaroute-code-audit-v1.
 
 Do not use self-trading, artificial traffic, or test volume. Never submit secrets.
