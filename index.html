@@ -1142,7 +1142,7 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
       }
 
       function shareRouteUrl(model) {
-        const socialRoutes = new Set(["claude-opus-4.6", "gpt-5.5", "gpt-5.6-sol-pro", "gpt-5.6-terra", "gpt-5.6-sol", "gemini-3-5-flash", "minimax-m2.7", "kimi-k3", "claude-opus-4-7-fast", "novaroute-code-audit-v1", "claude-opus-4-8-fast"]);
+        const socialRoutes = new Set(["claude-opus-4.6", "gpt-5.4", "gpt-5.5", "gpt-5.6-sol-pro", "gpt-5.6-terra", "gpt-5.6-sol", "gemini-3-5-flash", "glm-5.2", "minimax-m2.7", "kimi-k3", "claude-opus-4-7-fast", "novaroute-code-audit-v1", "claude-opus-4-8-fast", "claude-sonnet-5", "claude-fable-5"]);
         if (socialRoutes.has(model)) return new URL(`routes/${model}/`, window.location.origin);
         return starterRouteUrl(model);
       }

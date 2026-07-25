@@ -31,7 +31,7 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Specialist scope: findings-first code review, Web3 transaction safety, and release readiness; no transaction execution
 - Demand evidence: https://x.com/AntSeedAI/status/2081002378795377145
 - High-demand general route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.4
-- Public gpt-5.4 route: https://woodfuturebj-boop.github.io/?model=gpt-5.4#first-workload
+- Public gpt-5.4 route: https://woodfuturebj-boop.github.io/routes/gpt-5.4/
 - Published competitive gpt-5.5 route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.5
 - Public gpt-5.5 route: https://woodfuturebj-boop.github.io/?model=gpt-5.5#first-workload
 - High-demand reasoning route: c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol-pro
@@ -46,7 +46,7 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Public gemini-3-5-flash route: https://woodfuturebj-boop.github.io/routes/gemini-3-5-flash/
 - Pricing: inspect the signed live catalog before use
 - High-demand multilingual route: c50de6922b00677c93007c01924586de887ced7b@glm-5.2
-- Public glm-5.2 route: https://woodfuturebj-boop.github.io/?model=glm-5.2#first-workload
+- Public glm-5.2 route: https://woodfuturebj-boop.github.io/routes/glm-5.2/
 - Official top-10 token-volume route: c50de6922b00677c93007c01924586de887ced7b@minimax-m2.7
 - Public minimax-m2.7 route: https://woodfuturebj-boop.github.io/routes/minimax-m2.7/
 - Demand evidence: https://x.com/AntSeedAI/status/2077010692012470320
@@ -56,9 +56,9 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Top-sales Claude route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 - Public claude-opus-4.6 route: https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/
 - Rank-one coding route: c50de6922b00677c93007c01924586de887ced7b@claude-sonnet-5
-- Public claude-sonnet-5 route: https://woodfuturebj-boop.github.io/?model=claude-sonnet-5#first-workload
+- Public claude-sonnet-5 route: https://woodfuturebj-boop.github.io/routes/claude-sonnet-5/
 - Rank-one Fable route: c50de6922b00677c93007c01924586de887ced7b@claude-fable-5
-- Public claude-fable-5 route: https://woodfuturebj-boop.github.io/?model=claude-fable-5#first-workload
+- Public claude-fable-5 route: https://woodfuturebj-boop.github.io/routes/claude-fable-5/
 - AntFeed MCP: npx -y @antfeed/mcp
 - Direct AntFeed seller profile: https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b
 - AntFeed local buyer URLs: http://localhost:8377 for CLI; http://localhost:8378 for AntStation Desktop
