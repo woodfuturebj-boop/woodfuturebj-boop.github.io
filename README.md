@@ -69,7 +69,7 @@ guide](https://aider.chat/docs/llms/openai-compat.html) and [Continue OpenAI
 provider guide](https://docs.continue.dev/customize/model-providers/top-level/openai).
 
 The live page also provides copy-ready selectors for `gpt-5.6-sol`, `gpt-5.6-sol-pro`,
-`gemini-3-5-flash`, `kimi-k3`, `glm-5.2`, `gpt-5.5`, `claude-opus-4-7-fast`, `novaroute-code-audit-v1`, `claude-opus-4-8-fast`, `claude-opus-4.8`, `claude-opus-4.6`,
+`gemini-3-5-flash`, `kimi-k3`, `glm-5.2`, `gpt-5.5`, `claude-opus-4-7-fast`, `novaroute-code-audit-v1`, `claude-opus-4-8-fast`, `claude-opus-4.6`,
 `claude-sonnet-5`, and `claude-fable-5`. All routes use the one-request
 `peer@model` prefix and do not replace the buyer's saved
 connection.
@@ -87,7 +87,6 @@ command ready to copy:
 - [`claude-opus-4-7-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-7-fast/) - stable demand-backed route; inspect signed live pricing before use
 - [`novaroute-code-audit-v1`](https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/) - read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews
 - [`claude-opus-4-8-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/) - current-demand rank-one route; inspect signed live pricing before use
-- [`claude-opus-4.8`](https://woodfuturebj-boop.github.io/?model=claude-opus-4.8#first-workload)
 - [`claude-opus-4.6`](https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/) - first in AntSeed's July 25 official model-sales snapshot and lowest-priced indexed exact offer
 - [`claude-sonnet-5`](https://woodfuturebj-boop.github.io/?model=claude-sonnet-5#first-workload)
 - [`claude-fable-5`](https://woodfuturebj-boop.github.io/?model=claude-fable-5#first-workload)
@@ -99,7 +98,6 @@ command ready to copy:
 - `gpt-5.6-sol-pro` - second-highest current reasoning volume; exact rank one
 - `opus-4.7` / `claude-opus-4.7` - current high-value Opus demand; exact rank one
 - `claude-sonnet-5` - high-value coding demand; exact rank one
-- `claude-opus-4.8` - high-value frontier coding demand; exact rank one
 - `claude-fable-5` - high-value long-form demand; exact rank one
 - `kimi-k3` - agent and coding demand; exact rank one
 - `glm-5.2` - highest request count in the latest upstream sample

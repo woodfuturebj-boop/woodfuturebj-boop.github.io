@@ -52,13 +52,6 @@
       "focus": "High-value coding demand; exact rank one in the latest sample"
     },
     {
-      "id": "claude-opus-4.8",
-      "input": 0.3564,
-      "output": 1.77012,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Frontier coding demand; exact rank one in the latest sample"
-    },
-    {
       "id": "claude-fable-5",
       "input": 0.7128,
       "output": 3.564,
