@@ -730,6 +730,8 @@ antseed buyer balance</code></pre>
             <button class="tab-button" type="button" role="tab" id="tab-cli" aria-controls="panel-cli" aria-selected="false">OpenAI client</button>
             <button class="tab-button" type="button" role="tab" id="tab-codex" aria-controls="panel-codex" aria-selected="false">Codex</button>
             <button class="tab-button" type="button" role="tab" id="tab-opencode" aria-controls="panel-opencode" aria-selected="false">OpenCode</button>
+            <button class="tab-button" type="button" role="tab" id="tab-aider" aria-controls="panel-aider" aria-selected="false">Aider</button>
+            <button class="tab-button" type="button" role="tab" id="tab-continue" aria-controls="panel-continue" aria-selected="false">Continue</button>
             <button class="tab-button" type="button" role="tab" id="tab-claude" aria-controls="panel-claude" aria-selected="false">Claude Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-pi" aria-controls="panel-pi" aria-selected="false">Pi</button>
             <button class="tab-button" type="button" role="tab" id="tab-langchain" aria-controls="panel-langchain" aria-selected="false">LangChain</button>
@@ -778,6 +780,45 @@ antseed codex --model gpt-5.6-sol</code></pre>
 antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 antseed opencode --model gpt-5.6-sol</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-opencode">Copy</button>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-aider" aria-labelledby="tab-aider" hidden>
+            <h3>Aider</h3>
+            <p>Point Aider at the local buyer proxy and pin this peer in the model name. Run it only for a repository task you already need completed.</p>
+            <div class="command">
+              <pre id="code-aider"><code>export OPENAI_API_BASE=http://127.0.0.1:8377/v1
+export OPENAI_API_KEY=antseed-local
+aider --model openai/c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-aider">Copy</button>
+            </div>
+            <div class="actions">
+              <a class="action secondary" href="https://aider.chat/docs/llms/openai-compat.html" target="_blank" rel="noopener">Aider official setup</a>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-continue" aria-labelledby="tab-continue" hidden>
+            <h3>Continue</h3>
+            <p>Add this OpenAI-compatible model to Continue's <code>config.yaml</code>. The model prefix pins every real chat or edit request to this peer.</p>
+            <div class="command">
+              <pre id="code-continue"><code>name: NovaRoute AI
+version: 1.0.0
+schema: v1
+
+models:
+  - name: NovaRoute AI - gpt-5.6-sol
+    provider: openai
+    model: c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol
+    apiBase: http://127.0.0.1:8377/v1
+    apiKey: antseed-local
+    roles:
+      - chat
+      - edit
+      - apply</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-continue">Copy</button>
+            </div>
+            <div class="actions">
+              <a class="action secondary" href="https://docs.continue.dev/customize/model-providers/top-level/openai" target="_blank" rel="noopener">Continue official setup</a>
             </div>
           </div>
 

@@ -53,6 +53,20 @@ antseed codex --model gpt-5.6-sol
 antseed opencode --model gpt-5.6-sol
 ```
 
+Aider can use the same local proxy without changing the saved buyer pin. Its
+documented OpenAI-compatible path accepts the one-request `peer@model` route:
+
+```bash
+export OPENAI_API_BASE=http://127.0.0.1:8377/v1
+export OPENAI_API_KEY=antseed-local
+aider --model openai/c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol
+```
+
+The live page also includes a Continue `config.yaml` entry that uses the same
+explicit peer route. See the official [Aider OpenAI-compatible
+guide](https://aider.chat/docs/llms/openai-compat.html) and [Continue OpenAI
+provider guide](https://docs.continue.dev/customize/model-providers/top-level/openai).
+
 The live page also provides copy-ready selectors for `gpt-5.6-sol`, `gpt-5.6-sol-pro`,
 `gemini-3-5-flash`, `kimi-k3`, `glm-5.2`, `gpt-5.5`, `claude-opus-4-7-fast`, `novaroute-code-audit-v1`, `claude-opus-4-8-fast`, `claude-opus-4.8`, `claude-opus-4.6`,
 `claude-sonnet-5`, and `claude-fable-5`. All routes use the one-request
