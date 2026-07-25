@@ -853,6 +853,7 @@ custom_providers:
       "env": {
         "ANTFEED_EXPLORER_URL": "https://www.antfeed.org",
         "ANTSEED_BUYER_URL": "http://localhost:8377",
+        "ANTSEED_BUYER_STRICT": "1",
         "ANTSEED_MAX_DEPOSIT_USDC": "10"
       }
     }
@@ -863,7 +864,9 @@ custom_providers:
             <div class="command">
               <pre id="prompt-antfeed"><code>Use AntFeed MCP to look up "NovaRoute AI".
 Verify seller 0xc50DE6922b00677c93007c01924586dE887ced7b.
-Compare gpt-5.6-sol first, then gpt-5.6-sol-pro and opus-4.7, with other exact offers.
+For a real code, Web3 transaction-safety, or release-readiness review,
+compare novaroute-code-audit-v1 first. Otherwise compare gpt-5.6-sol,
+gpt-5.6-sol-pro, and opus-4.7 with other exact offers.
 If one fits my real workload, show the pinned model route and ask me
 before create_session.</code></pre>
               <button class="copy-button" type="button" data-copy-target="prompt-antfeed">Copy</button>
