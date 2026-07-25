@@ -121,6 +121,11 @@ local AntSeed buyer after explicit user confirmation. AntFeed refreshes its
 provider directory hourly, so compare newly published launch prices with the
 signed live catalog before approving a session.
 
+Use `http://localhost:8377` for the CLI buyer or `http://localhost:8378` for
+AntStation Desktop. Start the selected buyer before restarting Claude Code,
+Claude Desktop, Cursor, Cline, or another MCP host because AntFeed performs
+buyer detection once at startup.
+
 See the [external buyer connection guide](https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md).
 Agents can load the guarded
 [`novaroute-antseed-buyer` skill](https://github.com/woodfuturebj-boop/antseed-proof/blob/main/skills/novaroute-antseed-buyer/SKILL.md)

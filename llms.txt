@@ -59,6 +59,7 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Rank-one Fable route: c50de6922b00677c93007c01924586de887ced7b@claude-fable-5
 - Public claude-fable-5 route: https://woodfuturebj-boop.github.io/?model=claude-fable-5#first-workload
 - AntFeed MCP: npx -y @antfeed/mcp
+- AntFeed local buyer URLs: http://localhost:8377 for CLI; http://localhost:8378 for AntStation Desktop
 - Codex real-workload wrapper: antseed codex --model claude-opus-4.6
 - OpenCode real-workload wrapper: antseed opencode --model claude-opus-4.6
 - Aider real-workload route: export OPENAI_API_BASE=http://127.0.0.1:8377/v1 and run aider --model openai/c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6

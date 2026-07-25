@@ -908,7 +908,15 @@ custom_providers:
 
           <div class="tab-panel" role="tabpanel" id="panel-antfeed" aria-labelledby="tab-antfeed" hidden>
             <h3>AntFeed MCP discovery</h3>
-            <p>This seller is indexed in AntFeed under wallet <code>0xc50DE6922b00677c93007c01924586dE887ced7b</code>. Add the MCP server, then use read-only lookup and pricing tools before opening a session.</p>
+            <p>This seller is indexed in AntFeed under wallet <code>0xc50DE6922b00677c93007c01924586dE887ced7b</code>. Choose the local buyer you already run, add the MCP server, then use read-only lookup and pricing tools before opening a session.</p>
+            <div class="model-picker">
+              <span class="model-picker-label">Local buyer</span>
+              <div class="model-selector" role="group" aria-label="AntFeed local buyer">
+                <button class="model-option" type="button" aria-pressed="true" data-antfeed-buyer-url="http://localhost:8377" data-antfeed-mode-label="CLI buyer on port 8377">CLI buyer :8377</button>
+                <button class="model-option" type="button" aria-pressed="false" data-antfeed-buyer-url="http://localhost:8378" data-antfeed-mode-label="AntStation Desktop on port 8378">AntStation :8378</button>
+              </div>
+            </div>
+            <p id="antfeed-mode-note"><strong>CLI buyer on port 8377.</strong> Start the buyer before restarting the MCP host; AntFeed detects the local buyer once at startup.</p>
             <div class="command">
               <pre id="code-antfeed"><code>{
   "mcpServers": {
@@ -926,6 +934,7 @@ custom_providers:
 }</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-antfeed">Copy</button>
             </div>
+            <p>Use this config in Claude Code, Claude Desktop, Cursor, Cline, or another MCP host. Keep host confirmation enabled because <code>create_session</code> can move buyer funds.</p>
             <div class="command">
               <pre id="prompt-antfeed"><code>Use AntFeed MCP to look up "NovaRoute AI".
 Verify seller 0xc50DE6922b00677c93007c01924586dE887ced7b.
@@ -1222,6 +1231,31 @@ custom_providers:
 ${hermesModels}`);
       }
 
+      function antfeedConfig(buyerUrl) {
+        return JSON.stringify({
+          mcpServers: {
+            antfeed: {
+              command: "npx",
+              args: ["-y", "@antfeed/mcp"],
+              env: {
+                ANTFEED_EXPLORER_URL: "https://www.antfeed.org",
+                ANTSEED_BUYER_URL: buyerUrl,
+                ANTSEED_BUYER_STRICT: "1",
+                ANTSEED_MAX_DEPOSIT_USDC: "10",
+              },
+            },
+          },
+        }, null, 2);
+      }
+
+      function selectAntfeedMode(button) {
+        document.querySelectorAll("[data-antfeed-buyer-url]").forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+        document.querySelector("#code-antfeed code").textContent = antfeedConfig(button.dataset.antfeedBuyerUrl);
+        document.getElementById("antfeed-mode-note").innerHTML = `<strong>${button.dataset.antfeedModeLabel}.</strong> Start it before restarting the MCP host; AntFeed detects the local buyer once at startup.`;
+      }
+
       function selectStarterModel(model, updateUrl = true) {
         const route = STARTER_MODELS[model];
         if (!route) return;
@@ -1306,6 +1340,10 @@ ${hermesModels}`);
 
       document.querySelectorAll("[data-starter-model]").forEach((button) => {
         button.addEventListener("click", () => selectStarterModel(button.dataset.starterModel));
+      });
+
+      document.querySelectorAll("[data-antfeed-buyer-url]").forEach((button) => {
+        button.addEventListener("click", () => selectAntfeedMode(button));
       });
 
       document.getElementById("copy-route-link").addEventListener("click", copyRouteLink);
