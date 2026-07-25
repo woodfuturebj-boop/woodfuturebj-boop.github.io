@@ -756,7 +756,7 @@ antseed buyer balance</code></pre>
               <pre id="code-cli"><code>curl http://127.0.0.1:8377/v1/chat/completions \
   -H "content-type: application/json" \
   -H "x-antseed-pin-peer: c50de6922b00677c93007c01924586de887ced7b" \
-  -d '{"model":"gpt-5.6-sol","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
+  -d '{"model":"claude-opus-4.6","messages":[{"role":"user","content":"REPLACE WITH YOUR REAL TASK"}]}'</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-cli">Copy</button>
             </div>
           </div>
@@ -767,7 +767,7 @@ antseed buyer balance</code></pre>
             <div class="command">
               <pre id="code-codex"><code>npm install -g @openai/codex
 antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
-antseed codex --model gpt-5.6-sol</code></pre>
+antseed codex --model claude-opus-4.6</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-codex">Copy</button>
             </div>
           </div>
@@ -778,7 +778,7 @@ antseed codex --model gpt-5.6-sol</code></pre>
             <div class="command">
               <pre id="code-opencode"><code>npm install -g opencode-ai
 antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
-antseed opencode --model gpt-5.6-sol</code></pre>
+antseed opencode --model claude-opus-4.6</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-opencode">Copy</button>
             </div>
           </div>
@@ -789,7 +789,7 @@ antseed opencode --model gpt-5.6-sol</code></pre>
             <div class="command">
               <pre id="code-aider"><code>export OPENAI_API_BASE=http://127.0.0.1:8377/v1
 export OPENAI_API_KEY=antseed-local
-aider --model openai/c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol</code></pre>
+aider --model openai/c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-aider">Copy</button>
             </div>
             <div class="actions">
@@ -806,9 +806,9 @@ version: 1.0.0
 schema: v1
 
 models:
-  - name: NovaRoute AI - gpt-5.6-sol
+  - name: NovaRoute AI - claude-opus-4.6
     provider: openai
-    model: c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol
+    model: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
     apiBase: http://127.0.0.1:8377/v1
     apiKey: antseed-local
     roles:
@@ -827,7 +827,7 @@ models:
             <p>The AntSeed wrapper configures the local proxy and placeholder API key.</p>
             <div class="command">
               <pre id="code-claude"><code>npm install -g @anthropic-ai/claude-code
-antseed claude --model claude-opus-4.8</code></pre>
+antseed claude --model claude-opus-4.6</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-claude">Copy</button>
             </div>
           </div>
@@ -841,7 +841,7 @@ pi install git:github.com/AntSeed/pi-antseed
 pi
 # In Pi: /reload, then open the model selector with Ctrl+L
 # Search: c50de6922b006
-# Choose: antseed/gpt-5.6-sol@c50de6922b006-...</code></pre>
+# Choose: antseed/claude-opus-4.6@c50de6922b006-...</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-pi">Copy</button>
             </div>
           </div>
@@ -853,11 +853,10 @@ pi
               <pre id="code-langchain"><code>from langchain_openai import ChatOpenAI
 
 llm = ChatOpenAI(
-    model="claude-opus-4.8",
+    model="c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6",
     base_url="http://127.0.0.1:8377/v1",
     api_key="antseed",
-)
-print(llm.invoke("Hello").content)</code></pre>
+)</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-langchain">Copy</button>
             </div>
           </div>
@@ -867,7 +866,7 @@ print(llm.invoke("Hello").content)</code></pre>
             <p>Register AntSeed as a custom Chat Completions provider.</p>
             <div class="command">
               <pre id="code-hermes"><code>model:
-  default: claude-opus-4.8
+  default: claude-opus-4.6
   provider: antseed
 custom_providers:
   - name: antseed
@@ -875,6 +874,7 @@ custom_providers:
     api_key: antseed-p2p
     api_mode: chat_completions
     models:
+      - claude-opus-4.6
       - opus-4.7
       - claude-opus-4.8
       - claude-sonnet-5</code></pre>

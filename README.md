@@ -50,8 +50,8 @@ For coding-agent workloads, the official wrappers avoid hand-written provider
 configuration:
 
 ```bash
-antseed codex --model gpt-5.6-sol
-antseed opencode --model gpt-5.6-sol
+antseed codex --model claude-opus-4.6
+antseed opencode --model claude-opus-4.6
 ```
 
 Aider can use the same local proxy without changing the saved buyer pin. Its
@@ -60,7 +60,7 @@ documented OpenAI-compatible path accepts the one-request `peer@model` route:
 ```bash
 export OPENAI_API_BASE=http://127.0.0.1:8377/v1
 export OPENAI_API_KEY=antseed-local
-aider --model openai/c50de6922b00677c93007c01924586de887ced7b@gpt-5.6-sol
+aider --model openai/c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 ```
 
 The live page also includes a Continue `config.yaml` entry that uses the same
