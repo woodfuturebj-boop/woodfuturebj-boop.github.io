@@ -85,9 +85,12 @@ aider --model openai/c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 ```
 
 The live page also includes a Continue `config.yaml` entry that uses the same
-explicit peer route. See the official [Aider OpenAI-compatible
-guide](https://aider.chat/docs/llms/openai-compat.html) and [Continue OpenAI
-provider guide](https://docs.continue.dev/customize/model-providers/top-level/openai).
+explicit peer route. Cline can select **OpenAI Compatible** with base URL
+`http://127.0.0.1:8377/v1`, API key `antseed-local`, and model ID
+`c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6`. See the official
+[Aider OpenAI-compatible guide](https://aider.chat/docs/llms/openai-compat.html),
+[Continue OpenAI provider guide](https://docs.continue.dev/customize/model-providers/top-level/openai),
+and [Cline OpenAI Compatible guide](https://docs.cline.bot/provider-config/openai-compatible).
 
 The live page also provides copy-ready selectors for `gpt-5.6-sol`, `gpt-5.6-sol-pro`,
 `gemini-3-5-flash`, `kimi-k3`, `glm-5.2`, `minimax-m2.7`, `gpt-5.5`, `claude-opus-4-7-fast`, `novaroute-code-audit-v1`, `claude-opus-4-8-fast`, `claude-opus-4.6`,

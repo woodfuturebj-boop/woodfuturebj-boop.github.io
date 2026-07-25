@@ -770,6 +770,7 @@ antseed buyer balance</code></pre>
             <button class="tab-button" type="button" role="tab" id="tab-opencode" aria-controls="panel-opencode" aria-selected="false">OpenCode</button>
             <button class="tab-button" type="button" role="tab" id="tab-aider" aria-controls="panel-aider" aria-selected="false">Aider</button>
             <button class="tab-button" type="button" role="tab" id="tab-continue" aria-controls="panel-continue" aria-selected="false">Continue</button>
+            <button class="tab-button" type="button" role="tab" id="tab-cline" aria-controls="panel-cline" aria-selected="false">Cline</button>
             <button class="tab-button" type="button" role="tab" id="tab-claude" aria-controls="panel-claude" aria-selected="false">Claude Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-pi" aria-controls="panel-pi" aria-selected="false">Pi</button>
             <button class="tab-button" type="button" role="tab" id="tab-langchain" aria-controls="panel-langchain" aria-selected="false">LangChain</button>
@@ -857,6 +858,22 @@ models:
             </div>
             <div class="actions">
               <a class="action secondary" href="https://docs.continue.dev/customize/model-providers/top-level/openai" target="_blank" rel="noopener">Continue official setup</a>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-cline" aria-labelledby="tab-cline" hidden>
+            <h3>Cline</h3>
+            <p>Select <strong>OpenAI Compatible</strong> in Cline and enter these local buyer settings. The model ID pins every real coding request to this peer.</p>
+            <div class="command">
+              <pre id="code-cline"><code>API Provider: OpenAI Compatible
+Base URL: http://127.0.0.1:8377/v1
+API Key: antseed-local
+Model ID: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-cline">Copy</button>
+            </div>
+            <p class="notice">Cline may refresh the free local model catalog while these fields are entered. Do not send a verification prompt; begin only with repository work you already need completed.</p>
+            <div class="actions">
+              <a class="action secondary" href="https://docs.cline.bot/provider-config/openai-compatible" target="_blank" rel="noopener">Cline official setup</a>
             </div>
           </div>
 
@@ -1207,6 +1224,10 @@ models:
       - chat
       - edit
       - apply`);
+        setCode("code-cline", `API Provider: OpenAI Compatible
+Base URL: http://127.0.0.1:8377/v1
+API Key: antseed-local
+Model ID: ${pinnedModel}`);
         setCode("code-claude", `npm install -g @anthropic-ai/claude-code
 antseed buyer connection set --peer ${PEER_ID}
 antseed claude --model ${model}`);
