@@ -94,6 +94,10 @@ command ready to copy:
 
 ## Featured services
 
+The public service table links each service name to its exact AntFeed provider
+comparison. Confirm the selected peer and signed live pricing before opening a
+paid session.
+
 - `claude-opus-4.6` - first in the latest official model-sales snapshot; signed live directory pricing
 - `gpt-5.6-sol` - highest upstream dollar volume in the current market sample; exact rank one
 - `gpt-5.6-sol-pro` - second-highest current reasoning volume; exact rank one

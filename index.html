@@ -958,7 +958,7 @@ before create_session.</code></pre>
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Twelve production services are highlighted for common coding, reasoning, and agent workloads. Prices shown are published snapshots. Check the signed live catalog before choosing a service because upstream costs and market ranks can change.</p>
+          <p class="section-copy">Twelve production services are highlighted for common coding, reasoning, and agent workloads. Open any service name for its exact AntFeed comparison, then check the signed live catalog before choosing because upstream costs and market ranks can change.</p>
           <p class="section-copy">Demand evidence: <code>claude-opus-4.6</code> ranks first and <code>gpt-5.5</code> fourth in AntSeed's July 25 <a href="https://x.com/AntSeedAI/status/2081002378795377145" target="_blank" rel="noopener">Top models by sales</a> snapshot. <code>minimax-m2.7</code> ranks eighth in the July 14 <a href="https://x.com/AntSeedAI/status/2077010692012470320" target="_blank" rel="noopener">Top models by token volume</a> snapshot. This peer offers these routes with signed live pricing.</p>
           <div class="table-wrap">
             <table>
@@ -1476,8 +1476,18 @@ ${hermesModels}`);
             ];
             cells.forEach((value, index) => {
               const cell = document.createElement("td");
-              cell.textContent = value;
-              if (index === 0) cell.className = "service-name";
+              if (index === 0) {
+                const link = document.createElement("a");
+                link.href = `https://www.antfeed.org/services/${encodeURIComponent(service.id)}`;
+                link.target = "_blank";
+                link.rel = "noopener";
+                link.textContent = value;
+                link.setAttribute("aria-label", `Compare ${service.id} providers on AntFeed`);
+                cell.className = "service-name";
+                cell.appendChild(link);
+              } else {
+                cell.textContent = value;
+              }
               row.appendChild(cell);
             });
             body.appendChild(row);
