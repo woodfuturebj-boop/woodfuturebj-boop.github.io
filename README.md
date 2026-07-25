@@ -115,7 +115,9 @@ antseed network peer c50de6922b00677c93007c01924586de887ced7b
 ## AntFeed MCP
 
 This seller is indexed by AntFeed under wallet
-`0xc50DE6922b00677c93007c01924586dE887ced7b`. MCP-compatible agents can install
+`0xc50DE6922b00677c93007c01924586dE887ced7b`. Buyers can open the
+[direct AntFeed seller profile](https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b)
+without relying on directory ordering. MCP-compatible agents can install
 `@antfeed/mcp`, look up `NovaRoute AI`, inspect pricing, and connect a
 local AntSeed buyer after explicit user confirmation. AntFeed refreshes its
 provider directory hourly, so compare newly published launch prices with the
