@@ -710,6 +710,16 @@ antseed buyer balance</code></pre>
             </div>
           </div>
           <p class="notice"><strong>Finish cleanly:</strong> When the real workload is done, stop the foreground buyer with <code>Ctrl+C</code> and wait for <code>Disconnected. All channels finalized.</code> before closing the terminal. Do not force-kill the buyer process; graceful shutdown finalizes the payment channel normally and releases unused deposit.</p>
+          <div class="first-call" id="preflight">
+            <h3>Verify before opening a paid session</h3>
+            <p>These read-only checks confirm the installed CLI, this peer's signed live catalog, and the buyer balance. They do not call a model or open a paid inference session.</p>
+            <div class="command">
+              <pre id="cmd-preflight"><code>antseed --version
+antseed network peer c50de6922b00677c93007c01924586de887ced7b
+antseed buyer balance</code></pre>
+              <button class="copy-button" type="button" data-copy-target="cmd-preflight">Copy</button>
+            </div>
+          </div>
           <div class="first-call" id="first-workload">
             <h3>Step 04: Choose a real first workload</h3>
             <p id="starter-summary"><code id="starter-model-name">claude-opus-4.6</code> <span id="starter-summary-text">ranks first in AntSeed's latest official model-sales snapshot and uses signed live directory pricing. Open a second terminal, replace the message with a task you actually need completed, and confirm the signed live price before use.</span></p>

@@ -31,6 +31,15 @@ restart:
 antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 ```
 
+Before opening a paid session, run the read-only preflight. These commands do
+not call a model or open a paid inference session:
+
+```bash
+antseed --version
+antseed network peer c50de6922b00677c93007c01924586de887ced7b
+antseed buyer balance
+```
+
 When a foreground buyer workload is finished, press `Ctrl+C` and wait for
 `Disconnected. All channels finalized.` before closing the terminal. Avoid
 force-killing the buyer process; graceful shutdown lets AntSeed finalize the
