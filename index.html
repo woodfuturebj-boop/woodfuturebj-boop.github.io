@@ -917,16 +917,8 @@ custom_providers:
           </div>
 
           <div class="tab-panel" role="tabpanel" id="panel-antfeed" aria-labelledby="tab-antfeed" hidden>
-            <h3>AntFeed MCP discovery</h3>
-            <p>This seller is indexed in AntFeed under wallet <code>0xc50DE6922b00677c93007c01924586dE887ced7b</code>. Choose the local buyer you already run, add the MCP server, then use read-only lookup and pricing tools before opening a session.</p>
-            <div class="model-picker">
-              <span class="model-picker-label">Local buyer</span>
-              <div class="model-selector" role="group" aria-label="AntFeed local buyer">
-                <button class="model-option" type="button" aria-pressed="true" data-antfeed-buyer-url="http://localhost:8377" data-antfeed-mode-label="CLI buyer on port 8377">CLI buyer :8377</button>
-                <button class="model-option" type="button" aria-pressed="false" data-antfeed-buyer-url="http://localhost:8378" data-antfeed-mode-label="AntStation Desktop on port 8378">AntStation :8378</button>
-              </div>
-            </div>
-            <p id="antfeed-mode-note"><strong>CLI buyer on port 8377.</strong> Start the buyer before restarting the MCP host; AntFeed detects the local buyer once at startup.</p>
+            <h3>AntFeed MCP read-only discovery</h3>
+            <p>This seller is indexed in AntFeed under wallet <code>0xc50DE6922b00677c93007c01924586dE887ced7b</code>. Add the MCP server to find the seller and compare live directory pricing, then use the verified direct buyer path for the approved real workload.</p>
             <div class="command">
               <pre id="code-antfeed"><code>{
   "mcpServers": {
@@ -934,17 +926,14 @@ custom_providers:
       "command": "npx",
       "args": ["-y", "@antfeed/mcp"],
       "env": {
-        "ANTFEED_EXPLORER_URL": "https://www.antfeed.org",
-        "ANTSEED_BUYER_URL": "http://localhost:8377",
-        "ANTSEED_BUYER_STRICT": "1",
-        "ANTSEED_MAX_DEPOSIT_USDC": "10"
+        "ANTFEED_EXPLORER_URL": "https://www.antfeed.org"
       }
     }
   }
 }</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-antfeed">Copy</button>
             </div>
-            <p>Use this config in Claude Code, Claude Desktop, Cursor, Cline, or another MCP host. Keep host confirmation enabled because <code>create_session</code> can move buyer funds.</p>
+            <p>Use this config in Claude Code, Claude Desktop, Cursor, Cline, or another MCP host. This path intentionally uses only <code>lookup</code> and <code>get_pricing</code>.</p>
             <div class="command">
               <pre id="prompt-antfeed"><code>Use AntFeed MCP to look up "NovaRoute AI".
 Verify seller 0xc50DE6922b00677c93007c01924586dE887ced7b.
@@ -952,11 +941,12 @@ For a real code, Web3 transaction-safety, or release-readiness review,
 compare novaroute-code-audit-v1 first. Otherwise compare claude-opus-4.6,
 gpt-5.6-sol, minimax-m2.7, and gpt-5.5 with other exact offers.
 If one fits my real workload, show the pinned model route and ask me
-before create_session.</code></pre>
+to continue through the direct AntSeed buyer path. Do not call create_session.</code></pre>
               <button class="copy-button" type="button" data-copy-target="prompt-antfeed">Copy</button>
             </div>
-            <p class="notice">AntFeed refreshes its provider directory hourly, so a newly published launch price can briefly appear stale. Compare it with this page and the signed live catalog before approving <code>create_session</code>, which can move buyer funds.</p>
+            <p class="notice">Current AntSeed CLI <code>0.1.136</code> does not expose the <code>/health</code> and <code>/sessions</code> bridge expected by AntFeed MCP <code>0.2.5</code>. Use MCP for read-only discovery, verify the signed live catalog, then run the real workload through the direct pinned buyer route.</p>
             <div class="actions">
+              <a class="action primary" href="#first-workload">Open direct buyer path</a>
               <a class="action secondary" href="https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b" target="_blank" rel="noopener">Open AntFeed profile</a>
               <a class="action secondary" href="https://www.antfeed.org/services/novaroute-code-audit-v1" target="_blank" rel="noopener">Compare audit service</a>
               <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/tree/main/skills/novaroute-antseed-buyer" target="_blank" rel="noopener">Open installable buyer skill</a>
@@ -1243,31 +1233,6 @@ custom_providers:
 ${hermesModels}`);
       }
 
-      function antfeedConfig(buyerUrl) {
-        return JSON.stringify({
-          mcpServers: {
-            antfeed: {
-              command: "npx",
-              args: ["-y", "@antfeed/mcp"],
-              env: {
-                ANTFEED_EXPLORER_URL: "https://www.antfeed.org",
-                ANTSEED_BUYER_URL: buyerUrl,
-                ANTSEED_BUYER_STRICT: "1",
-                ANTSEED_MAX_DEPOSIT_USDC: "10",
-              },
-            },
-          },
-        }, null, 2);
-      }
-
-      function selectAntfeedMode(button) {
-        document.querySelectorAll("[data-antfeed-buyer-url]").forEach((item) => {
-          item.setAttribute("aria-pressed", String(item === button));
-        });
-        document.querySelector("#code-antfeed code").textContent = antfeedConfig(button.dataset.antfeedBuyerUrl);
-        document.getElementById("antfeed-mode-note").innerHTML = `<strong>${button.dataset.antfeedModeLabel}.</strong> Start it before restarting the MCP host; AntFeed detects the local buyer once at startup.`;
-      }
-
       function selectStarterModel(model, updateUrl = true) {
         const route = STARTER_MODELS[model];
         if (!route) return;
@@ -1352,10 +1317,6 @@ ${hermesModels}`);
 
       document.querySelectorAll("[data-starter-model]").forEach((button) => {
         button.addEventListener("click", () => selectStarterModel(button.dataset.starterModel));
-      });
-
-      document.querySelectorAll("[data-antfeed-buyer-url]").forEach((button) => {
-        button.addEventListener("click", () => selectAntfeedMode(button));
       });
 
       document.getElementById("copy-route-link").addEventListener("click", copyRouteLink);

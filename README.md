@@ -131,15 +131,15 @@ This seller is indexed by AntFeed under wallet
 `0xc50DE6922b00677c93007c01924586dE887ced7b`. Buyers can open the
 [direct AntFeed seller profile](https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b)
 without relying on directory ordering. MCP-compatible agents can install
-`@antfeed/mcp`, look up `NovaRoute AI`, inspect pricing, and connect a
-local AntSeed buyer after explicit user confirmation. AntFeed refreshes its
+`@antfeed/mcp`, look up `NovaRoute AI`, and inspect pricing before switching
+to the direct pinned AntSeed buyer path for an approved real workload. AntFeed refreshes its
 provider directory hourly, so compare newly published launch prices with the
 signed live catalog before approving a session.
 
-Use `http://localhost:8377` for the CLI buyer or `http://localhost:8378` for
-AntStation Desktop. Start the selected buyer before restarting Claude Code,
-Claude Desktop, Cursor, Cline, or another MCP host because AntFeed performs
-buyer detection once at startup.
+Use AntFeed MCP `0.2.5` as read-only discovery with the current AntSeed CLI.
+CLI `0.1.136` does not expose the MCP bridge's `/health` and `/sessions`
+endpoints, so do not call `create_session`; use the verified direct buyer
+instructions for the paid workload.
 
 See the [external buyer connection guide](https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md).
 Agents can load the guarded

@@ -62,7 +62,8 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Public claude-fable-5 route: https://woodfuturebj-boop.github.io/routes/claude-fable-5/
 - AntFeed MCP: npx -y @antfeed/mcp
 - Direct AntFeed seller profile: https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b
-- AntFeed local buyer URLs: http://localhost:8377 for CLI; http://localhost:8378 for AntStation Desktop
+- AntFeed MCP 0.2.5 is read-only discovery with AntSeed CLI 0.1.136; do not call create_session because the CLI does not expose the required /health and /sessions bridge
+- After lookup and get_pricing, use the direct pinned buyer route for the approved real workload
 - Codex real-workload wrapper: antseed codex --model claude-opus-4.6
 - OpenCode real-workload wrapper: antseed opencode --model claude-opus-4.6
 - Aider real-workload route: export OPENAI_API_BASE=http://127.0.0.1:8377/v1 and run aider --model openai/c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
