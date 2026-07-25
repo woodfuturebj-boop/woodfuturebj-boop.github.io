@@ -687,11 +687,15 @@ antseed --version</code></pre>
             <div class="step">
               <span class="step-number">Step 02</span>
               <h3>Fund the buyer</h3>
-              <p>Open the payment portal and deposit USDC on Base.</p>
+              <p>Run the local payment portal in this terminal and deposit USDC on Base. The portal stays in the foreground; after funding, stop it with <code>Ctrl+C</code>.</p>
               <div class="command">
-                <pre id="cmd-fund"><code>antseed payments
-antseed buyer balance</code></pre>
+                <pre id="cmd-fund"><code>antseed payments</code></pre>
                 <button class="copy-button" type="button" data-copy-target="cmd-fund">Copy</button>
+              </div>
+              <p>Then confirm the deposit from another terminal or after the portal has stopped.</p>
+              <div class="command">
+                <pre id="cmd-fund-balance"><code>antseed buyer balance</code></pre>
+                <button class="copy-button" type="button" data-copy-target="cmd-fund-balance">Copy</button>
               </div>
             </div>
             <div class="step">

@@ -16,11 +16,23 @@ Searching by service name such as `claude-opus-4.6` is a useful fallback, but it
 can return several peers; the exact provider name narrows the list directly.
 
 Selecting a Discover result pins both the provider and service. For CLI buyers,
-fund first, then start the proxy with this peer pinned in the startup command:
+install the CLI, then run the foreground payment portal in its own terminal:
 
 ```bash
 npm install -g @antseed/cli
 antseed payments
+```
+
+After funding, stop the portal with `Ctrl+C` and confirm the deposit from that
+terminal, or keep it open and use another terminal:
+
+```bash
+antseed buyer balance
+```
+
+Then start the proxy with this peer pinned:
+
+```bash
 antseed buyer start --peer c50de6922b00677c93007c01924586de887ced7b
 ```
 
