@@ -38,7 +38,7 @@ payment channel normally and release unused deposit.
 
 In a second terminal, run one real workload through the pinned
 `claude-opus-4.6` route. It ranks first in AntSeed's July 25 official
-model-sales snapshot and has the lowest indexed exact-offer price:
+model-sales snapshot and exposes signed live directory pricing:
 
 ```bash
 curl http://127.0.0.1:8377/v1/chat/completions \
@@ -88,13 +88,13 @@ command ready to copy:
 - [`claude-opus-4-7-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-7-fast/) - stable demand-backed route; inspect signed live pricing before use
 - [`novaroute-code-audit-v1`](https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/) - read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews; [compare on AntFeed](https://www.antfeed.org/services/novaroute-code-audit-v1)
 - [`claude-opus-4-8-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/) - current-demand rank-one route; inspect signed live pricing before use
-- [`claude-opus-4.6`](https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/) - first in AntSeed's July 25 official model-sales snapshot and lowest-priced indexed exact offer
+- [`claude-opus-4.6`](https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/) - first in AntSeed's July 25 official model-sales snapshot; inspect signed live pricing before use
 - [`claude-sonnet-5`](https://woodfuturebj-boop.github.io/?model=claude-sonnet-5#first-workload)
 - [`claude-fable-5`](https://woodfuturebj-boop.github.io/?model=claude-fable-5#first-workload)
 
 ## Featured services
 
-- `claude-opus-4.6` - first in the latest official model-sales snapshot; lowest-priced indexed exact offer
+- `claude-opus-4.6` - first in the latest official model-sales snapshot; signed live directory pricing
 - `gpt-5.6-sol` - highest upstream dollar volume in the current market sample; exact rank one
 - `gpt-5.6-sol-pro` - second-highest current reasoning volume; exact rank one
 - `claude-sonnet-5` - high-value coding demand; exact rank one
