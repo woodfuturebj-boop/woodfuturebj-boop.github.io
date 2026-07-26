@@ -774,6 +774,7 @@ antseed buyer balance</code></pre>
             <button class="tab-button" type="button" role="tab" id="tab-kilo" aria-controls="panel-kilo" aria-selected="false">Kilo Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-zoo" aria-controls="panel-zoo" aria-selected="false">Zoo Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-goose" aria-controls="panel-goose" aria-selected="false">Goose</button>
+            <button class="tab-button" type="button" role="tab" id="tab-cherry" aria-controls="panel-cherry" aria-selected="false">Cherry Studio</button>
             <button class="tab-button" type="button" role="tab" id="tab-claude" aria-controls="panel-claude" aria-selected="false">Claude Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-pi" aria-controls="panel-pi" aria-selected="false">Pi</button>
             <button class="tab-button" type="button" role="tab" id="tab-langchain" aria-controls="panel-langchain" aria-selected="false">LangChain</button>
@@ -929,6 +930,24 @@ Streaming: on</code></pre>
             <p class="notice">Goose may read only the free local <code>/v1/models</code> catalog for model discovery or context metadata. Keep the peer-prefixed model, do not run the provider test, and start the session only with repository work you already need completed.</p>
             <div class="actions">
               <a class="action secondary" href="https://goose-docs.ai/docs/getting-started/providers/#configure-custom-provider" target="_blank" rel="noopener">Goose official setup</a>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-cherry" aria-labelledby="tab-cherry" hidden>
+            <h3>Cherry Studio</h3>
+            <p>Add a custom OpenAI provider, then add the explicit model ID manually so each real assistant or MCP-backed request stays pinned to this peer.</p>
+            <div class="command">
+              <pre id="code-cherry"><code>Provider name: NovaRoute AI
+Provider type: OpenAI
+API key: antseed-local
+API address: http://127.0.0.1:8377
+Model ID (manual): c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
+Provider: enabled</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-cherry">Copy</button>
+            </div>
+            <p class="notice">Cherry Studio appends <code>/v1</code> to this root API address. Adding or listing models reads only the free local catalog, but <strong>Check</strong> or <strong>Detect</strong> sends a paid inference probe. Do not use either check; keep the manual peer-prefixed model, choose a service with native OpenAI tool calling for MCP work, and begin only with a real task.</p>
+            <div class="actions">
+              <a class="action secondary" href="https://docs.cherry-ai.com/docs/en-us/pre-basic/providers/zi-ding-yi-fu-wu-shang" target="_blank" rel="noopener">Cherry Studio official setup</a>
             </div>
           </div>
 
@@ -1299,6 +1318,12 @@ API URL: http://127.0.0.1:8377/v1
 Requires API key: off
 Model: ${pinnedModel}
 Streaming: on`);
+        setCode("code-cherry", `Provider name: NovaRoute AI
+Provider type: OpenAI
+API key: antseed-local
+API address: http://127.0.0.1:8377
+Model ID (manual): ${pinnedModel}
+Provider: enabled`);
         setCode("code-claude", `npm install -g @anthropic-ai/claude-code
 antseed buyer connection set --peer ${PEER_ID}
 antseed claude --model ${model}`);
