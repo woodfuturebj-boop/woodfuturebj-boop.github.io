@@ -763,6 +763,11 @@ antseed buyer balance</code></pre>
         <div class="shell">
           <h2>Use your existing tools</h2>
           <p class="section-copy">AntStation can discover and pin the provider visually. The remaining examples assume the buyer proxy is running and this peer is pinned.</p>
+          <p class="notice"><strong>Required before client setup:</strong> AntStation manages its buyer inside the desktop app. For every other panel, install, fund, and start the local buyer proxy pinned to this peer first. The setup and read-only preflight do not send a model request.</p>
+          <div class="actions">
+            <a class="action" href="#connect">Prepare the CLI buyer</a>
+            <a class="action secondary" href="#preflight">Run the read-only preflight</a>
+          </div>
           <div class="tabs" role="tablist" aria-label="Integration examples">
             <button class="tab-button" type="button" role="tab" id="tab-antstation" aria-controls="panel-antstation" aria-selected="true">AntStation</button>
             <button class="tab-button" type="button" role="tab" id="tab-cli" aria-controls="panel-cli" aria-selected="false">OpenAI client</button>
