@@ -771,6 +771,7 @@ antseed buyer balance</code></pre>
             <button class="tab-button" type="button" role="tab" id="tab-aider" aria-controls="panel-aider" aria-selected="false">Aider</button>
             <button class="tab-button" type="button" role="tab" id="tab-continue" aria-controls="panel-continue" aria-selected="false">Continue</button>
             <button class="tab-button" type="button" role="tab" id="tab-cline" aria-controls="panel-cline" aria-selected="false">Cline</button>
+            <button class="tab-button" type="button" role="tab" id="tab-kilo" aria-controls="panel-kilo" aria-selected="false">Kilo Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-claude" aria-controls="panel-claude" aria-selected="false">Claude Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-pi" aria-controls="panel-pi" aria-selected="false">Pi</button>
             <button class="tab-button" type="button" role="tab" id="tab-langchain" aria-controls="panel-langchain" aria-selected="false">LangChain</button>
@@ -874,6 +875,24 @@ Model ID: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6</code></pre>
             <p class="notice">Cline may refresh the free local model catalog while these fields are entered. Do not send a verification prompt; begin only with repository work you already need completed.</p>
             <div class="actions">
               <a class="action secondary" href="https://docs.cline.bot/provider-config/openai-compatible" target="_blank" rel="noopener">Cline official setup</a>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-kilo" aria-labelledby="tab-kilo" hidden>
+            <h3>Kilo Code</h3>
+            <p>Add a custom provider, then add the explicit model ID manually so every real coding request stays pinned to this peer.</p>
+            <div class="command">
+              <pre id="code-kilo"><code>Provider ID: antseed
+Display name: NovaRoute AI
+Provider API: OpenAI Compatible
+Base URL: http://127.0.0.1:8377/v1
+API Key: antseed-local
+Model ID (manual): c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-kilo">Copy</button>
+            </div>
+            <p class="notice">Kilo may query the free local <code>/v1/models</code> catalog during setup. Keep the manual peer-prefixed model ID and begin only with repository work you already need completed.</p>
+            <div class="actions">
+              <a class="action secondary" href="https://kilo.ai/docs/ai-providers/openai-compatible" target="_blank" rel="noopener">Kilo official setup</a>
             </div>
           </div>
 
@@ -1228,6 +1247,12 @@ models:
 Base URL: http://127.0.0.1:8377/v1
 API Key: antseed-local
 Model ID: ${pinnedModel}`);
+        setCode("code-kilo", `Provider ID: antseed
+Display name: NovaRoute AI
+Provider API: OpenAI Compatible
+Base URL: http://127.0.0.1:8377/v1
+API Key: antseed-local
+Model ID (manual): ${pinnedModel}`);
         setCode("code-claude", `npm install -g @anthropic-ai/claude-code
 antseed buyer connection set --peer ${PEER_ID}
 antseed claude --model ${model}`);

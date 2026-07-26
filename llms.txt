@@ -73,6 +73,9 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Cline real-workload route: select OpenAI Compatible, use Base URL http://127.0.0.1:8377/v1, API key antseed-local, and Model ID c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 - Cline configuration refreshes only the free local /v1/models catalog; the first paid request must be a real task, never a verification prompt
 - Cline integration guide: https://woodfuturebj-boop.github.io/#integrations
+- Kilo Code real-workload route: add custom provider antseed with provider API OpenAI Compatible, Base URL http://127.0.0.1:8377/v1, API key antseed-local, and manually add Model ID c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
+- Kilo may query only the free local /v1/models catalog during setup; keep the manual peer-prefixed model ID and make the first paid request a real task
+- Kilo integration guide: https://woodfuturebj-boop.github.io/#integrations
 - Installable guarded buyer skill: https://github.com/woodfuturebj-boop/antseed-proof/tree/main/skills/novaroute-antseed-buyer
 - External buyer connection guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml
