@@ -1113,7 +1113,7 @@ to continue through the direct AntSeed buyer path. Do not call create_session.</
             <div class="actions">
               <a class="action primary" href="#first-workload">Open direct buyer path</a>
               <a class="action secondary" href="https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b" target="_blank" rel="noopener">Open AntFeed profile</a>
-              <a class="action secondary" href="https://www.antfeed.org/services/novaroute-code-audit-v1" target="_blank" rel="noopener">Compare audit service</a>
+              <a class="action secondary" href="https://www.antfeed.org/services" target="_blank" rel="noopener">Browse AntFeed services</a>
               <a class="action secondary" href="https://github.com/woodfuturebj-boop/antseed-proof/tree/main/skills/novaroute-antseed-buyer" target="_blank" rel="noopener">Open installable buyer skill</a>
             </div>
           </div>
@@ -1123,7 +1123,7 @@ to continue through the direct AntSeed buyer path. Do not call create_session.</
       <section id="services">
         <div class="shell">
           <h2>Featured services</h2>
-          <p class="section-copy">Twelve production services are highlighted for common coding, reasoning, and agent workloads. Open any service name for its exact AntFeed comparison, then check the signed live catalog before choosing because upstream costs and market ranks can change.</p>
+          <p class="section-copy">Twelve production services are highlighted for common coding, reasoning, and agent workloads. Open any service name to inspect this provider's stable AntFeed profile, then search the exact service ID in AntFeed's service directory if you need a market comparison. Check the signed live catalog before choosing because upstream costs and market ranks can change.</p>
           <p class="section-copy">Demand evidence: <code>claude-opus-4.6</code> ranks first and <code>gpt-5.5</code> fourth in AntSeed's July 25 <a href="https://x.com/AntSeedAI/status/2081002378795377145" target="_blank" rel="noopener">Top models by sales</a> snapshot. <code>minimax-m2.7</code> ranks eighth in the July 14 <a href="https://x.com/AntSeedAI/status/2077010692012470320" target="_blank" rel="noopener">Top models by token volume</a> snapshot. This peer offers these routes with signed live pricing.</p>
           <div class="table-wrap">
             <table>
@@ -1140,6 +1140,10 @@ to continue through the direct AntSeed buyer path. Do not call create_session.</
                 <tr><td colspan="5">Loading published service snapshot...</td></tr>
               </tbody>
             </table>
+          </div>
+          <div class="actions">
+            <a class="action secondary" href="https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b" target="_blank" rel="noopener">Open AntFeed seller profile</a>
+            <a class="action secondary" href="https://www.antfeed.org/services" target="_blank" rel="noopener">Search AntFeed services</a>
           </div>
           <p class="notice">Prices shown here are a published snapshot. Inspect the signed live catalog before use with <code>antseed network peer c50de6922b00677c93007c01924586de887ced7b</code>.</p>
         </div>
@@ -1699,11 +1703,11 @@ ${hermesModels}`);
               const cell = document.createElement("td");
               if (index === 0) {
                 const link = document.createElement("a");
-                link.href = `https://www.antfeed.org/services/${encodeURIComponent(service.id)}`;
+                link.href = "https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b";
                 link.target = "_blank";
                 link.rel = "noopener";
                 link.textContent = value;
-                link.setAttribute("aria-label", `Compare ${service.id} providers on AntFeed`);
+                link.setAttribute("aria-label", `Inspect ${service.id} on the NovaRoute AI AntFeed profile`);
                 cell.className = "service-name";
                 cell.appendChild(link);
               } else {

@@ -175,7 +175,7 @@ command ready to copy:
 - [`minimax-m2.7`](https://woodfuturebj-boop.github.io/routes/minimax-m2.7/) - eighth in AntSeed's official token-volume snapshot; inspect signed live pricing before use
 - [`kimi-k3`](https://woodfuturebj-boop.github.io/?model=kimi-k3#first-workload)
 - [`claude-opus-4-7-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-7-fast/) - stable demand-backed route; inspect signed live pricing before use
-- [`novaroute-code-audit-v1`](https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/) - read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews; [compare on AntFeed](https://www.antfeed.org/services/novaroute-code-audit-v1)
+- [`novaroute-code-audit-v1`](https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/) - read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews; [inspect the seller on AntFeed](https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b)
 - [`claude-opus-4-8-fast`](https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/) - current-demand rank-one route; inspect signed live pricing before use
 - [`claude-opus-4.6`](https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/) - first in AntSeed's July 25 official model-sales snapshot; inspect signed live pricing before use
 - [`claude-sonnet-5`](https://woodfuturebj-boop.github.io/routes/claude-sonnet-5/)
@@ -183,9 +183,10 @@ command ready to copy:
 
 ## Featured services
 
-The public service table links each service name to its exact AntFeed provider
-comparison. Confirm the selected peer and signed live pricing before opening a
-paid session.
+The public service table links each service name to the stable AntFeed seller
+profile. Use the [AntFeed service directory](https://www.antfeed.org/services)
+to search an exact service ID for comparison, then confirm the selected peer
+and signed live pricing before opening a paid session.
 
 - `claude-opus-4.6` - first in the latest official model-sales snapshot; signed live directory pricing
 - `gpt-5.6-sol` - highest upstream dollar volume in the current market sample; exact rank one
