@@ -777,6 +777,7 @@ antseed buyer balance</code></pre>
             <button class="tab-button" type="button" role="tab" id="tab-cherry" aria-controls="panel-cherry" aria-selected="false">Cherry Studio</button>
             <button class="tab-button" type="button" role="tab" id="tab-chatbox" aria-controls="panel-chatbox" aria-selected="false">Chatbox</button>
             <button class="tab-button" type="button" role="tab" id="tab-jan" aria-controls="panel-jan" aria-selected="false">Jan</button>
+            <button class="tab-button" type="button" role="tab" id="tab-anythingllm" aria-controls="panel-anythingllm" aria-selected="false">AnythingLLM</button>
             <button class="tab-button" type="button" role="tab" id="tab-claude" aria-controls="panel-claude" aria-selected="false">Claude Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-pi" aria-controls="panel-pi" aria-selected="false">Pi</button>
             <button class="tab-button" type="button" role="tab" id="tab-langchain" aria-controls="panel-langchain" aria-selected="false">LangChain</button>
@@ -991,6 +992,26 @@ Edit model &gt; Tools: on &gt; Save</code></pre>
             <div class="actions">
               <a class="action secondary" href="https://jan.ai/docs/desktop/remote-models/custom-endpoint" target="_blank" rel="noopener">Jan official setup</a>
               <a class="action secondary" href="https://jan.ai/docs/desktop/mcp" target="_blank" rel="noopener">Jan MCP guide</a>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-anythingllm" aria-labelledby="tab-anythingllm" hidden>
+            <h3>AnythingLLM Desktop</h3>
+            <p>Select the Generic OpenAI provider in the desktop app. Its local model catalog preserves the exact peer-prefixed route for normal chat, RAG, and real agent work.</p>
+            <div class="command">
+              <pre id="code-anythingllm"><code>Settings &gt; AI Providers &gt; LLM
+LLM Provider: Generic OpenAI
+Base URL: http://127.0.0.1:8377/v1
+API Key: antseed-local
+Selected Model: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
+Model context window: 8192
+Max Tokens: 1024</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-anythingllm">Copy</button>
+            </div>
+            <p class="notice">Use the desktop app for this localhost route. Docker's <code>127.0.0.1</code> points inside its container and is not this verified path. The settings screen reads only the free local <code>/v1/models</code> catalog; no inference probe is required. Open a workspace and begin with a real task. Prefix that real task with <code>@agent</code> only when agent tools are needed.</p>
+            <div class="actions">
+              <a class="action secondary" href="https://docs.anythingllm.com/setup/llm-configuration/cloud/openai-generic" target="_blank" rel="noopener">AnythingLLM official setup</a>
+              <a class="action secondary" href="https://docs.anythingllm.com/agent/overview" target="_blank" rel="noopener">AnythingLLM agents</a>
             </div>
           </div>
 
@@ -1405,6 +1426,13 @@ Base URL: http://127.0.0.1:8377/v1
 API key: antseed-local
 Model ID: ${pinnedModel}
 Edit model > Tools: on > Save`);
+        setCode("code-anythingllm", `Settings > AI Providers > LLM
+LLM Provider: Generic OpenAI
+Base URL: http://127.0.0.1:8377/v1
+API Key: antseed-local
+Selected Model: ${pinnedModel}
+Model context window: 8192
+Max Tokens: 1024`);
         setCode("code-claude", `npm install -g @anthropic-ai/claude-code
 antseed buyer connection set --peer ${PEER_ID}
 antseed claude --model ${model}`);

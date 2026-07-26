@@ -91,6 +91,9 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Jan real-workload route: add an OpenAI-compatible custom provider named NovaRoute AI with Base URL http://127.0.0.1:8377/v1, API key antseed-local, and model c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6; edit the model and enable Tools locally
 - Jan provider creation and key testing read only the free local /v1/models catalog; custom capabilities are not auto-detected, so do not send a test prompt, keep individual MCP tool approvals enabled, and make the first paid request a real task
 - Jan integration guide: https://woodfuturebj-boop.github.io/#integrations
+- AnythingLLM Desktop real-workload route: select Generic OpenAI with Base URL http://127.0.0.1:8377/v1, API key antseed-local, model c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6, context window 8192, and max tokens 1024
+- AnythingLLM reads only the free local /v1/models catalog during setup and preserves the selected model for native agent tool calls; this localhost path is for Desktop, not Docker; make the first paid workspace request a real task
+- AnythingLLM integration guide: https://woodfuturebj-boop.github.io/#integrations
 - Installable guarded buyer skill: https://github.com/woodfuturebj-boop/antseed-proof/tree/main/skills/novaroute-antseed-buyer
 - External buyer connection guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml
