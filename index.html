@@ -775,6 +775,7 @@ antseed buyer balance</code></pre>
             <button class="tab-button" type="button" role="tab" id="tab-zoo" aria-controls="panel-zoo" aria-selected="false">Zoo Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-goose" aria-controls="panel-goose" aria-selected="false">Goose</button>
             <button class="tab-button" type="button" role="tab" id="tab-cherry" aria-controls="panel-cherry" aria-selected="false">Cherry Studio</button>
+            <button class="tab-button" type="button" role="tab" id="tab-chatbox" aria-controls="panel-chatbox" aria-selected="false">Chatbox</button>
             <button class="tab-button" type="button" role="tab" id="tab-claude" aria-controls="panel-claude" aria-selected="false">Claude Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-pi" aria-controls="panel-pi" aria-selected="false">Pi</button>
             <button class="tab-button" type="button" role="tab" id="tab-langchain" aria-controls="panel-langchain" aria-selected="false">LangChain</button>
@@ -949,6 +950,27 @@ Provider: enabled</code></pre>
             <div class="actions">
               <a class="action secondary" href="https://docs.cherry-ai.com/docs/en-us/pre-basic/providers/zi-ding-yi-fu-wu-shang" target="_blank" rel="noopener">Cherry Studio official setup</a>
             </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-chatbox" aria-labelledby="tab-chatbox" hidden>
+            <h3>Chatbox</h3>
+            <p>Import a reviewed custom provider for the selected route, or enter the same fields manually. The imported model is marked for native tool use without running a capability test.</p>
+            <div class="actions">
+              <a class="action" id="chatbox-import" href="#">Open import preview in Chatbox</a>
+              <a class="action secondary" href="https://docs.chatboxai.app/en/guides/providers" target="_blank" rel="noopener">Chatbox official setup</a>
+            </div>
+            <div class="command">
+              <pre id="code-chatbox"><code>Provider name: NovaRoute AI
+API mode: OpenAI API Compatible
+API key: antseed-local
+API Host: http://127.0.0.1:8377
+API Path: leave blank
+Model ID (New): c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
+Model type: Chat
+Capability: Tool use</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-chatbox">Copy</button>
+            </div>
+            <p class="notice">The import link opens a read-only preview and writes local settings only after you choose <strong>Save</strong>. Re-importing the same NovaRoute provider ID shows an overwrite warning. Do not click <strong>Check</strong> or <strong>Test Model</strong>: Chatbox sends separate paid text, vision, and tool probes. <strong>Fetch</strong> only reads the free local <code>/v1/models</code> catalog but is unnecessary for this imported route. Begin only with a real task.</p>
           </div>
 
           <div class="tab-panel" role="tabpanel" id="panel-claude" aria-labelledby="tab-claude" hidden>
@@ -1324,6 +1346,37 @@ API key: antseed-local
 API address: http://127.0.0.1:8377
 Model ID (manual): ${pinnedModel}
 Provider: enabled`);
+        setCode("code-chatbox", `Provider name: NovaRoute AI
+API mode: OpenAI API Compatible
+API key: antseed-local
+API Host: http://127.0.0.1:8377
+API Path: leave blank
+Model ID (New): ${pinnedModel}
+Model type: Chat
+Capability: Tool use`);
+        const chatboxConfig = {
+          isCustom: true,
+          id: "novaroute-antseed",
+          name: "NovaRoute AI",
+          type: "openai",
+          urls: {
+            website: "https://woodfuturebj-boop.github.io/",
+            docs: "https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md",
+            models: "https://woodfuturebj-boop.github.io/#services"
+          },
+          settings: {
+            apiHost: "http://127.0.0.1:8377",
+            apiKey: "antseed-local",
+            models: [{
+              modelId: pinnedModel,
+              nickname: `NovaRoute AI - ${model}`,
+              type: "chat",
+              capabilities: ["tool_use"]
+            }]
+          }
+        };
+        document.getElementById("chatbox-import").href =
+          `chatbox://provider/import?config=${encodeURIComponent(btoa(JSON.stringify(chatboxConfig)))}`;
         setCode("code-claude", `npm install -g @anthropic-ai/claude-code
 antseed buyer connection set --peer ${PEER_ID}
 antseed claude --model ${model}`);
