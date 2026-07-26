@@ -1563,24 +1563,37 @@ ${hermesModels}`);
       }
 
       const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
-      function selectTab(tab) {
+      const integrationTabs = new Map(
+        tabs.map((tab) => [tab.id.replace(/^tab-/, ""), tab])
+      );
+      function selectTab(tab, syncUrl = false) {
         tabs.forEach((item) => {
           const selected = item === tab;
           item.setAttribute("aria-selected", String(selected));
           document.getElementById(item.getAttribute("aria-controls")).hidden = !selected;
         });
+        if (syncUrl) {
+          const url = new URL(window.location.href);
+          url.searchParams.set("integration", tab.id.replace(/^tab-/, ""));
+          url.hash = "integrations";
+          window.history.replaceState({}, "", url);
+        }
       }
 
       tabs.forEach((tab) => {
-        tab.addEventListener("click", () => selectTab(tab));
+        tab.addEventListener("click", () => selectTab(tab, true));
       });
 
       document.querySelectorAll("[data-select-tab]").forEach((link) => {
         link.addEventListener("click", () => {
           const tab = document.getElementById(link.dataset.selectTab);
-          if (tab) selectTab(tab);
+          if (tab) selectTab(tab, true);
         });
       });
+
+      const requestedIntegration = new URLSearchParams(window.location.search).get("integration");
+      const requestedIntegrationTab = integrationTabs.get(requestedIntegration);
+      if (requestedIntegrationTab) selectTab(requestedIntegrationTab);
 
       async function loadStatus() {
         const networkStatus = document.getElementById("network-status");

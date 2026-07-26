@@ -123,7 +123,9 @@ both checks, keep the peer prefix, and make the first paid request a real task.
 For MCP-backed work, choose a service with native OpenAI tool calling. See the
 [Cherry Studio custom provider guide](https://docs.cherry-ai.com/docs/en-us/pre-basic/providers/zi-ding-yi-fu-wu-shang).
 
-Chatbox can import a reviewed custom provider through its official
+Chatbox can import a reviewed custom provider from the
+[direct Chatbox buyer route](https://woodfuturebj-boop.github.io/?integration=chatbox#integrations)
+through its official
 `chatbox://provider/import` flow. The live page generates a route-specific
 preview with provider ID `novaroute-antseed`, API host
 `http://127.0.0.1:8377`, placeholder key `antseed-local`, and the explicit
@@ -143,6 +145,7 @@ testing the placeholder key. Custom-model capabilities are not inferred, so
 open the model editor and enable **Tools** locally before MCP-backed work.
 Keep individual MCP tool approvals enabled and make the first paid request a
 real task. See the [Jan custom endpoint guide](https://jan.ai/docs/desktop/remote-models/custom-endpoint).
+Open the [direct Jan buyer route](https://woodfuturebj-boop.github.io/?integration=jan#integrations).
 
 AnythingLLM Desktop supports a **Generic OpenAI** LLM with base URL
 `http://127.0.0.1:8377/v1`, placeholder key `antseed-local`, and the exact
@@ -152,6 +155,7 @@ ID and enables native OpenAI tool calls for agent work without a setup probe.
 Use the desktop app for this localhost path; Docker's `127.0.0.1` points inside
 the container. Start only with a real workspace task. See the
 [AnythingLLM Generic OpenAI guide](https://docs.anythingllm.com/setup/llm-configuration/cloud/openai-generic).
+Open the [direct AnythingLLM buyer route](https://woodfuturebj-boop.github.io/?integration=anythingllm#integrations).
 
 The live page also provides copy-ready selectors for `gpt-5.6-sol`, `gpt-5.6-sol-pro`,
 `gemini-3-5-flash`, `kimi-k3`, `glm-5.2`, `minimax-m2.7`, `gpt-5.5`, `claude-opus-4-7-fast`, `novaroute-code-audit-v1`, `claude-opus-4-8-fast`, `claude-opus-4.6`,

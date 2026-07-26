@@ -67,33 +67,33 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Codex real-workload wrapper: antseed codex --model claude-opus-4.6
 - OpenCode real-workload wrapper: antseed opencode --model claude-opus-4.6
 - Aider real-workload route: export OPENAI_API_BASE=http://127.0.0.1:8377/v1 and run aider --model openai/c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
-- Aider integration guide: https://woodfuturebj-boop.github.io/#integrations
+- Aider integration guide: https://woodfuturebj-boop.github.io/?integration=aider#integrations
 - Continue real-workload route: use provider openai, apiBase http://127.0.0.1:8377/v1, and model c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6 in config.yaml
-- Continue integration guide: https://woodfuturebj-boop.github.io/#integrations
+- Continue integration guide: https://woodfuturebj-boop.github.io/?integration=continue#integrations
 - Cline real-workload route: select OpenAI Compatible, use Base URL http://127.0.0.1:8377/v1, API key antseed-local, and Model ID c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 - Cline configuration refreshes only the free local /v1/models catalog; the first paid request must be a real task, never a verification prompt
-- Cline integration guide: https://woodfuturebj-boop.github.io/#integrations
+- Cline integration guide: https://woodfuturebj-boop.github.io/?integration=cline#integrations
 - Kilo Code real-workload route: add custom provider antseed with provider API OpenAI Compatible, Base URL http://127.0.0.1:8377/v1, API key antseed-local, and manually add Model ID c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 - Kilo may query only the free local /v1/models catalog during setup; keep the manual peer-prefixed model ID and make the first paid request a real task
-- Kilo integration guide: https://woodfuturebj-boop.github.io/#integrations
+- Kilo integration guide: https://woodfuturebj-boop.github.io/?integration=kilo#integrations
 - Zoo Code real-workload route: select OpenAI Compatible, use Base URL http://127.0.0.1:8377/v1, API key antseed-local, and custom Model ID c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 - Zoo Code setup fetches only the free local /v1/models catalog; retain the custom peer-prefixed model ID, choose a service with native OpenAI tool calling, and make the first paid request a real task
-- Zoo Code integration guide: https://woodfuturebj-boop.github.io/#integrations
+- Zoo Code integration guide: https://woodfuturebj-boop.github.io/?integration=zoo#integrations
 - Goose real-workload route: add a custom OpenAI Compatible provider with API URL http://127.0.0.1:8377/v1, API-key requirement off, streaming on, and model c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 - Goose may read only the free local /v1/models catalog for discovery or context metadata; retain the peer-prefixed model, skip the provider test, and make the first paid request a real repository task
-- Goose integration guide: https://woodfuturebj-boop.github.io/#integrations
+- Goose integration guide: https://woodfuturebj-boop.github.io/?integration=goose#integrations
 - Cherry Studio real-workload route: add a custom OpenAI provider with API address http://127.0.0.1:8377, API key antseed-local, and manually add model c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 - Cherry Studio appends /v1 to the root API address; adding or listing models reads only the free local catalog, but Check or Detect sends a paid inference probe, so skip both and make the first paid request a real task
-- Cherry Studio integration guide: https://woodfuturebj-boop.github.io/#integrations
+- Cherry Studio integration guide: https://woodfuturebj-boop.github.io/?integration=cherry#integrations
 - Chatbox one-click route: open the generated chatbox://provider/import preview for provider ID novaroute-antseed, API Host http://127.0.0.1:8377, API key antseed-local, and model c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6 with tool_use enabled
 - Chatbox import is read-only until Save and warns before replacing the same provider ID; do not click Check or Test Model because they send paid text, vision, and tool probes; Fetch only reads the free local /v1/models catalog and is unnecessary
-- Chatbox integration guide: https://woodfuturebj-boop.github.io/#integrations
+- Chatbox integration guide: https://woodfuturebj-boop.github.io/?integration=chatbox#integrations
 - Jan real-workload route: add an OpenAI-compatible custom provider named NovaRoute AI with Base URL http://127.0.0.1:8377/v1, API key antseed-local, and model c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6; edit the model and enable Tools locally
 - Jan provider creation and key testing read only the free local /v1/models catalog; custom capabilities are not auto-detected, so do not send a test prompt, keep individual MCP tool approvals enabled, and make the first paid request a real task
-- Jan integration guide: https://woodfuturebj-boop.github.io/#integrations
+- Jan integration guide: https://woodfuturebj-boop.github.io/?integration=jan#integrations
 - AnythingLLM Desktop real-workload route: select Generic OpenAI with Base URL http://127.0.0.1:8377/v1, API key antseed-local, model c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6, context window 8192, and max tokens 1024
 - AnythingLLM reads only the free local /v1/models catalog during setup and preserves the selected model for native agent tool calls; this localhost path is for Desktop, not Docker; make the first paid workspace request a real task
-- AnythingLLM integration guide: https://woodfuturebj-boop.github.io/#integrations
+- AnythingLLM integration guide: https://woodfuturebj-boop.github.io/?integration=anythingllm#integrations
 - Installable guarded buyer skill: https://github.com/woodfuturebj-boop/antseed-proof/tree/main/skills/novaroute-antseed-buyer
 - External buyer connection guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml
