@@ -776,6 +776,7 @@ antseed buyer balance</code></pre>
             <button class="tab-button" type="button" role="tab" id="tab-goose" aria-controls="panel-goose" aria-selected="false">Goose</button>
             <button class="tab-button" type="button" role="tab" id="tab-cherry" aria-controls="panel-cherry" aria-selected="false">Cherry Studio</button>
             <button class="tab-button" type="button" role="tab" id="tab-chatbox" aria-controls="panel-chatbox" aria-selected="false">Chatbox</button>
+            <button class="tab-button" type="button" role="tab" id="tab-jan" aria-controls="panel-jan" aria-selected="false">Jan</button>
             <button class="tab-button" type="button" role="tab" id="tab-claude" aria-controls="panel-claude" aria-selected="false">Claude Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-pi" aria-controls="panel-pi" aria-selected="false">Pi</button>
             <button class="tab-button" type="button" role="tab" id="tab-langchain" aria-controls="panel-langchain" aria-selected="false">LangChain</button>
@@ -971,6 +972,26 @@ Capability: Tool use</code></pre>
               <button class="copy-button" type="button" data-copy-target="code-chatbox">Copy</button>
             </div>
             <p class="notice">The import link opens a read-only preview and writes local settings only after you choose <strong>Save</strong>. Re-importing the same NovaRoute provider ID shows an overwrite warning. Do not click <strong>Check</strong> or <strong>Test Model</strong>: Chatbox sends separate paid text, vision, and tool probes. <strong>Fetch</strong> only reads the free local <code>/v1/models</code> catalog but is unnecessary for this imported route. Begin only with a real task.</p>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-jan" aria-labelledby="tab-jan" hidden>
+            <h3>Jan</h3>
+            <p>Add an OpenAI-compatible custom provider, select the exact peer-prefixed model, then mark that model as tool-capable for real assistant or MCP work.</p>
+            <div class="command">
+              <pre id="code-jan"><code>Settings &gt; Model Providers &gt; Add Provider
+Provider name: NovaRoute AI
+API format: OpenAI-compatible
+Base URL: http://127.0.0.1:8377/v1
+API key: antseed-local
+Model ID: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
+Edit model &gt; Tools: on &gt; Save</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-jan">Copy</button>
+            </div>
+            <p class="notice">Creating the provider and testing its key only read the free local <code>/v1/models</code> catalog; no inference is sent. Jan cannot infer custom-model capabilities, so enable <strong>Tools</strong> in the model editor without sending a test prompt. Keep per-tool approval enabled for MCP work and begin only with a real task.</p>
+            <div class="actions">
+              <a class="action secondary" href="https://jan.ai/docs/desktop/remote-models/custom-endpoint" target="_blank" rel="noopener">Jan official setup</a>
+              <a class="action secondary" href="https://jan.ai/docs/desktop/mcp" target="_blank" rel="noopener">Jan MCP guide</a>
+            </div>
           </div>
 
           <div class="tab-panel" role="tabpanel" id="panel-claude" aria-labelledby="tab-claude" hidden>
@@ -1377,6 +1398,13 @@ Capability: Tool use`);
         };
         document.getElementById("chatbox-import").href =
           `chatbox://provider/import?config=${encodeURIComponent(btoa(JSON.stringify(chatboxConfig)))}`;
+        setCode("code-jan", `Settings > Model Providers > Add Provider
+Provider name: NovaRoute AI
+API format: OpenAI-compatible
+Base URL: http://127.0.0.1:8377/v1
+API key: antseed-local
+Model ID: ${pinnedModel}
+Edit model > Tools: on > Save`);
         setCode("code-claude", `npm install -g @anthropic-ai/claude-code
 antseed buyer connection set --peer ${PEER_ID}
 antseed claude --model ${model}`);
