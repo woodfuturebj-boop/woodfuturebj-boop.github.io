@@ -98,6 +98,14 @@ Kilo Code can add a custom provider named `antseed` with provider API
 `c50de6922b00677c93007c01924586de887ced7b@<service-id>` route. See the
 [Kilo OpenAI Compatible guide](https://kilo.ai/docs/ai-providers/openai-compatible).
 
+Zoo Code can select **OpenAI Compatible** with the same local Base URL and
+placeholder API key, then choose a custom model ID using the explicit
+`c50de6922b00677c93007c01924586de887ced7b@<service-id>` route. Its settings
+refresh performs only a free local `/v1/models` read; the first paid request
+must be a real coding task. The selected service must support native OpenAI
+tool calling. See the
+[Zoo Code OpenAI Compatible guide](https://docs.zoocode.dev/providers/openai-compatible).
+
 The live page also provides copy-ready selectors for `gpt-5.6-sol`, `gpt-5.6-sol-pro`,
 `gemini-3-5-flash`, `kimi-k3`, `glm-5.2`, `minimax-m2.7`, `gpt-5.5`, `claude-opus-4-7-fast`, `novaroute-code-audit-v1`, `claude-opus-4-8-fast`, `claude-opus-4.6`,
 `claude-sonnet-5`, and `claude-fable-5`. All routes use the one-request
