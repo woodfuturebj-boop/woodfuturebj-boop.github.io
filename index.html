@@ -773,6 +773,7 @@ antseed buyer balance</code></pre>
             <button class="tab-button" type="button" role="tab" id="tab-cline" aria-controls="panel-cline" aria-selected="false">Cline</button>
             <button class="tab-button" type="button" role="tab" id="tab-kilo" aria-controls="panel-kilo" aria-selected="false">Kilo Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-zoo" aria-controls="panel-zoo" aria-selected="false">Zoo Code</button>
+            <button class="tab-button" type="button" role="tab" id="tab-goose" aria-controls="panel-goose" aria-selected="false">Goose</button>
             <button class="tab-button" type="button" role="tab" id="tab-claude" aria-controls="panel-claude" aria-selected="false">Claude Code</button>
             <button class="tab-button" type="button" role="tab" id="tab-pi" aria-controls="panel-pi" aria-selected="false">Pi</button>
             <button class="tab-button" type="button" role="tab" id="tab-langchain" aria-controls="panel-langchain" aria-selected="false">LangChain</button>
@@ -910,6 +911,24 @@ Model ID (custom): c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6</cod
             <p class="notice">Zoo Code fetches only the free local <code>/v1/models</code> catalog while these fields are entered. Keep the custom peer-prefixed model ID, use a service with native OpenAI tool calling, and begin only with repository work you already need completed.</p>
             <div class="actions">
               <a class="action secondary" href="https://docs.zoocode.dev/providers/openai-compatible" target="_blank" rel="noopener">Zoo Code official setup</a>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-goose" aria-labelledby="tab-goose" hidden>
+            <h3>Goose</h3>
+            <p>Add a custom OpenAI-compatible provider in Goose, then add the explicit model ID so every real agent request stays pinned to this peer.</p>
+            <div class="command">
+              <pre id="code-goose"><code>Provider type: OpenAI Compatible
+Display name: NovaRoute AI
+API URL: http://127.0.0.1:8377/v1
+Requires API key: off
+Model: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
+Streaming: on</code></pre>
+              <button class="copy-button" type="button" data-copy-target="code-goose">Copy</button>
+            </div>
+            <p class="notice">Goose may read only the free local <code>/v1/models</code> catalog for model discovery or context metadata. Keep the peer-prefixed model, do not run the provider test, and start the session only with repository work you already need completed.</p>
+            <div class="actions">
+              <a class="action secondary" href="https://goose-docs.ai/docs/getting-started/providers/#configure-custom-provider" target="_blank" rel="noopener">Goose official setup</a>
             </div>
           </div>
 
@@ -1274,6 +1293,12 @@ Model ID (manual): ${pinnedModel}`);
 Base URL: http://127.0.0.1:8377/v1
 API Key: antseed-local
 Model ID (custom): ${pinnedModel}`);
+        setCode("code-goose", `Provider type: OpenAI Compatible
+Display name: NovaRoute AI
+API URL: http://127.0.0.1:8377/v1
+Requires API key: off
+Model: ${pinnedModel}
+Streaming: on`);
         setCode("code-claude", `npm install -g @anthropic-ai/claude-code
 antseed buyer connection set --peer ${PEER_ID}
 antseed claude --model ${model}`);

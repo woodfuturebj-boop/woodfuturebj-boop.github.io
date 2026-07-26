@@ -79,6 +79,9 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Zoo Code real-workload route: select OpenAI Compatible, use Base URL http://127.0.0.1:8377/v1, API key antseed-local, and custom Model ID c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
 - Zoo Code setup fetches only the free local /v1/models catalog; retain the custom peer-prefixed model ID, choose a service with native OpenAI tool calling, and make the first paid request a real task
 - Zoo Code integration guide: https://woodfuturebj-boop.github.io/#integrations
+- Goose real-workload route: add a custom OpenAI Compatible provider with API URL http://127.0.0.1:8377/v1, API-key requirement off, streaming on, and model c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
+- Goose may read only the free local /v1/models catalog for discovery or context metadata; retain the peer-prefixed model, skip the provider test, and make the first paid request a real repository task
+- Goose integration guide: https://woodfuturebj-boop.github.io/#integrations
 - Installable guarded buyer skill: https://github.com/woodfuturebj-boop/antseed-proof/tree/main/skills/novaroute-antseed-buyer
 - External buyer connection guide: https://github.com/woodfuturebj-boop/antseed-proof/blob/main/BETA.md
 - Support: https://github.com/woodfuturebj-boop/antseed-proof/issues/new?template=support.yml
