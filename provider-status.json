@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "generatedAt": "2026-11-24T05:52:00Z",
+  "generatedAt": "2026-11-24T06:07:00Z",
   "peerId": "c50de6922b00677c93007c01924586de887ced7b",
   "publicAddress": "149.28.69.249:6882",
   "cliVersion": "0.1.259",
   "metadataVersion": 12,
   "serviceCount": 77,
-  "maxConcurrency": 24,
-  "freeModel": "openai-gpt-oss-20b",
+  "maxConcurrency": 48,
+  "freeModels": [
+    "glm-5.3-flash",
+    "openai-gpt-oss-20b"
+  ],
   "protocols": [
     "openai-chat-completions",
     "openai-responses",
