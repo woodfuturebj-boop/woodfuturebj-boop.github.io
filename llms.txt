@@ -16,19 +16,25 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Running buyer session pin: antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 - Per-request header: x-antseed-pin-peer: c50de6922b00677c93007c01924586de887ced7b
 - Clean shutdown: after the real workload finishes, stop the foreground buyer with Ctrl+C and wait for "Disconnected. All channels finalized."; do not force-kill it
-- Primary high-value routes:
-  - c50de6922b00677c93007c01924586de887ced7b@gpt-6-astra ($0.72/$3.60/c=$0.09 per 1M; rank-one AntSeed organic model)
-  - c50de6922b00677c93007c01924586de887ced7b@claude-opus-5.5 ($0.32/$0.92/c=$0.05 per 1M; native Anthropic Messages + OpenAI Responses + Chat)
-  - c50de6922b00677c93007c01924586de887ced7b@gpt-6.1-sol ($0.34/$1.70/c=$0.04 per 1M)
-  - c50de6922b00677c93007c01924586de887ced7b@glm-5.3 ($0.0065/$0.032/c=$0.0012 per 1M)
-  - c50de6922b00677c93007c01924586de887ced7b@deepseek-v4.1-flash ($0.015/$0.058/c=$0.0018 per 1M)
-  - c50de6922b00677c93007c01924586de887ced7b@kimi-k3 ($0.11/$0.58/c=$0.015 per 1M)
-  - c50de6922b00677c93007c01924586de887ced7b@kimi-k3.1-pro ($0.25/$1.20/c=$0.025 per 1M)
-  - c50de6922b00677c93007c01924586de887ced7b@claude-sonnet-5.5 ($0.26/$0.78/c=$0.03 per 1M)
-  - c50de6922b00677c93007c01924586de887ced7b@gemini-4-argon ($0.22/$1.05/c=$0.022 per 1M)
-- Free tier route ($0/$0/$0, 60 req/day per buyer, 10x to unlimited for NovaRoute ANTS pool stakers):
-  - c50de6922b00677c93007c01924586de887ced7b@openai-gpt-oss-20b
-- Wire protocols supported: OpenAI Chat Completions, OpenAI Responses, and Anthropic Messages (AntSeed CLI 0.1.259, metadata v12, 77 services, built-in model health checks)
+- Primary high-value paid routes (priced 2% below cheapest healthy market offer; inspect live signed catalog for exact rates):
+  - c50de6922b00677c93007c01924586de887ced7b@gpt-6-astra
+  - c50de6922b00677c93007c01924586de887ced7b@claude-opus-5.5
+  - c50de6922b00677c93007c01924586de887ced7b@gpt-6.1-sol
+  - c50de6922b00677c93007c01924586de887ced7b@glm-5.3
+  - c50de6922b00677c93007c01924586de887ced7b@deepseek-v4.1-flash
+  - c50de6922b00677c93007c01924586de887ced7b@deepseek-v4.1-flash-1017
+  - c50de6922b00677c93007c01924586de887ced7b@minimax-m2.7-highspeed
+  - c50de6922b00677c93007c01924586de887ced7b@qwen3.5-397b-a17b
+  - c50de6922b00677c93007c01924586de887ced7b@qwen3-coder
+  - c50de6922b00677c93007c01924586de887ced7b@qwen3-coder-next-80b
+  - c50de6922b00677c93007c01924586de887ced7b@kimi-k3
+  - c50de6922b00677c93007c01924586de887ced7b@kimi-k3.1-pro
+  - c50de6922b00677c93007c01924586de887ced7b@claude-sonnet-5.5
+  - c50de6922b00677c93007c01924586de887ced7b@gemini-4-argon
+  - c50de6922b00677c93007c01924586de887ced7b@grok-4.3
+- 18 capped $0 free-tier routes (40 req/day per address, 120/IP; 10x at 260k ANTS pool power, 30x at 5.2M power):
+  - glm-5.3-flash, openai-gpt-oss-20b, gpt-oss-120b, openai-gpt-oss-120b, deepseek-v4-flash-0731, glm-4.7-flash, gpt-5-nano, qwen3.7-flash, gemma-4-e2b, gemma-4-26b-a4b-it, gemma-3-27b-it, gemma-3-12b-it, gemma-3-4b-it, llama-3.2-3b-instruct, mistral-small-3.2-24b-instruct, nvidia-nemotron-3-nano-30b-a3b, nvidia-nemotron-3-5-lightning-30b-a3b, nvidia-nemotron-nano-9b-v2
+- Wire protocols supported: OpenAI Chat Completions, OpenAI Responses, and Anthropic Messages (AntSeed CLI 0.1.259, metadata v12, 113 live services, 96 concurrent buyers, built-in model health checks)
 - Read-only specialist code audit agent: c50de6922b00677c93007c01924586de887ced7b@novaroute-code-audit-v1
 - Public specialist agent route: https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/
 - AntFeed seller profile: https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b
@@ -67,7 +73,7 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Public claude-fable-5 route: https://woodfuturebj-boop.github.io/routes/claude-fable-5/
 - AntFeed MCP: npx -y @antfeed/mcp
 - Direct AntFeed seller profile: https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b
-- NovaRoute AI runs AntSeed CLI 0.1.259 with signed metadata v12, live model health checks, a $0 free tier (openai-gpt-oss-20b), and native OpenAI Chat Completions, OpenAI Responses, and Anthropic Messages endpoints
+- NovaRoute AI runs AntSeed CLI 0.1.259 with signed metadata v12, live model health checks, 18 capped $0 free-tier models, 95 paid models priced 2% below healthy market floor, and native OpenAI Chat Completions, OpenAI Responses, and Anthropic Messages endpoints
 - After lookup and get_pricing, use the direct pinned buyer route for the approved real workload
 - Codex real-workload wrapper: antseed codex --model claude-opus-4.6
 - OpenCode real-workload wrapper: antseed opencode --model claude-opus-4.6
