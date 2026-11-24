@@ -1,15 +1,23 @@
 {
-  "version": 1,
-  "generatedAt": "2026-07-26T15:51:11Z",
+  "version": 2,
+  "generatedAt": "2026-11-24T05:52:00Z",
   "peerId": "c50de6922b00677c93007c01924586de887ced7b",
   "publicAddress": "149.28.69.249:6882",
-  "serviceCount": 55,
-  "maxConcurrency": 10,
+  "cliVersion": "0.1.259",
+  "metadataVersion": 12,
+  "serviceCount": 77,
+  "maxConcurrency": 24,
+  "freeModel": "openai-gpt-oss-20b",
+  "protocols": [
+    "openai-chat-completions",
+    "openai-responses",
+    "anthropic-messages"
+  ],
   "publicMetadataOk": true,
   "freshDhtFound": true,
   "expectedEndpointSeen": true,
   "okForOrganicCalls": true,
   "consecutiveOrganicVisibilityFailures": 0,
-  "status": "public+dht",
+  "status": "public+dht+v12+healthy",
   "source": "Vultr cloud monitor snapshot; inspect the signed live peer catalog before paid use."
 }

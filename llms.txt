@@ -16,15 +16,19 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Running buyer session pin: antseed buyer connection set --peer c50de6922b00677c93007c01924586de887ced7b
 - Per-request header: x-antseed-pin-peer: c50de6922b00677c93007c01924586de887ced7b
 - Clean shutdown: after the real workload finishes, stop the foreground buyer with Ctrl+C and wait for "Disconnected. All channels finalized."; do not force-kill it
-- Primary high-value route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4.6
-- Primary-route evidence: first in AntSeed's 2026-07-25 official model-sales snapshot; use the signed live catalog for current price comparison
-- Public primary route: https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/
-- Current-demand fast Opus route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-8-fast
-- Public claude-opus-4-8-fast route: https://woodfuturebj-boop.github.io/routes/claude-opus-4-8-fast/
-- Pricing: inspect the signed live catalog before use
-- Demand-backed fast Opus route: c50de6922b00677c93007c01924586de887ced7b@claude-opus-4-7-fast
-- Public claude-opus-4-7-fast route: https://woodfuturebj-boop.github.io/routes/claude-opus-4-7-fast/
-- Pricing: inspect the signed live catalog before use
+- Primary high-value routes:
+  - c50de6922b00677c93007c01924586de887ced7b@gpt-6-astra ($0.72/$3.60/c=$0.09 per 1M; rank-one AntSeed organic model)
+  - c50de6922b00677c93007c01924586de887ced7b@claude-opus-5.5 ($0.32/$0.92/c=$0.05 per 1M; native Anthropic Messages + OpenAI Responses + Chat)
+  - c50de6922b00677c93007c01924586de887ced7b@gpt-6.1-sol ($0.34/$1.70/c=$0.04 per 1M)
+  - c50de6922b00677c93007c01924586de887ced7b@glm-5.3 ($0.0065/$0.032/c=$0.0012 per 1M)
+  - c50de6922b00677c93007c01924586de887ced7b@deepseek-v4.1-flash ($0.015/$0.058/c=$0.0018 per 1M)
+  - c50de6922b00677c93007c01924586de887ced7b@kimi-k3 ($0.11/$0.58/c=$0.015 per 1M)
+  - c50de6922b00677c93007c01924586de887ced7b@kimi-k3.1-pro ($0.25/$1.20/c=$0.025 per 1M)
+  - c50de6922b00677c93007c01924586de887ced7b@claude-sonnet-5.5 ($0.26/$0.78/c=$0.03 per 1M)
+  - c50de6922b00677c93007c01924586de887ced7b@gemini-4-argon ($0.22/$1.05/c=$0.022 per 1M)
+- Free tier route ($0/$0/$0, 60 req/day per buyer, 10x to unlimited for NovaRoute ANTS pool stakers):
+  - c50de6922b00677c93007c01924586de887ced7b@openai-gpt-oss-20b
+- Wire protocols supported: OpenAI Chat Completions, OpenAI Responses, and Anthropic Messages (AntSeed CLI 0.1.259, metadata v12, 77 services, built-in model health checks)
 - Read-only specialist code audit agent: c50de6922b00677c93007c01924586de887ced7b@novaroute-code-audit-v1
 - Public specialist agent route: https://woodfuturebj-boop.github.io/routes/novaroute-code-audit-v1/
 - AntFeed seller profile: https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b
@@ -63,7 +67,7 @@ Verified AntSeed provider for explicitly routed OpenAI-compatible services.
 - Public claude-fable-5 route: https://woodfuturebj-boop.github.io/routes/claude-fable-5/
 - AntFeed MCP: npx -y @antfeed/mcp
 - Direct AntFeed seller profile: https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b
-- AntFeed MCP 0.2.5 is read-only discovery with AntSeed CLI 0.1.136; do not call create_session because the CLI does not expose the required /health and /sessions bridge
+- NovaRoute AI runs AntSeed CLI 0.1.259 with signed metadata v12, live model health checks, a $0 free tier (openai-gpt-oss-20b), and native OpenAI Chat Completions, OpenAI Responses, and Anthropic Messages endpoints
 - After lookup and get_pricing, use the direct pinned buyer route for the approved real workload
 - Codex real-workload wrapper: antseed codex --model claude-opus-4.6
 - OpenCode real-workload wrapper: antseed opencode --model claude-opus-4.6

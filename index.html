@@ -655,7 +655,7 @@
             </div>
             <div class="status-item">
               <span class="status-label">Advertised services</span>
-              <span class="status-value" id="service-count">55</span>
+              <span class="status-value" id="service-count">77</span>
             </div>
             <div class="status-item">
               <span class="status-label">Settlement</span>
@@ -730,21 +730,20 @@ antseed buyer balance</code></pre>
             <div class="model-picker">
               <span class="model-picker-label">Starter model</span>
               <div class="model-selector" role="group" aria-label="Starter model">
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.5">gpt-5.5</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.6-sol-pro">gpt-5.6-sol-pro</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.6-terra">gpt-5.6-terra</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.6-sol">gpt-5.6-sol</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gemini-3-5-flash">gemini-3-5-flash</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-5.4">gpt-5.4</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="glm-5.2">glm-5.2</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="minimax-m2.7">minimax-m2.7</button>
+                <button class="model-option" type="button" aria-pressed="true" data-starter-model="gpt-6-astra">gpt-6-astra</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-5.5">claude-opus-5.5</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-6.1-sol">gpt-6.1-sol</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="glm-5.3">glm-5.3</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="deepseek-v4.1-flash">deepseek-v4.1-flash</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="kimi-k3">kimi-k3</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4-7-fast">claude-opus-4-7-fast</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="novaroute-code-audit-v1">novaroute-code-audit-v1</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4-8-fast">claude-opus-4-8-fast</button>
-                <button class="model-option" type="button" aria-pressed="true" data-starter-model="claude-opus-4.6">claude-opus-4.6</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="kimi-k3.1-pro">kimi-k3.1-pro</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-sonnet-5.5">claude-sonnet-5.5</button>
                 <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-sonnet-5">claude-sonnet-5</button>
-                <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-fable-5">claude-fable-5</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gpt-6.2-sol">gpt-6.2-sol</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="gemini-4-argon">gemini-4-argon</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="openai-gpt-oss-20b">openai-gpt-oss-20b (free)</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="claude-opus-4.6">claude-opus-4.6</button>
+                <button class="model-option" type="button" aria-pressed="false" data-starter-model="novaroute-code-audit-v1">novaroute-code-audit-v1</button>
               </div>
               <button class="route-link-button" type="button" id="copy-route-link" aria-live="polite">Copy route link</button>
             </div>
@@ -1109,7 +1108,7 @@ If one fits my real workload, show the pinned model route and ask me
 to continue through the direct AntSeed buyer path. Do not call create_session.</code></pre>
               <button class="copy-button" type="button" data-copy-target="prompt-antfeed">Copy</button>
             </div>
-            <p class="notice">Current AntSeed CLI <code>0.1.136</code> does not expose the <code>/health</code> and <code>/sessions</code> bridge expected by AntFeed MCP <code>0.2.5</code>. Use MCP for read-only discovery, verify the signed live catalog, then run the real workload through the direct pinned buyer route.</p>
+            <p class="notice">NovaRoute AI runs AntSeed CLI <code>0.1.259</code> with signed metadata v12, live model health probes, a <code>$0</code> free tier (<code>openai-gpt-oss-20b</code>), and native OpenAI Chat Completions, OpenAI Responses, and Anthropic Messages endpoints. Inspect the signed live catalog before opening a paid session.</p>
             <div class="actions">
               <a class="action primary" href="#first-workload">Open direct buyer path</a>
               <a class="action secondary" href="https://www.antfeed.org/sellers/0xc50de6922b00677c93007c01924586de887ced7b" target="_blank" rel="noopener">Open AntFeed profile</a>
@@ -1260,40 +1259,80 @@ https://woodfuturebj-boop.github.io/routes/claude-opus-4.6/</code></pre>
           output: "$0.0864",
           summary: "ranks eighth in AntSeed's official top models by token-volume snapshot and has signed live pricing",
         },
-        "kimi-k3": {
-          input: "$0.1782",
-          output: "$0.891",
-          summary: "has meaningful recent agent demand and ranks first among indexed exact offers",
+        "gpt-6-astra": {
+          input: "$0.72",
+          output: "$3.60",
+          summary: "ranks first on AntSeed by organic revenue with native OpenAI Chat, Responses, and Anthropic Messages support plus low cached-input pricing ($0.09/1M)",
         },
-        "claude-opus-4-7-fast": {
-          input: "$4.2984",
-          output: "$21.492",
-          summary: "is a fast Opus route with signed live pricing",
+        "claude-opus-5.5": {
+          input: "$0.32",
+          output: "$0.92",
+          summary: "is a top-3 flagship coding and reasoning model with native Anthropic Messages and OpenAI Responses support plus $0.05/1M cached input",
+        },
+        "gpt-6.1-sol": {
+          input: "$0.34",
+          output: "$1.70",
+          summary: "is a top-4 high-volume reasoning route with $0.04/1M cached input across all three wire protocols",
+        },
+        "glm-5.3": {
+          input: "$0.0065",
+          output: "$0.032",
+          summary: "is an ultra-low-cost high-demand coding and reasoning model with $0.0012/1M cached input",
+        },
+        "deepseek-v4.1-flash": {
+          input: "$0.015",
+          output: "$0.058",
+          summary: "leads AntSeed in request count with $0.0018/1M cached input and native multi-protocol support",
+        },
+        "kimi-k3.1-pro": {
+          input: "$0.25",
+          output: "$1.20",
+          summary: "is a next-generation Kimi agentic reasoning model with $0.025/1M cached input",
+        },
+        "claude-sonnet-5.5": {
+          input: "$0.26",
+          output: "$0.78",
+          summary: "is a high-throughput coding and tool-use route with $0.03/1M cached input",
+        },
+        "gpt-6.2-sol": {
+          input: "$0.16",
+          output: "$0.80",
+          summary: "is a latest-generation GPT-6.2 reasoning route with $0.02/1M cached input",
+        },
+        "gemini-4-argon": {
+          input: "$0.22",
+          output: "$1.05",
+          summary: "is a Gemini 4 flagship reasoning route with $0.022/1M cached input",
+        },
+        "openai-gpt-oss-20b": {
+          input: "$0.00",
+          output: "$0.00",
+          summary: "is NovaRoute AI's $0 free tier (60 requests/day per buyer, 10x to unlimited for ANTS pool stakers)",
+        },
+        "kimi-k3": {
+          input: "$0.11",
+          output: "$0.58",
+          summary: "ranks second on AntSeed by organic revenue with $0.015/1M cached input",
         },
         "novaroute-code-audit-v1": {
           input: "$4.2984",
           output: "$21.492",
-          summary: "is a read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews",
-        },
-        "claude-opus-4-8-fast": {
-          input: "$1.08",
-          output: "$5.4",
-          summary: "is a fast Opus route with signed live pricing",
+          summary: "is a read-only specialist agent for findings-first code, Web3 transaction-safety, and release-readiness reviews (backed by claude-opus-5.5)",
         },
         "claude-opus-4.6": {
-          input: "$0.297",
-          output: "$1.485",
-          summary: "ranks first in AntSeed's latest official model-sales snapshot and uses signed live directory pricing",
+          input: "$0.19",
+          output: "$0.95",
+          summary: "is a high-demand Claude Opus route with signed live v12 pricing",
         },
         "claude-sonnet-5": {
-          input: "$0.236412",
-          output: "$1.18206",
-          summary: "has strong recent coding demand and ranks first among indexed exact offers",
+          input: "$0.19",
+          output: "$0.78",
+          summary: "has strong coding demand with $0.02/1M cached input across all three protocols",
         },
         "claude-fable-5": {
-          input: "$0.7128",
-          output: "$3.564",
-          summary: "has meaningful recent high-value demand and ranks first among indexed exact offers",
+          input: "$0.42",
+          output: "$1.12",
+          summary: "is a high-value long-form writing and reasoning route with $0.06/1M cached input",
         },
       };
 

@@ -1,98 +1,125 @@
 {
-  "version": 2,
-  "updatedAt": "2026-07-25T18:15:00Z",
+  "version": 3,
+  "updatedAt": "2026-11-24T05:50:00Z",
   "pricingUnit": "USD per 1M tokens",
   "demandEvidence": {
-    "label": "AntSeed sales and token-volume snapshots plus current exact-offer audit",
-    "url": "https://x.com/AntSeedAI/status/2081002378795377145",
-    "tokenVolumeUrl": "https://x.com/AntSeedAI/status/2077010692012470320",
-    "observedAt": "2026-07-25T13:03:24Z",
+    "label": "AntSeed organic revenue snapshot, AntSeed KBF verifier catalog, and live Surplus wholesale audit",
+    "url": "https://antseedstats.com/providers/0xc50de6922b00677c93007c01924586de887ced7b",
+    "observedAt": "2026-11-24T05:50:00Z",
     "marketUrl": "https://www.surplusintelligence.ai/api/inference/markets"
   },
   "services": [
     {
-      "id": "claude-opus-4.6",
-      "input": 0.297,
-      "output": 1.485,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "First in AntSeed's latest official model-sales snapshot; signed live directory pricing"
+      "id": "openai-gpt-oss-20b",
+      "input": 0,
+      "output": 0,
+      "cachedInput": 0,
+      "protocol": "OpenAI Chat Completions (Free Tier)",
+      "focus": "Free $0 tier (60 req/day per buyer, 10x–unlimited for NovaRoute ANTS pool stakers)"
     },
     {
-      "id": "gpt-5.6-sol",
-      "input": 0.54,
-      "output": 0.54,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Highest upstream dollar volume in the current sample; exact rank one"
+      "id": "gpt-6-astra",
+      "input": 0.72,
+      "output": 3.6,
+      "cachedInput": 0.09,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "Rank-one AntSeed model by organic volume; full v12 capabilities and low cached-input pricing"
     },
     {
-      "id": "gpt-5.6-sol-pro",
-      "input": 0.594,
-      "output": 3.564,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Current high-value reasoning demand; exact rank one in the latest sample"
+      "id": "claude-opus-5.5",
+      "input": 0.32,
+      "output": 0.92,
+      "cachedInput": 0.05,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "Top-3 flagship coding & reasoning model; native Anthropic Messages + OpenAI Responses support"
     },
     {
-      "id": "claude-sonnet-5",
-      "input": 0.236412,
-      "output": 1.18206,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "High-value coding demand; exact rank one in the latest sample"
+      "id": "gpt-6.1-sol",
+      "input": 0.34,
+      "output": 1.7,
+      "cachedInput": 0.04,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "High-volume frontier reasoning model with 10x lower cached-input pricing"
     },
     {
-      "id": "claude-fable-5",
-      "input": 0.7128,
-      "output": 3.564,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "High-value long-form demand; exact rank one in the latest sample"
+      "id": "glm-5.3",
+      "input": 0.0065,
+      "output": 0.032,
+      "cachedInput": 0.0012,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "Ultra-low-cost high-demand coding & reasoning route"
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "input": 0.015,
+      "output": 0.058,
+      "cachedInput": 0.0018,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "Highest request-count fast reasoning & coding model on AntSeed"
     },
     {
       "id": "kimi-k3",
-      "input": 0.1782,
-      "output": 0.891,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Agent and coding demand; exact rank one in the latest sample"
+      "input": 0.11,
+      "output": 0.58,
+      "cachedInput": 0.015,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "Rank-two AntSeed model by organic volume; agentic coding route"
     },
     {
-      "id": "glm-5.2",
-      "input": 0.021,
-      "output": 0.036,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Highest recent request count in the latest upstream sample"
+      "id": "kimi-k3.1-pro",
+      "input": 0.25,
+      "output": 1.2,
+      "cachedInput": 0.025,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "Next-gen Kimi pro agent & reasoning route"
     },
     {
-      "id": "minimax-m2.7",
-      "input": 0.0216,
-      "output": 0.0864,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Eighth in AntSeed's official token-volume snapshot"
+      "id": "claude-sonnet-5.5",
+      "input": 0.26,
+      "output": 0.78,
+      "cachedInput": 0.03,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "High-throughput coding & tool-use route"
     },
     {
-      "id": "gpt-5.5",
-      "input": 0.06,
-      "output": 0.36,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Strong recent request demand with signed live directory pricing"
+      "id": "claude-sonnet-5",
+      "input": 0.19,
+      "output": 0.78,
+      "cachedInput": 0.02,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "Competitive coding & agent route with clean low cached-input pricing"
     },
     {
-      "id": "gpt-5.4",
-      "input": 0.015,
-      "output": 0.09,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "General reasoning demand; exact rank one in the latest sample"
+      "id": "gpt-6.2-sol",
+      "input": 0.16,
+      "output": 0.8,
+      "cachedInput": 0.02,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "Latest GPT-6.2 reasoning route across all three wire protocols"
     },
     {
-      "id": "gemini-3-5-flash",
-      "input": 0.177309,
-      "output": 1.063854,
-      "protocol": "OpenAI Chat Completions",
-      "focus": "Fast multimodal-family demand; exact rank one in the latest sample"
+      "id": "gemini-4-argon",
+      "input": 0.22,
+      "output": 1.05,
+      "cachedInput": 0.022,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "Gemini 4 flagship reasoning & multimodal route"
+    },
+    {
+      "id": "claude-fable-5.2",
+      "input": 1.1,
+      "output": 4.8,
+      "cachedInput": 0.12,
+      "protocol": "OpenAI Chat Completions / OpenAI Responses / Anthropic Messages",
+      "focus": "Frontier long-form writing & reasoning route"
     },
     {
       "id": "novaroute-code-audit-v1",
       "input": 4.2984,
       "output": 21.492,
+      "cachedInput": 0.85968,
       "protocol": "Ant Agent / OpenAI Chat Completions",
-      "focus": "Read-only code, Web3 transaction-safety, and release-readiness reviews"
+      "focus": "Read-only code, Web3 transaction-safety, and release-readiness reviews (backed by claude-opus-5.5)"
     }
   ]
 }
